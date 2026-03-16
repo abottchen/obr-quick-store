@@ -48,8 +48,8 @@ function openStorefront(): void {
     url: `${baseUrl}store.html`,
     height: 600,
     width: 500,
-    anchorPosition: { top: 50, left: 50 },
-    anchorOrigin: { horizontal: "LEFT", vertical: "TOP" },
+    anchorPosition: { top: 100, left: window.innerWidth * 0.55 },
+    anchorOrigin: { horizontal: "CENTER", vertical: "TOP" },
     disableClickAway: true,
     hidePaper: false,
   });

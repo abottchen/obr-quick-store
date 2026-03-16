@@ -35,14 +35,23 @@ export async function addToCart(
   await setStoreMetadata({ cart: { entries } });
 }
 
-export async function removeFromCart(
+export async function removeOneFromCart(
   itemName: string,
   playerId: string
 ): Promise<void> {
   const data = await getStoreMetadata();
-  const entries = data.cart.entries.filter(
-    (e) => !(e.itemName === itemName && e.playerId === playerId)
-  );
+  const entries: CartEntry[] = [];
+
+  for (const e of data.cart.entries) {
+    if (e.itemName === itemName && e.playerId === playerId) {
+      if (e.quantity > 1) {
+        entries.push({ ...e, quantity: e.quantity - 1 });
+      }
+    } else {
+      entries.push(e);
+    }
+  }
+
   await setStoreMetadata({ cart: { entries } });
 }
 

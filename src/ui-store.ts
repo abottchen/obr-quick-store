@@ -1,7 +1,7 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 import { onStoreMetadataChange, setStoreMetadata, getStoreMetadata } from "./metadata";
-import { addToCart, removeFromCart, getPlayerSubtotal, getTotal } from "./cart";
+import { addToCart, removeOneFromCart, getPlayerSubtotal, getTotal } from "./cart";
 import type { QuickStoreMetadata, StoreItem, CartEntry } from "./types";
 
 let isMinimized = false;
@@ -69,8 +69,14 @@ function renderStorefront(
         </div>
       </div>
       <div class="store-body ${isMinimized ? "minimized" : ""}">
-        <div class="items-grid" id="items-grid">
-          ${renderItemCards(grouped, adjustment, data.cart.entries)}
+        <div class="items-list-header">
+          <span class="col-icon"></span>
+          <span class="col-name">Name</span>
+          <span class="col-type">Type</span>
+          <span class="col-price">Price</span>
+        </div>
+        <div class="items-list" id="items-list">
+          ${renderItemRows(grouped, adjustment, data.cart.entries)}
         </div>
         ${renderCart(data.cart.entries, adjustment)}
       </div>
@@ -80,13 +86,13 @@ function renderStorefront(
   bindStorefrontEvents(container, data, isGM);
 }
 
-function renderItemCards(
+function renderItemRows(
   grouped: Map<string, StoreItem[]>,
   adjustment: number,
   cartEntries: CartEntry[]
 ): string {
   if (grouped.size === 0) {
-    return `<p style="grid-column: 1/-1; text-align: center; color: #666; font-style: italic;">No items available.</p>`;
+    return `<p style="text-align: center; color: #666; font-style: italic; padding: 20px;">No items available.</p>`;
   }
 
   let html = "";
@@ -104,15 +110,15 @@ function renderItemCards(
         .reduce((sum, e) => sum + e.quantity, 0);
 
       html += `
-        <div class="item-card"
-             style="background: ${color}"
+        <div class="item-row"
+             style="border-left-color: ${color}"
              data-item-name="${escapeAttr(item.name)}"
              data-item-price="${price}">
+          <div class="item-image" style="background: ${color}">${imageContent}</div>
+          <span class="item-name">${escape(item.name)}</span>
+          <span class="item-type">${escape(item.type)}</span>
+          <span class="item-price">${price} gp</span>
           ${playerCartQty > 0 ? `<span class="added-badge">${playerCartQty}</span>` : ""}
-          <div class="item-image">${imageContent}</div>
-          <div class="item-name">${escape(item.name)}</div>
-          <div class="item-type">${escape(item.type)}</div>
-          <div class="item-price">${price} gp</div>
         </div>
       `;
     }
@@ -150,6 +156,7 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
           <span class="cart-item-name">${escape(entry.itemName)}</span>
           <span class="cart-item-qty">x${entry.quantity}</span>
           <span class="cart-item-price">${entry.itemPrice * entry.quantity} gp</span>
+          <button class="cart-item-remove" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}" title="Remove one">&#x2715;</button>
         </div>
       `;
     }
@@ -197,7 +204,7 @@ function bindStorefrontEvents(
     });
   }
 
-  container.querySelectorAll<HTMLElement>(".item-card").forEach((card) => {
+  container.querySelectorAll<HTMLElement>(".item-row").forEach((card) => {
     card.addEventListener("click", async () => {
       const itemName = card.dataset.itemName!;
       const item = data.catalog.find((i) => i.name === itemName);
@@ -215,15 +222,15 @@ function bindStorefrontEvents(
     });
   });
 
-  container.querySelectorAll<HTMLElement>(".cart-item").forEach((cartItem) => {
-    cartItem.addEventListener("contextmenu", async (e) => {
-      e.preventDefault();
-      const itemName = cartItem.dataset.cartItem!;
-      const playerId = cartItem.dataset.cartPlayer!;
+  container.querySelectorAll<HTMLElement>(".cart-item-remove").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const itemName = (btn as HTMLElement).dataset.removeItem!;
+      const playerId = (btn as HTMLElement).dataset.removePlayer!;
       const currentPlayerId = OBR.player.id;
       const role = await OBR.player.getRole();
       if (playerId === currentPlayerId || role === "GM") {
-        await removeFromCart(itemName, playerId);
+        await removeOneFromCart(itemName, playerId);
       }
     });
   });
