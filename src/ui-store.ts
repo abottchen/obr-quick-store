@@ -54,6 +54,9 @@ function renderStorefront(
   const grouped = groupItemsByGrouping(items);
   const adjustment = data.config.priceAdjustment;
 
+  const itemsList = container.querySelector<HTMLElement>("#items-list");
+  const prevScroll = itemsList?.scrollTop ?? 0;
+
   container.innerHTML = `
     <div class="storefront">
       <div class="store-header">
@@ -74,6 +77,7 @@ function renderStorefront(
           <span class="col-name">Name</span>
           <span class="col-type">Type</span>
           <span class="col-price">Price</span>
+          <span class="col-qty">#</span>
         </div>
         <div class="items-list" id="items-list">
           ${renderItemRows(grouped, adjustment, data.cart.entries)}
@@ -82,6 +86,9 @@ function renderStorefront(
       </div>
     </div>
   `;
+
+  const newItemsList = container.querySelector<HTMLElement>("#items-list");
+  if (newItemsList) newItemsList.scrollTop = prevScroll;
 
   bindStorefrontEvents(container, data, isGM);
 }
@@ -117,8 +124,8 @@ function renderItemRows(
           <div class="item-image" style="background: ${color}">${imageContent}</div>
           <span class="item-name">${escape(item.name)}</span>
           <span class="item-type">${escape(item.type)}</span>
-          <span class="item-price">${price} gp</span>
-          ${playerCartQty > 0 ? `<span class="added-badge">${playerCartQty}</span>` : ""}
+          <span class="item-price">${price}</span>
+          <span class="item-qty">${playerCartQty > 0 ? playerCartQty : ""}</span>
         </div>
       `;
     }

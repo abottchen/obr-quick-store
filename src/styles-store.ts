@@ -77,7 +77,8 @@ export const STORE_STYLES = `
   .items-list-header .col-icon { width: 28px; flex-shrink: 0; }
   .items-list-header .col-name { flex: 2; padding-left: 6px; }
   .items-list-header .col-type { flex: 1; }
-  .items-list-header .col-price { width: 60px; text-align: right; flex-shrink: 0; }
+  .items-list-header .col-price { width: 80px; text-align: right; flex-shrink: 0; }
+  .items-list-header .col-qty { width: 30px; text-align: center; flex-shrink: 0; }
   .item-row {
     display: flex;
     align-items: center;
@@ -131,28 +132,21 @@ export const STORE_STYLES = `
     text-overflow: ellipsis;
   }
   .item-row .item-price {
-    width: 60px;
+    width: 80px;
     text-align: right;
     font-size: 13px;
     font-weight: 600;
     color: #ffd700;
     flex-shrink: 0;
+    white-space: nowrap;
   }
-  .item-row .added-badge {
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-    background: #bb86fc;
-    color: #1a1a2e;
-    font-size: 9px;
-    font-weight: 700;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .item-row .item-qty {
+    width: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #bb86fc;
+    flex-shrink: 0;
   }
   .cart-panel {
     border-top: 2px solid #bb86fc;
