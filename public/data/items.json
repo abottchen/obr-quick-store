@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Longsword",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A versatile martial weapon with a straight, double-edged blade. Deals 1d8 slashing damage (1d10 two-handed).",
+    "image": "",
+    "price": 15,
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Shortbow",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A simple ranged weapon. Deals 1d6 piercing damage. Range 80/320.",
+    "image": "",
+    "price": 25,
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Greataxe",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A heavy martial weapon favored by barbarians. Deals 1d12 slashing damage.",
+    "image": "",
+    "price": 30,
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Dagger",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A simple melee weapon with the finesse, light, and thrown properties. Deals 1d4 piercing damage.",
+    "image": "",
+    "price": 2,
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Chain Mail",
+    "type": "Armor",
+    "rarity": "common",
+    "description": "Made of interlocking metal rings. AC 16, requires Str 13. Disadvantage on Stealth.",
+    "image": "",
+    "price": 75,
+    "itemGrouping": "Armor"
+  },
+  {
+    "name": "Leather Armor",
+    "type": "Armor",
+    "rarity": "common",
+    "description": "The breastpiece and shoulder protectors are made of leather. AC 11 + Dex modifier.",
+    "image": "",
+    "price": 10,
+    "itemGrouping": "Armor"
+  },
+  {
+    "name": "Shield",
+    "type": "Armor",
+    "rarity": "common",
+    "description": "A wooden or metal shield carried in one hand. +2 AC.",
+    "image": "",
+    "price": 10,
+    "itemGrouping": "Armor"
+  },
+  {
+    "name": "Studded Leather",
+    "type": "Armor",
+    "rarity": "common",
+    "description": "Tough but flexible leather reinforced with rivets. AC 12 + Dex modifier.",
+    "image": "",
+    "price": 45,
+    "itemGrouping": "Armor"
+  },
+  {
+    "name": "Healing Potion",
+    "type": "Potion",
+    "rarity": "common",
+    "description": "A vial of red liquid that shimmers when agitated. Restores 2d4+2 hit points when consumed.",
+    "image": "",
+    "price": 50,
+    "itemGrouping": "Potions"
+  },
+  {
+    "name": "Greater Healing Potion",
+    "type": "Potion",
+    "rarity": "uncommon",
+    "description": "A vial of bright red liquid. Restores 4d4+4 hit points when consumed.",
+    "image": "",
+    "price": 150,
+    "itemGrouping": "Potions"
+  },
+  {
+    "name": "Antitoxin",
+    "type": "Potion",
+    "rarity": "common",
+    "description": "A vial of antitoxin. Grants advantage on saving throws against poison for 1 hour.",
+    "image": "",
+    "price": 50,
+    "itemGrouping": "Potions"
+  },
+  {
+    "name": "Rope (50 ft)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "Hempen rope, 50 feet. Has 2 hit points and can be burst with a DC 17 Strength check.",
+    "image": "",
+    "price": 1,
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Torch (10)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A bundle of 10 torches. Each burns for 1 hour, providing bright light in a 20-foot radius.",
+    "image": "",
+    "price": 1,
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Backpack",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A standard adventurer's backpack. Can hold 1 cubic foot or 30 pounds of gear.",
+    "image": "",
+    "price": 2,
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Rations (10 days)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "Dry foods suitable for extended travel, including jerky, dried fruit, and hardtack.",
+    "image": "",
+    "price": 5,
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Thieves' Tools",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A set of picks and tools for disabling traps and opening locks. Required for Dexterity (Sleight of Hand) checks to pick locks.",
+    "image": "",
+    "price": 25,
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Bag of Holding",
+    "type": "Wondrous Item",
+    "rarity": "uncommon",
+    "description": "This bag has an interior space considerably larger than its outside dimensions. It can hold up to 500 pounds, not exceeding a volume of 64 cubic feet.",
+    "image": "",
+    "price": 500,
+    "itemGrouping": "Wondrous Items"
+  },
+  {
+    "name": "Cloak of Protection",
+    "type": "Wondrous Item",
+    "rarity": "uncommon",
+    "description": "You gain a +1 bonus to AC and saving throws while you wear this cloak. Requires attunement.",
+    "image": "",
+    "price": 750,
+    "itemGrouping": "Wondrous Items"
+  },
+  {
+    "name": "Flame Tongue",
+    "type": "Weapon",
+    "rarity": "rare",
+    "description": "When you speak this sword's command word, flames erupt from the blade. While ablaze, it deals an extra 2d6 fire damage.",
+    "image": "",
+    "price": 5000,
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Staff of Power",
+    "type": "Weapon",
+    "rarity": "very rare",
+    "description": "This staff grants a +2 bonus to AC, saving throws, and spell attack rolls. It has 20 charges for casting spells. Requires attunement by a sorcerer, warlock, or wizard.",
+    "image": "",
+    "price": 15000,
+    "itemGrouping": "Wondrous Items"
+  },
+  {
+    "name": "Vorpal Sword",
+    "type": "Weapon",
+    "rarity": "legendary",
+    "description": "You gain a +3 bonus to attack and damage rolls. On a roll of 20, it cuts off one of the target's heads.",
+    "image": "",
+    "price": 50000,
+    "itemGrouping": "Weapons"
+  }
+]
