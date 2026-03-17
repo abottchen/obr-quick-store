@@ -8,6 +8,8 @@ import type { StoreData, StoreItem, CartEntry } from "./types";
 
 let isMinimized = false;
 let descriptionPopup: HTMLElement | null = null;
+const collapsedGroups = new Set<string>();
+let groupsInitialized = false;
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const meta = await getStoreMetadata();
@@ -123,9 +125,19 @@ function renderItemRows(
     return `<p style="text-align: center; color: #666; font-style: italic; padding: 20px;">No items available.</p>`;
   }
 
+  if (!groupsInitialized) {
+    for (const grouping of grouped.keys()) {
+      collapsedGroups.add(grouping);
+    }
+    groupsInitialized = true;
+  }
+
   let html = "";
   for (const [grouping, items] of grouped) {
-    html += `<div class="grouping-header">${escape(grouping)}</div>`;
+    const isCollapsed = collapsedGroups.has(grouping);
+    const arrow = isCollapsed ? "&#x25B6;" : "&#x25BC;";
+    html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}"><span class="grouping-arrow">${arrow}</span> ${escape(grouping)} <span class="grouping-count">(${items.length})</span></div>`;
+    html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}">`;
     for (const item of items) {
       const price = adjustPrice(item.price, adjustment);
       const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
@@ -149,6 +161,7 @@ function renderItemRows(
         </div>
       `;
     }
+    html += `</div>`;
   }
   return html;
 }
@@ -212,6 +225,18 @@ function bindStorefrontEvents(
   data: StoreData,
   isGM: boolean
 ): void {
+  container.querySelectorAll<HTMLElement>(".grouping-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      const group = header.dataset.group!;
+      if (collapsedGroups.has(group)) {
+        collapsedGroups.delete(group);
+      } else {
+        collapsedGroups.add(group);
+      }
+      renderStorefront(container, data, isGM);
+    });
+  });
+
   container.querySelector("#minimize-btn")?.addEventListener("click", () => {
     isMinimized = !isMinimized;
     renderStorefront(container, data, isGM);
@@ -275,10 +300,19 @@ function showDescription(item: StoreItem, x: number, y: number): void {
   popup.style.left = `${Math.min(x, maxX)}px`;
   popup.style.top = `${Math.min(y, maxY)}px`;
 
+  const imageHtml = item.image
+    ? `<img class="desc-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
+    : "";
+
   popup.innerHTML = `
-    <h3>${escape(item.name)}</h3>
-    <div class="desc-type">${escape(item.type)}</div>
-    <div class="desc-rarity" style="color: ${color}">${escape(item.rarity)}</div>
+    <div class="desc-header">
+      ${imageHtml}
+      <div class="desc-header-info">
+        <h3>${escape(item.name)}</h3>
+        <div class="desc-type">${escape(item.type)}</div>
+        <div class="desc-rarity" style="color: ${color}">${escape(item.rarity)}</div>
+      </div>
+    </div>
     <p>${escape(item.description)}</p>
   `;
 
