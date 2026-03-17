@@ -61,6 +61,28 @@ export const STORE_STYLES = `
     background: #444;
     border-radius: 4px;
   }
+  .search-bar {
+    padding: 9px 15px;
+    background: #1a1a2e;
+    border-bottom: 1px solid #333;
+    flex-shrink: 0;
+  }
+  .search-bar input {
+    width: 100%;
+    background: #2a2a4a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  .search-bar input:focus {
+    outline: none;
+    border-color: #bb86fc;
+  }
+  .search-bar input::placeholder {
+    color: #666;
+  }
   .items-list-header {
     display: flex;
     align-items: center;

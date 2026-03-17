@@ -10,6 +10,7 @@ let isMinimized = false;
 let descriptionPopup: HTMLElement | null = null;
 const collapsedGroups = new Set<string>();
 let groupsInitialized = false;
+let searchTerm = "";
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const meta = await getStoreMetadata();
@@ -62,6 +63,9 @@ function groupItemsByGrouping(items: StoreItem[]): Map<string, StoreItem[]> {
     group.push(item);
     groups.set(item.type, group);
   }
+  for (const items of groups.values()) {
+    items.sort((a, b) => a.name.localeCompare(b.name));
+  }
   return groups;
 }
 
@@ -70,7 +74,14 @@ function renderStorefront(
   data: StoreData,
   isGM: boolean
 ): void {
-  const items = getActiveItems(data);
+  let items = getActiveItems(data);
+  if (searchTerm) {
+    const term = searchTerm.toLowerCase();
+    items = items.filter((item) =>
+      item.name.toLowerCase().includes(term) ||
+      item.description.toLowerCase().includes(term)
+    );
+  }
   const grouped = groupItemsByGrouping(items);
   const adjustment = data.config.priceAdjustment;
 
@@ -94,6 +105,9 @@ function renderStorefront(
         </div>
       </div>
       <div class="store-body ${isMinimized ? "minimized" : ""}">
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search items..." value="${escapeAttr(searchTerm)}" />
+        </div>
         <div class="items-list-header">
           <span class="col-icon"></span>
           <span class="col-name">Name</span>
@@ -112,6 +126,14 @@ function renderStorefront(
   const newCartPanel = container.querySelector<HTMLElement>(".cart-panel");
   if (newItemsList) newItemsList.scrollTop = prevScroll;
   if (newCartPanel) newCartPanel.scrollTop = prevCartScroll;
+
+  if (searchTerm) {
+    const searchInput = container.querySelector<HTMLInputElement>("#search-input");
+    if (searchInput) {
+      searchInput.focus();
+      searchInput.setSelectionRange(searchTerm.length, searchTerm.length);
+    }
+  }
 
   bindStorefrontEvents(container, data, isGM);
 }
@@ -134,7 +156,7 @@ function renderItemRows(
 
   let html = "";
   for (const [grouping, items] of grouped) {
-    const isCollapsed = collapsedGroups.has(grouping);
+    const isCollapsed = searchTerm ? false : collapsedGroups.has(grouping);
     const arrow = isCollapsed ? "&#x25B6;" : "&#x25BC;";
     html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}"><span class="grouping-arrow">${arrow}</span> ${escape(grouping)} <span class="grouping-count">(${items.length})</span></div>`;
     html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}">`;
@@ -225,6 +247,11 @@ function bindStorefrontEvents(
   data: StoreData,
   isGM: boolean
 ): void {
+  container.querySelector<HTMLInputElement>("#search-input")?.addEventListener("input", (e) => {
+    searchTerm = (e.target as HTMLInputElement).value;
+    renderStorefront(container, data, isGM);
+  });
+
   container.querySelectorAll<HTMLElement>(".grouping-header").forEach((header) => {
     header.addEventListener("click", () => {
       const group = header.dataset.group!;
