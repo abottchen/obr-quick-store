@@ -53,11 +53,9 @@ function getActiveItems(data: QuickStoreMetadata): StoreItem[] {
 function groupItemsByGrouping(items: StoreItem[]): Map<string, StoreItem[]> {
   const groups = new Map<string, StoreItem[]>();
   for (const item of items) {
-    for (const grouping of item.itemGrouping) {
-      const group = groups.get(grouping) ?? [];
-      group.push(item);
-      groups.set(grouping, group);
-    }
+    const group = groups.get(item.type) ?? [];
+    group.push(item);
+    groups.set(item.type, group);
   }
   return groups;
 }
