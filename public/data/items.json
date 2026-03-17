@@ -4,7 +4,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A versatile martial weapon with a straight, double-edged blade. Deals 1d8 slashing damage (1d10 two-handed).",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/broadsword.svg",
     "price": 15,
     "currency": "gp",
     "itemGrouping": "Weapons"
@@ -14,7 +14,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A simple ranged weapon. Deals 1d6 piercing damage. Range 80/320.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/bowman.svg",
     "price": 25,
     "currency": "gp",
     "itemGrouping": "Weapons"
@@ -24,7 +24,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A heavy martial weapon favored by barbarians. Deals 1d12 slashing damage.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/battle-axe.svg",
     "price": 30,
     "currency": "gp",
     "itemGrouping": "Weapons"
@@ -34,7 +34,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A simple melee weapon with the finesse, light, and thrown properties. Deals 1d4 piercing damage.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/broad-dagger.svg",
     "price": 2,
     "currency": "gp",
     "itemGrouping": "Weapons"
@@ -44,7 +44,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A simple ranged weapon. Deals 1d4 bludgeoning damage. Range 30/120.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/slingshot.svg",
     "price": 1,
     "currency": "sp",
     "itemGrouping": "Weapons"
@@ -54,7 +54,7 @@
     "type": "Weapon",
     "rarity": "common",
     "description": "A bundle of 20 simple ranged weapons. Each deals 1d4 piercing damage. Range 20/60.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/dart.svg",
     "price": 5,
     "currency": "cp",
     "itemGrouping": "Weapons"
@@ -64,7 +64,7 @@
     "type": "Armor",
     "rarity": "common",
     "description": "Made of interlocking metal rings. AC 16, requires Str 13. Disadvantage on Stealth.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/chest-armor.svg",
     "price": 75,
     "currency": "gp",
     "itemGrouping": "Armor"
@@ -74,7 +74,7 @@
     "type": "Armor",
     "rarity": "common",
     "description": "The breastpiece and shoulder protectors are made of leather. AC 11 + Dex modifier.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/leather-armor.svg",
     "price": 10,
     "currency": "gp",
     "itemGrouping": "Armor"
@@ -84,7 +84,7 @@
     "type": "Armor",
     "rarity": "common",
     "description": "A wooden or metal shield carried in one hand. +2 AC.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/viking-shield.svg",
     "price": 10,
     "currency": "gp",
     "itemGrouping": "Armor"
@@ -94,7 +94,7 @@
     "type": "Armor",
     "rarity": "common",
     "description": "Tough but flexible leather reinforced with rivets. AC 12 + Dex modifier.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/armor-vest.svg",
     "price": 45,
     "currency": "gp",
     "itemGrouping": "Armor"
@@ -104,7 +104,7 @@
     "type": "Armor",
     "rarity": "common",
     "description": "Quilted layers of cloth and batting. AC 11 + Dex modifier. Disadvantage on Stealth.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/abdominal-armor.svg",
     "price": 5,
     "currency": "gp",
     "itemGrouping": "Armor"
@@ -114,7 +114,7 @@
     "type": "Potion",
     "rarity": "common",
     "description": "A vial of red liquid that shimmers when agitated. Restores 2d4+2 hit points when consumed.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/health-potion.svg",
     "price": 50,
     "currency": "gp",
     "itemGrouping": "Potions"
@@ -124,7 +124,7 @@
     "type": "Potion",
     "rarity": "uncommon",
     "description": "A vial of bright red liquid. Restores 4d4+4 hit points when consumed.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/magic-potion.svg",
     "price": 150,
     "currency": "gp",
     "itemGrouping": "Potions"
@@ -134,7 +134,7 @@
     "type": "Potion",
     "rarity": "common",
     "description": "A vial of antitoxin. Grants advantage on saving throws against poison for 1 hour.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/caro-asercion/round-potion.svg",
     "price": 50,
     "currency": "gp",
     "itemGrouping": "Potions"
@@ -144,7 +144,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "Hempen rope, 50 feet. Has 2 hit points and can be burst with a DC 17 Strength check.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/rope-coil.svg",
     "price": 1,
     "currency": "gp",
     "itemGrouping": "Adventuring Gear"
@@ -154,7 +154,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A bundle of 10 torches. Each burns for 1 hour, providing bright light in a 20-foot radius.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/celebration-fire.svg",
     "price": 1,
     "currency": "cp",
     "itemGrouping": "Adventuring Gear"
@@ -164,7 +164,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A bundle of 10 candles. Each provides bright light in a 5-foot radius for 1 hour.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/candle-light.svg",
     "price": 1,
     "currency": "cp",
     "itemGrouping": "Adventuring Gear"
@@ -174,7 +174,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A bundle of 10 iron spikes for climbing or securing ropes.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/barbed-nails.svg",
     "price": 5,
     "currency": "cp",
     "itemGrouping": "Adventuring Gear"
@@ -184,7 +184,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A bundle of 10 pieces of chalk for marking paths and surfaces.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/chalk-outline-murder.svg",
     "price": 1,
     "currency": "cp",
     "itemGrouping": "Adventuring Gear"
@@ -194,7 +194,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A leather pouch that holds up to 4 pints of liquid.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/waterskin.svg",
     "price": 2,
     "currency": "sp",
     "itemGrouping": "Adventuring Gear"
@@ -204,7 +204,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A portable sleeping pad and blanket for resting during travel.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/sleeping-bag.svg",
     "price": 1,
     "currency": "gp",
     "itemGrouping": "Adventuring Gear"
@@ -214,7 +214,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A small container with flint, fire steel, and tinder for starting fires.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/flint-spark.svg",
     "price": 5,
     "currency": "sp",
     "itemGrouping": "Adventuring Gear"
@@ -224,7 +224,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A standard adventurer's backpack. Can hold 1 cubic foot or 30 pounds of gear.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/backpack.svg",
     "price": 2,
     "currency": "gp",
     "itemGrouping": "Adventuring Gear"
@@ -234,7 +234,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "Dry foods suitable for extended travel, including jerky, dried fruit, and hardtack.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/meat.svg",
     "price": 5,
     "currency": "gp",
     "itemGrouping": "Adventuring Gear"
@@ -244,7 +244,7 @@
     "type": "Adventuring Gear",
     "rarity": "common",
     "description": "A set of picks and tools for disabling traps and opening locks. Required for Dexterity (Sleight of Hand) checks to pick locks.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/lockpicks.svg",
     "price": 25,
     "currency": "gp",
     "itemGrouping": "Adventuring Gear"
@@ -254,7 +254,7 @@
     "type": "Wondrous Item",
     "rarity": "uncommon",
     "description": "This bag has an interior space considerably larger than its outside dimensions. It can hold up to 500 pounds, not exceeding a volume of 64 cubic feet.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/knapsack.svg",
     "price": 500,
     "currency": "gp",
     "itemGrouping": "Wondrous Items"
@@ -264,7 +264,7 @@
     "type": "Wondrous Item",
     "rarity": "uncommon",
     "description": "You gain a +1 bonus to AC and saving throws while you wear this cloak. Requires attunement.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/cape.svg",
     "price": 750,
     "currency": "gp",
     "itemGrouping": "Wondrous Items"
@@ -274,7 +274,7 @@
     "type": "Weapon",
     "rarity": "rare",
     "description": "When you speak this sword's command word, flames erupt from the blade. While ablaze, it deals an extra 2d6 fire damage.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/bloody-sword.svg",
     "price": 5000,
     "currency": "gp",
     "itemGrouping": "Weapons"
@@ -284,7 +284,7 @@
     "type": "Weapon",
     "rarity": "very rare",
     "description": "This staff grants a +2 bonus to AC, saving throws, and spell attack rolls. It has 20 charges for casting spells. Requires attunement by a sorcerer, warlock, or wizard.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/crescent-staff.svg",
     "price": 15000,
     "currency": "gp",
     "itemGrouping": "Wondrous Items"
@@ -294,7 +294,7 @@
     "type": "Weapon",
     "rarity": "legendary",
     "description": "You gain a +3 bonus to attack and damage rolls. On a roll of 20, it cuts off one of the target's heads.",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/pointy-sword.svg",
     "price": 50000,
     "currency": "gp",
     "itemGrouping": "Weapons"

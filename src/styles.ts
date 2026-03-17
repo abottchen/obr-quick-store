@@ -17,6 +17,14 @@ export const BASE_STYLES = `
     flex-direction: column;
     height: 100vh;
     padding: 12px;
+    overflow-y: auto;
+  }
+  #app::-webkit-scrollbar {
+    width: 6px;
+  }
+  #app::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
   }
   button {
     cursor: pointer;
