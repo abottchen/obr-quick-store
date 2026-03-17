@@ -2182,5 +2182,215 @@
 		"itemGrouping": [
 			"Base Items"
 		]
+	},
+	{
+		"name": "Exotic Saddle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 40 lb. Required for riding an aquatic or a flying mount. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
+		"price": 60,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Military Saddle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 30 lb. Gives Advantage on any ability check you make to remain mounted. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
+		"price": 20,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Riding Saddle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 25 lb. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Canoe",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Holds up to six Medium creatures. Maximum speed of 2 mph. Otherwise identical to a rowboat.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/canoe.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Insect Repellent (Incense)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "A block of incense. When lit, burns for 8 hours and repels normal insects within a 20-foot radius centered on it. Does not protect against giant insects or swarms.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/incense.svg",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Insect Repellent (Salve)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "A gourd or vial containing 20 applications of odorless, waterproof grease. One application protects against normal insects for 24 hours. Does not protect against giant insects or swarms.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fragrance.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Rain Catcher",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. A 5-foot-square leather tarp on a wooden frame with legs. Catches 2 gallons of drinking water per inch of rainfall and holds up to 8 gallons. Folds up for easy transport.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/drink-me.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Tej (Mug)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "An amber-colored, fermented drink made from honey. More common and popular in Chult than beer or ale.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/beer-stein.svg",
+		"price": 4,
+		"currency": "cp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Tej (1-gallon Cask)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "A 1-gallon cask of tej, an amber-colored fermented drink made from honey. More common and popular in Chult than beer or ale.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/beer-stein.svg",
+		"price": 2,
+		"currency": "sp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "Yklwa",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Thrown (Range 10/30). Mastery: Sap. Weight: 3 lb. Traditional weapon of Chultan warriors. A 3-foot wooden shaft with a steel or stone blade up to 18 inches long. Not well balanced for throwing. (Simple Melee Weapon)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/stone-spear.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": ["ToA"]
+	},
+	{
+		"name": "+1 Ammunition (per piece)",
+		"type": "weapon",
+		"rarity": "uncommon",
+		"description": "You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Ekene-Afa"]
+	},
+	{
+		"name": "+1 Shield, Wooden",
+		"type": "armor",
+		"rarity": "uncommon",
+		"description": "AC +3 (base +2, plus +1 magical bonus). A wooden shield imbued with magic. While holding this shield, you have a +1 bonus to AC in addition to the shield's normal bonus to AC.",
+		"image": "https://5e.tools/img/items/XPHB/Shield.webp",
+		"price": 450,
+		"currency": "gp",
+		"itemGrouping": ["Ekene-Afa"]
+	},
+	{
+		"name": "+1 Dagger",
+		"type": "weapon",
+		"rarity": "uncommon",
+		"description": "1d4+1 Piercing. Properties: Finesse, Light, Thrown (Range 20/60). You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+		"image": "https://5e.tools/img/items/XPHB/Dagger.webp",
+		"price": 500,
+		"currency": "gp",
+		"itemGrouping": ["Ekene-Afa"]
+	},
+	{
+		"name": "+1 Yklwa",
+		"type": "weapon",
+		"rarity": "uncommon",
+		"description": "1d8+1 Piercing. Properties: Thrown (Range 10/30). Mastery: Sap. You have a +1 bonus to attack and damage rolls made with this magic weapon. Traditional weapon of Chultan warriors. (Simple Melee Weapon)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/stone-spear.svg",
+		"price": 500,
+		"currency": "gp",
+		"itemGrouping": ["Ekene-Afa"]
+	},
+	{
+		"name": "Flying Monkey",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A domesticated flying monkey, slightly more clever and curious than a common monkey, with feathered wings spanning about 5 feet. Can be taught to obey simple commands.",
+		"image": "https://5e.tools/img/bestiary/ToA/Flying%20Monkey.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+	},
+	{
+		"name": "Giant Lizard",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained giant lizard that can be used as a mount or beast of burden.",
+		"image": "https://5e.tools/img/bestiary/XMM/Lizard.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+	},
+	{
+		"name": "Hadrosaurus",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained hadrosaurus, a semi-quadrupedal herbivore recognizable by its bony head crests. Can carry a Small or Medium rider.",
+		"image": "https://5e.tools/img/bestiary/tokens/VGM/Hadrosaurus.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+	},
+	{
+		"name": "Ankylosaurus",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained ankylosaurus, a heavily armored dinosaur with a devastating tail club.",
+		"image": "https://5e.tools/img/bestiary/XMM/Ankylosaurus.webp",
+		"price": 250,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+	},
+	{
+		"name": "Deinonychus",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained deinonychus, a larger cousin of the velociraptor. An agile and aggressive predator.",
+		"image": "https://5e.tools/img/bestiary/tokens/VGM/Deinonychus.webp",
+		"price": 250,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+	},
+	{
+		"name": "Flying Snake",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained flying snake, a brightly colored serpent with wing-like fins that allow it to glide through the air.",
+		"image": "https://5e.tools/img/bestiary/XMM/Flying%20Snake.webp",
+		"price": 250,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a"]
+	},
+	{
+		"name": "Triceratops",
+		"type": "animal",
+		"rarity": "common",
+		"description": "A trained triceratops, a massive three-horned dinosaur with a protective bony frill.",
+		"image": "https://5e.tools/img/bestiary/XMM/Triceratops.webp",
+		"price": 500,
+		"currency": "gp",
+		"itemGrouping": ["Ifan Talro'a", "Base Items"]
 	}
 ]
