@@ -5,10 +5,10 @@ export const POPOVER_STORE_ID = `${EXTENSION_ID}/storefront`;
 
 export const RARITY_COLORS: Record<string, string> = {
   common: "#6b6b6b",
-  uncommon: "#1a7a1a",
-  rare: "#1a3a7a",
-  "very rare": "#5a1a7a",
-  legendary: "#7a4a1a",
+  uncommon: "#2ecc71",
+  rare: "#3498db",
+  "very rare": "#9b59b6",
+  legendary: "#e67e22",
 };
 
 export const CURRENCY_COLORS: Record<string, string> = {
