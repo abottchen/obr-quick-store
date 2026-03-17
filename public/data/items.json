@@ -1,362 +1,512 @@
 [
-  {
-    "name": "Longsword",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A versatile martial weapon with a straight, double-edged blade. Deals 1d8 slashing damage (1d10 two-handed).",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/broadsword.svg",
-    "price": 15,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Shortbow",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A simple ranged weapon. Deals 1d6 piercing damage. Range 80/320.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/bowman.svg",
-    "price": 25,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Greataxe",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A heavy martial weapon favored by barbarians. Deals 1d12 slashing damage.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/battle-axe.svg",
-    "price": 30,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Dagger",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A simple melee weapon with the finesse, light, and thrown properties. Deals 1d4 piercing damage.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/broad-dagger.svg",
-    "price": 2,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Sling",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A simple ranged weapon. Deals 1d4 bludgeoning damage. Range 30/120.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/slingshot.svg",
-    "price": 1,
-    "currency": "sp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Dart (20)",
-    "type": "Weapon",
-    "rarity": "common",
-    "description": "A bundle of 20 simple ranged weapons. Each deals 1d4 piercing damage. Range 20/60.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/dart.svg",
-    "price": 5,
-    "currency": "cp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Chain Mail",
-    "type": "Armor",
-    "rarity": "common",
-    "description": "Made of interlocking metal rings. AC 16, requires Str 13. Disadvantage on Stealth.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/chest-armor.svg",
-    "price": 75,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Leather Armor",
-    "type": "Armor",
-    "rarity": "common",
-    "description": "The breastpiece and shoulder protectors are made of leather. AC 11 + Dex modifier.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/leather-armor.svg",
-    "price": 10,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Shield",
-    "type": "Armor",
-    "rarity": "common",
-    "description": "A wooden or metal shield carried in one hand. +2 AC.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/viking-shield.svg",
-    "price": 10,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Studded Leather",
-    "type": "Armor",
-    "rarity": "common",
-    "description": "Tough but flexible leather reinforced with rivets. AC 12 + Dex modifier.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/armor-vest.svg",
-    "price": 45,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Padded Armor",
-    "type": "Armor",
-    "rarity": "common",
-    "description": "Quilted layers of cloth and batting. AC 11 + Dex modifier. Disadvantage on Stealth.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/abdominal-armor.svg",
-    "price": 5,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Healing Potion",
-    "type": "Potion",
-    "rarity": "common",
-    "description": "A vial of red liquid that shimmers when agitated. Restores 2d4+2 hit points when consumed.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/health-potion.svg",
-    "price": 50,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Greater Healing Potion",
-    "type": "Potion",
-    "rarity": "uncommon",
-    "description": "A vial of bright red liquid. Restores 4d4+4 hit points when consumed.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/magic-potion.svg",
-    "price": 150,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Antitoxin",
-    "type": "Potion",
-    "rarity": "common",
-    "description": "A vial of antitoxin. Grants advantage on saving throws against poison for 1 hour.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/caro-asercion/round-potion.svg",
-    "price": 50,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Rope (50 ft)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "Hempen rope, 50 feet. Has 2 hit points and can be burst with a DC 17 Strength check.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/rope-coil.svg",
-    "price": 1,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Torch (10)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A bundle of 10 torches. Each burns for 1 hour, providing bright light in a 20-foot radius.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/celebration-fire.svg",
-    "price": 1,
-    "currency": "cp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Candle (10)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A bundle of 10 candles. Each provides bright light in a 5-foot radius for 1 hour.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/candle-light.svg",
-    "price": 1,
-    "currency": "cp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Piton (10)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A bundle of 10 iron spikes for climbing or securing ropes.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/barbed-nails.svg",
-    "price": 5,
-    "currency": "cp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Chalk (10)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A bundle of 10 pieces of chalk for marking paths and surfaces.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/chalk-outline-murder.svg",
-    "price": 1,
-    "currency": "cp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Waterskin",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A leather pouch that holds up to 4 pints of liquid.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/waterskin.svg",
-    "price": 2,
-    "currency": "sp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Bedroll",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A portable sleeping pad and blanket for resting during travel.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/sleeping-bag.svg",
-    "price": 1,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Tinderbox",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A small container with flint, fire steel, and tinder for starting fires.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/flint-spark.svg",
-    "price": 5,
-    "currency": "sp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Backpack",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A standard adventurer's backpack. Can hold 1 cubic foot or 30 pounds of gear.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/backpack.svg",
-    "price": 2,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Rations (10 days)",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "Dry foods suitable for extended travel, including jerky, dried fruit, and hardtack.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/meat.svg",
-    "price": 5,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Thieves' Tools",
-    "type": "Adventuring Gear",
-    "rarity": "common",
-    "description": "A set of picks and tools for disabling traps and opening locks. Required for Dexterity (Sleight of Hand) checks to pick locks.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/lockpicks.svg",
-    "price": 25,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Bag of Holding",
-    "type": "Wondrous Item",
-    "rarity": "uncommon",
-    "description": "This bag has an interior space considerably larger than its outside dimensions. It can hold up to 500 pounds, not exceeding a volume of 64 cubic feet.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/knapsack.svg",
-    "price": 500,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Cloak of Protection",
-    "type": "Wondrous Item",
-    "rarity": "uncommon",
-    "description": "You gain a +1 bonus to AC and saving throws while you wear this cloak. Requires attunement.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/cape.svg",
-    "price": 750,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Flame Tongue",
-    "type": "Weapon",
-    "rarity": "rare",
-    "description": "When you speak this sword's command word, flames erupt from the blade. While ablaze, it deals an extra 2d6 fire damage.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/bloody-sword.svg",
-    "price": 5000,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Staff of Power",
-    "type": "Weapon",
-    "rarity": "very rare",
-    "description": "This staff grants a +2 bonus to AC, saving throws, and spell attack rolls. It has 20 charges for casting spells. Requires attunement by a sorcerer, warlock, or wizard.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/delapouite/crescent-staff.svg",
-    "price": 15000,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  },
-  {
-    "name": "Vorpal Sword",
-    "type": "Weapon",
-    "rarity": "legendary",
-    "description": "You gain a +3 bonus to attack and damage rolls. On a roll of 20, it cuts off one of the target's heads.",
-    "image": "https://raw.githubusercontent.com/game-icons/icons/master/lorc/pointy-sword.svg",
-    "price": 50000,
-    "currency": "gp",
-    "itemGrouping": [
-      "test entry"
-    ]
-  }
+	{
+		"name": "Padded Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 11 + Dex modifier. Stealth: Disadvantage. Padded armor consists of quilted layers of cloth and batting. (Light Armor — 1 Minute to Don or Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Padded%20Armor.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Leather Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 11 + Dex modifier. The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials. (Light Armor — 1 Minute to Don or Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Leather%20Armor.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Studded Leather Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 12 + Dex modifier. Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes. (Light Armor — 1 Minute to Don or Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Studded%20Leather%20Armor.webp",
+		"price": 45,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Hide Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 12 + Dex modifier (max 2). This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor. (Medium Armor — 5 Minutes to Don, 1 Minute to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Hide%20Armor.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Chain Shirt",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 13 + Dex modifier (max 2). Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. This armor offers modest protection to the wearer's upper body and allows the sound of the rings rubbing against one another to be muffled by outer layers. (Medium Armor — 5 Minutes to Don, 1 Minute to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Chain%20Shirt.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Scale Mail",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 14 + Dex modifier (max 2). Stealth: Disadvantage. This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets. (Medium Armor — 5 Minutes to Don, 1 Minute to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Scale%20Mail.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Breastplate",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 14 + Dex modifier (max 2). This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered. (Medium Armor — 5 Minutes to Don, 1 Minute to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Breastplate.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Half Plate Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 15 + Dex modifier (max 2). Stealth: Disadvantage. Half plate consists of shaped metal plates that cover most of the wearer's body. It does not include leg protection beyond simple greaves that are attached with leather straps. (Medium Armor — 5 Minutes to Don, 1 Minute to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Half%20Plate%20Armor.webp",
+		"price": 750,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Ring Mail",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 14. Stealth: Disadvantage. This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor. (Heavy Armor — 10 Minutes to Don, 5 Minutes to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Ring%20Mail.webp",
+		"price": 90,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Chain Mail",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 16. Strength: 13. Stealth: Disadvantage. Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets. (Heavy Armor — 10 Minutes to Don, 5 Minutes to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Chain%20Mail.webp",
+		"price": 225,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Splint Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 17. Strength: 15. Stealth: Disadvantage. This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints. (Heavy Armor — 10 Minutes to Don, 5 Minutes to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Splint%20Armor.webp",
+		"price": 600,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Plate Armor",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC 18. Strength: 15. Stealth: Disadvantage. Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body. (Heavy Armor — 10 Minutes to Don, 5 Minutes to Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Plate%20Armor.webp",
+		"price": 4500,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Shield",
+		"type": "armor",
+		"rarity": "common",
+		"description": "AC +2. A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time. (Utilize Action to Don or Doff)",
+		"image": "https://5e.tools/img/items/XPHB/Shield.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Club",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Bludgeoning. Properties: Light. Mastery: Slow. Weight: 2 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Club.webp",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Dagger",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Piercing. Properties: Finesse, Light, Thrown (Range 20/60). Mastery: Nick. Weight: 1 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Dagger.webp",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Greatclub",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Bludgeoning. Properties: Two-Handed. Mastery: Push. Weight: 10 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Greatclub.webp",
+		"price": 2,
+		"currency": "sp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Handaxe",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Slashing. Properties: Light, Thrown (Range 20/60). Mastery: Vex. Weight: 2 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Handaxe.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Javelin",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Piercing. Properties: Thrown (Range 30/120). Mastery: Slow. Weight: 2 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Javelin.webp",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Light Hammer",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Bludgeoning. Properties: Light, Thrown (Range 20/60). Mastery: Nick. Weight: 2 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Light%20Hammer.webp",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Mace",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Bludgeoning. Mastery: Sap. Weight: 4 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Mace.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Quarterstaff",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Bludgeoning. Properties: Versatile (1d8). Mastery: Topple. Weight: 4 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
+		"price": 2,
+		"currency": "sp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Sickle",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Slashing. Properties: Light. Mastery: Nick. Weight: 2 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Sickle.webp",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Spear",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Piercing. Properties: Thrown (Range 20/60), Versatile (1d8). Mastery: Sap. Weight: 3 lb. (Simple Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Spear.webp",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Dart",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Piercing. Properties: Finesse, Thrown (Range 20/60). Mastery: Vex. Weight: 1/4 lb. (Simple Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Dart.webp",
+		"price": 5,
+		"currency": "cp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Light Crossbow",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Ammunition (Range 80/320; Bolt), Loading, Two-Handed. Mastery: Slow. Weight: 5 lb. (Simple Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Light%20Crossbow.webp",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Shortbow",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Piercing. Properties: Ammunition (Range 80/320; Arrow), Two-Handed. Mastery: Vex. Weight: 2 lb. (Simple Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Shortbow.webp",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Sling",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Bludgeoning. Properties: Ammunition (Range 30/120; Bullet). Mastery: Slow. (Simple Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Sling.webp",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Battleaxe",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Slashing. Properties: Versatile (1d10). Mastery: Topple. Weight: 4 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Battleaxe.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Flail",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Bludgeoning. Mastery: Sap. Weight: 2 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Flail.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Glaive",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Slashing. Properties: Heavy, Reach, Two-Handed. Mastery: Graze. Weight: 6 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Glaive.webp",
+		"price": 20,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Greataxe",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d12 Slashing. Properties: Heavy, Two-Handed. Mastery: Cleave. Weight: 7 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Greataxe.webp",
+		"price": 30,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Greatsword",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "2d6 Slashing. Properties: Heavy, Two-Handed. Mastery: Graze. Weight: 6 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Greatsword.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Halberd",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Slashing. Properties: Heavy, Reach, Two-Handed. Mastery: Cleave. Weight: 6 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Halberd.webp",
+		"price": 20,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Lance",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Piercing. Properties: Heavy, Reach, Two-Handed (unless mounted). Mastery: Topple. Weight: 6 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Lance.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Longsword",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Slashing. Properties: Versatile (1d10). Mastery: Sap. Weight: 3 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Longsword.webp",
+		"price": 15,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Maul",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "2d6 Bludgeoning. Properties: Heavy, Two-Handed. Mastery: Topple. Weight: 10 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Maul.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Morningstar",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Mastery: Sap. Weight: 4 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Morningstar.webp",
+		"price": 15,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Pike",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Piercing. Properties: Heavy, Reach, Two-Handed. Mastery: Push. Weight: 18 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Pike.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Rapier",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Finesse. Mastery: Vex. Weight: 2 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Rapier.webp",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Scimitar",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Slashing. Properties: Finesse, Light. Mastery: Nick. Weight: 3 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Scimitar.webp",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Shortsword",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Piercing. Properties: Finesse, Light. Mastery: Vex. Weight: 2 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Shortsword.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Trident",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Thrown (Range 20/60), Versatile (1d10). Mastery: Topple. Weight: 4 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Trident.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "War Pick",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Versatile (1d10). Mastery: Sap. Weight: 2 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/War%20Pick.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Warhammer",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Bludgeoning. Properties: Versatile (1d10). Mastery: Push. Weight: 5 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Warhammer.webp",
+		"price": 15,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Whip",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d4 Slashing. Properties: Finesse, Reach. Mastery: Slow. Weight: 3 lb. (Martial Melee Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Whip.webp",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Blowgun",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1 Piercing. Properties: Ammunition (Range 25/100; Needle), Loading. Mastery: Vex. Weight: 1 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Blowgun.webp",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Hand Crossbow",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d6 Piercing. Properties: Ammunition (Range 30/120; Bolt), Light, Loading. Mastery: Vex. Weight: 3 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Hand%20Crossbow.webp",
+		"price": 75,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Heavy Crossbow",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Piercing. Properties: Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed. Mastery: Push. Weight: 18 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Heavy%20Crossbow.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Longbow",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d8 Piercing. Properties: Ammunition (Range 150/600; Arrow), Heavy, Two-Handed. Mastery: Slow. Weight: 2 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Longbow.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Musket",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d12 Piercing. Properties: Ammunition (Range 40/120; Bullet), Loading, Two-Handed. Mastery: Slow. Weight: 10 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Musket.webp",
+		"price": 500,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	},
+	{
+		"name": "Pistol",
+		"type": "weapon",
+		"rarity": "common",
+		"description": "1d10 Piercing. Properties: Ammunition (Range 30/90; Bullet), Loading. Mastery: Vex. Weight: 3 lb. (Martial Ranged Weapon)",
+		"image": "https://5e.tools/img/items/XPHB/Pistol.webp",
+		"price": 250,
+		"currency": "gp",
+		"itemGrouping": ["Base Items"]
+	}
 ]

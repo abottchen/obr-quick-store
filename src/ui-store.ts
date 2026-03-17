@@ -1,20 +1,23 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 import { onStoreMetadataChange, setStoreMetadata, getStoreMetadata } from "./metadata";
+import { fetchCatalog } from "./catalog";
 import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
 import type { CurrencyBreakdown } from "./cart";
-import type { QuickStoreMetadata, StoreItem, CartEntry } from "./types";
+import type { StoreData, StoreItem, CartEntry } from "./types";
 
 let isMinimized = false;
 let descriptionPopup: HTMLElement | null = null;
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
-  const data = await getStoreMetadata();
+  const meta = await getStoreMetadata();
+  const catalog = await fetchCatalog(meta.config.catalogUrl);
   const role = await OBR.player.getRole();
-  renderStorefront(container, data, role === "GM");
+  renderStorefront(container, { catalog, ...meta }, role === "GM");
 
-  onStoreMetadataChange((updated) => {
-    renderStorefront(container, updated, role === "GM");
+  onStoreMetadataChange(async (updated) => {
+    const freshCatalog = await fetchCatalog(updated.config.catalogUrl);
+    renderStorefront(container, { catalog: freshCatalog, ...updated }, role === "GM");
   });
 
   OBR.broadcast.onMessage(BROADCAST_CHANNEL, (event) => {
@@ -45,7 +48,7 @@ function renderBreakdown(breakdown: CurrencyBreakdown): string {
   return parts.length > 0 ? parts.join(" ") : currencySpan(0, "gp");
 }
 
-function getActiveItems(data: QuickStoreMetadata): StoreItem[] {
+function getActiveItems(data: StoreData): StoreItem[] {
   const active = new Set(data.config.activeGroupings);
   return data.catalog.filter((item) => item.itemGrouping.some((g) => active.has(g)));
 }
@@ -62,7 +65,7 @@ function groupItemsByGrouping(items: StoreItem[]): Map<string, StoreItem[]> {
 
 function renderStorefront(
   container: HTMLElement,
-  data: QuickStoreMetadata,
+  data: StoreData,
   isGM: boolean
 ): void {
   const items = getActiveItems(data);
@@ -206,7 +209,7 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
 
 function bindStorefrontEvents(
   container: HTMLElement,
-  data: QuickStoreMetadata,
+  data: StoreData,
   isGM: boolean
 ): void {
   container.querySelector("#minimize-btn")?.addEventListener("click", () => {

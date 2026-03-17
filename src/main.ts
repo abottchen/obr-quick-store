@@ -3,6 +3,7 @@ import { BASE_STYLES } from "./styles";
 import { CONFIG_STYLES } from "./styles-config";
 import { renderConfigUI, renderPlayerMessage } from "./ui-config";
 import { getStoreMetadata, onStoreMetadataChange } from "./metadata";
+import { fetchCatalog } from "./catalog";
 import { BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 
 OBR.onReady(async () => {
@@ -22,8 +23,8 @@ OBR.onReady(async () => {
     }
   });
 
-  const data = await getStoreMetadata();
-  if (data.config.isOpen) {
+  const meta = await getStoreMetadata();
+  if (meta.config.isOpen) {
     openStorefront();
   }
 
@@ -32,12 +33,12 @@ OBR.onReady(async () => {
     return;
   }
 
-  renderConfigUI(app, data);
+  const catalog = await fetchCatalog(meta.config.catalogUrl);
+  renderConfigUI(app, { catalog, ...meta });
 
-  onStoreMetadataChange((updated) => {
-    if (role === "GM") {
-      renderConfigUI(app, updated);
-    }
+  onStoreMetadataChange(async (updated) => {
+    const freshCatalog = await fetchCatalog(updated.config.catalogUrl);
+    renderConfigUI(app, { catalog: freshCatalog, ...updated });
   });
 });
 

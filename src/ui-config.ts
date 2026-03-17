@@ -1,22 +1,22 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { getStoreMetadata, setStoreMetadata } from "./metadata";
 import { generateNpcName, generateStoreName } from "./names";
-import { setupImportHandler } from "./import-catalog";
+import { fetchCatalog, clearCatalogCache } from "./catalog";
 import { clearCart } from "./cart";
 import { BROADCAST_CHANNEL, METADATA_KEY } from "./constants";
-import type { QuickStoreMetadata } from "./types";
+import type { StoreData } from "./types";
 
-function getGroupings(data: QuickStoreMetadata): string[] {
+function getGroupings(data: StoreData): string[] {
   const groupings = new Set(data.catalog.flatMap((item) => item.itemGrouping));
   return [...groupings].sort();
 }
 
 function renderGroupingsChecklist(
-  data: QuickStoreMetadata
+  data: StoreData
 ): string {
   const groupings = getGroupings(data);
   if (groupings.length === 0) {
-    return `<p class="no-catalog">No catalog imported yet. Import items to get started.</p>`;
+    return `<p class="no-catalog">No catalog loaded. Check the catalog URL below.</p>`;
   }
   return groupings
     .map(
@@ -31,7 +31,7 @@ function renderGroupingsChecklist(
 
 export function renderConfigUI(
   container: HTMLElement,
-  data: QuickStoreMetadata
+  data: StoreData
 ): void {
   const statusClass = data.config.isOpen ? "open" : "closed";
   const statusText = data.config.isOpen ? "Store is open" : "Store is closed";
@@ -41,7 +41,6 @@ export function renderConfigUI(
       <div class="config-header-row">
         <h1>Quick Store</h1>
         <div class="config-header-actions">
-          <button class="btn-icon" id="import-btn" title="Import Catalog">&#x1F4C1;</button>
           ${
             data.config.isOpen
               ? `<button class="btn-icon btn-icon-danger" id="close-store" title="Close Store">&#x23F9;</button>`
@@ -55,6 +54,15 @@ export function renderConfigUI(
     <div class="store-status ${statusClass}">
       <span class="status-dot"></span>
       <span>${statusText}</span>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Catalog URL</div>
+      <div class="input-row">
+        <input type="text" id="catalog-url" value="${escapeAttr(data.config.catalogUrl)}" placeholder="URL to catalog JSON..." />
+        <button class="btn-secondary btn-small" id="refresh-catalog-btn" title="Refresh Catalog">&#x21BB;</button>
+      </div>
+      <div style="font-size: 11px; color: #888; margin-top: 4px;">${data.catalog.length} items loaded</div>
     </div>
 
     <div class="section">
@@ -96,8 +104,6 @@ export function renderConfigUI(
       </div>
     </div>
 
-    <input type="file" id="file-input" accept=".json" style="display: none" />
-
     <div class="metadata-overlay" id="metadata-overlay" style="display: none">
       <div class="metadata-modal">
         <div class="metadata-modal-header">
@@ -114,36 +120,47 @@ export function renderConfigUI(
 
 function bindConfigEvents(
   container: HTMLElement,
-  data: QuickStoreMetadata
+  data: StoreData
 ): void {
   const storeNameInput = container.querySelector<HTMLInputElement>("#store-name")!;
   const npcNameInput = container.querySelector<HTMLInputElement>("#npc-name")!;
   const priceInput = container.querySelector<HTMLInputElement>("#price-adjustment")!;
-  const fileInput = container.querySelector<HTMLInputElement>("#file-input")!;
 
   container.querySelector("#random-store-name")!.addEventListener("click", () => {
     storeNameInput.value = generateStoreName();
-    saveConfig(container, data);
+    saveConfig(container);
   });
 
   container.querySelector("#random-npc-name")!.addEventListener("click", () => {
     npcNameInput.value = generateNpcName();
-    saveConfig(container, data);
+    saveConfig(container);
   });
 
-  storeNameInput.addEventListener("change", () => saveConfig(container, data));
-  npcNameInput.addEventListener("change", () => saveConfig(container, data));
-  priceInput.addEventListener("change", () => saveConfig(container, data));
+  storeNameInput.addEventListener("change", () => saveConfig(container));
+  npcNameInput.addEventListener("change", () => saveConfig(container));
+  priceInput.addEventListener("change", () => saveConfig(container));
 
   container.querySelectorAll<HTMLInputElement>("[data-grouping]").forEach((cb) => {
-    cb.addEventListener("change", () => saveConfig(container, data));
+    cb.addEventListener("change", () => saveConfig(container));
+  });
+
+  container.querySelector<HTMLInputElement>("#catalog-url")!
+    .addEventListener("change", () => saveConfig(container));
+
+  container.querySelector("#refresh-catalog-btn")!.addEventListener("click", async () => {
+    await saveConfig(container);
+    clearCatalogCache();
+    const meta = await getStoreMetadata();
+    const catalog = await fetchCatalog(meta.config.catalogUrl, true);
+    await OBR.notification.show(`Loaded ${catalog.length} items.`, "SUCCESS");
+    renderConfigUI(container, { catalog, ...meta });
   });
 
   const openBtn = container.querySelector("#open-store");
   const closeBtn = container.querySelector("#close-store");
 
   openBtn?.addEventListener("click", async () => {
-    await saveConfig(container, data);
+    await saveConfig(container);
     await setStoreMetadata({
       config: { ...(await getStoreMetadata()).config, isOpen: true },
     });
@@ -166,15 +183,6 @@ function bindConfigEvents(
     );
   });
 
-  container.querySelector("#import-btn")!.addEventListener("click", () => {
-    fileInput.click();
-  });
-
-  setupImportHandler(fileInput, async () => {
-    const fresh = await getStoreMetadata();
-    renderConfigUI(container, fresh);
-  });
-
   const overlay = container.querySelector<HTMLElement>("#metadata-overlay")!;
   const modalBody = container.querySelector<HTMLElement>("#metadata-modal-body")!;
 
@@ -195,15 +203,14 @@ function bindConfigEvents(
   container.querySelector("#clear-metadata-btn")!.addEventListener("click", async () => {
     await OBR.room.setMetadata({ [METADATA_KEY]: undefined });
     await OBR.notification.show("Metadata cleared.", "SUCCESS");
-    const fresh = await getStoreMetadata();
-    renderConfigUI(container, fresh);
+    const meta = await getStoreMetadata();
+    const catalog = await fetchCatalog(meta.config.catalogUrl);
+    renderConfigUI(container, { catalog, ...meta });
   });
 }
 
-async function saveConfig(
-  container: HTMLElement,
-  _data: QuickStoreMetadata
-): Promise<void> {
+async function saveConfig(container: HTMLElement): Promise<void> {
+  const catalogUrl = container.querySelector<HTMLInputElement>("#catalog-url")!.value;
   const storeName = container.querySelector<HTMLInputElement>("#store-name")!.value;
   const npcName = container.querySelector<HTMLInputElement>("#npc-name")!.value;
   const priceAdjustment = parseInt(
@@ -220,6 +227,7 @@ async function saveConfig(
   await setStoreMetadata({
     config: {
       ...current.config,
+      catalogUrl,
       storeName,
       npcName,
       priceAdjustment,

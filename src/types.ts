@@ -13,6 +13,7 @@ export interface StoreItem {
 }
 
 export interface StoreConfig {
+  catalogUrl: string;
   activeGroupings: string[];
   priceAdjustment: number;
   npcName: string;
@@ -35,6 +36,11 @@ export interface CartState {
 }
 
 export interface QuickStoreMetadata {
+  config: StoreConfig;
+  cart: CartState;
+}
+
+export interface StoreData {
   catalog: StoreItem[];
   config: StoreConfig;
   cart: CartState;

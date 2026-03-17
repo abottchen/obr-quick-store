@@ -18,7 +18,10 @@ export const CURRENCY_COLORS: Record<string, string> = {
   pp: "#d0d0d8",
 };
 
+export const DEFAULT_CATALOG_URL = "./data/items.json";
+
 export const DEFAULT_CONFIG = {
+  catalogUrl: DEFAULT_CATALOG_URL,
   activeGroupings: [] as string[],
   priceAdjustment: 100,
   npcName: "",
