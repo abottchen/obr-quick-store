@@ -25,7 +25,7 @@ The extension runs in two separate popover windows, each with its own HTML entry
 
 ### State Management
 
-All shared state lives in **OBR room metadata** under key `com.abottchen.obr-quick-store/data`, shaped as `QuickStoreMetadata` (defined in `types.ts`): catalog, config, and cart. There is no external state library — `metadata.ts` wraps get/set/subscribe on OBR's metadata API.
+Config and cart state live in **OBR room metadata** under key `com.abottchen.obr-quick-store/data`, shaped as `QuickStoreMetadata` (defined in `types.ts`). The item catalog is **not** stored in room metadata (due to OBR's 16KB metadata limit) — it is fetched via HTTP from a configurable URL (default: `./data/items.json` on GitHub Pages). The `catalog.ts` module handles fetching, validation, and in-memory caching with cache-busting support. The composite `StoreData` type combines the fetched catalog with metadata for rendering.
 
 Inter-client signaling (open/close store) uses OBR's broadcast channel (`com.abottchen.obr-quick-store/store-control`).
 
@@ -33,13 +33,13 @@ Inter-client signaling (open/close store) uses OBR's broadcast channel (`com.abo
 
 | Module | Role |
 |--------|------|
-| `metadata.ts` | Get/set/subscribe to room metadata (the single source of truth) |
+| `metadata.ts` | Get/set/subscribe to room metadata (config + cart) |
+| `catalog.ts` | Fetch, validate, and cache the item catalog from a remote URL |
 | `ui-config.ts` | GM config panel rendering and event binding |
 | `ui-store.ts` | Storefront rendering: item list (grouped by `type`), cart, descriptions |
 | `cart.ts` | Cart add/remove, currency conversion (pp/gp/sp/cp ↔ copper base), subtotals |
-| `import-catalog.ts` | JSON catalog import with field validation |
-| `types.ts` | All shared interfaces |
-| `constants.ts` | Extension ID, rarity/currency color maps, default config |
+| `types.ts` | All shared interfaces (`StoreItem`, `QuickStoreMetadata`, `StoreData`, etc.) |
+| `constants.ts` | Extension ID, rarity/currency color maps, default config, default catalog URL |
 | `styles.ts`, `styles-config.ts`, `styles-store.ts` | CSS-in-JS strings injected at runtime |
 
 ### Data Model

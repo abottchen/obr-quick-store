@@ -9,7 +9,7 @@ An [Owlbear Rodeo](https://www.owlbear.rodeo/) extension that lets GMs present i
 - **Shared Cart** — Players click items to add them to a synced cart with per-player subtotals and a grand total
 - **Item Descriptions** — Right-click any item card to view its full description
 - **Minimize/Maximize** — Each player can collapse the storefront to a title bar without affecting others
-- **Catalog Import** — Upload a JSON file to define your own item catalog
+- **Remote Catalog** — Catalog is fetched from a configurable URL (defaults to a bundled JSON file on GitHub Pages)
 
 ## Installation
 
@@ -25,7 +25,7 @@ https://abottchen.github.io/obr-quick-store/manifest.json
 ### As the GM
 
 1. Click the **Quick Store** button in the toolbar to open the configuration panel
-2. Import a catalog JSON file or use the built-in starter items
+2. The catalog URL defaults to the bundled `data/items.json` — change it to point to a different JSON file if needed, then click the refresh button to reload
 3. Select which item groups to include in the store
 4. Set a price adjustment percentage (e.g., 150% for a markup, 75% for a discount)
 5. Enter or randomize the store name and shopkeeper name
@@ -42,7 +42,7 @@ https://abottchen.github.io/obr-quick-store/manifest.json
 
 ## Catalog Format
 
-Import a JSON file containing an array of items:
+The catalog is a JSON file containing an array of items, served from a URL. The default catalog is bundled at `public/data/items.json` and deployed to GitHub Pages. To customize, edit that file or host your own and update the catalog URL in the config panel.
 
 ```json
 [

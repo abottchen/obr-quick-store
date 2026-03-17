@@ -82,7 +82,7 @@ function renderStorefront(
       <div class="store-header">
         <div class="store-header-info">
           <h1>${escape(data.config.storeName || "Shop")}</h1>
-          <p>${escape(data.config.npcName || "Shopkeeper")} (${data.catalog.length} items in catalog)</p>
+          <p>${escape(data.config.npcName || "Shopkeeper")}</p>
         </div>
         <div class="store-header-controls">
           ${isGM ? `<button class="btn-icon btn-small" id="close-store-btn" title="Close Store">&#x2715;</button>` : ""}

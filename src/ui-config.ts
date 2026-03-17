@@ -3,7 +3,7 @@ import { getStoreMetadata, setStoreMetadata } from "./metadata";
 import { generateNpcName, generateStoreName } from "./names";
 import { fetchCatalog, clearCatalogCache } from "./catalog";
 import { clearCart } from "./cart";
-import { BROADCAST_CHANNEL, METADATA_KEY } from "./constants";
+import { BROADCAST_CHANNEL } from "./constants";
 import type { StoreData } from "./types";
 
 function getGroupings(data: StoreData): string[] {
@@ -96,23 +96,6 @@ export function renderConfigUI(
       </div>
     </div>
 
-    <div class="section debug-section">
-      <div class="section-title">Debug</div>
-      <div class="input-row">
-        <button class="btn-secondary btn-small" id="view-metadata-btn">View Metadata</button>
-        <button class="btn-secondary btn-small btn-danger-text" id="clear-metadata-btn">Clear Metadata</button>
-      </div>
-    </div>
-
-    <div class="metadata-overlay" id="metadata-overlay" style="display: none">
-      <div class="metadata-modal">
-        <div class="metadata-modal-header">
-          <span>Room Metadata</span>
-          <button class="btn-icon" id="close-metadata-btn">&#x2715;</button>
-        </div>
-        <pre class="metadata-modal-body" id="metadata-modal-body"></pre>
-      </div>
-    </div>
   `;
 
   bindConfigEvents(container, data);
@@ -183,30 +166,6 @@ function bindConfigEvents(
     );
   });
 
-  const overlay = container.querySelector<HTMLElement>("#metadata-overlay")!;
-  const modalBody = container.querySelector<HTMLElement>("#metadata-modal-body")!;
-
-  container.querySelector("#view-metadata-btn")!.addEventListener("click", async () => {
-    const current = await getStoreMetadata();
-    modalBody.textContent = JSON.stringify(current, null, 2);
-    overlay.style.display = "flex";
-  });
-
-  container.querySelector("#close-metadata-btn")!.addEventListener("click", () => {
-    overlay.style.display = "none";
-  });
-
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) overlay.style.display = "none";
-  });
-
-  container.querySelector("#clear-metadata-btn")!.addEventListener("click", async () => {
-    await OBR.room.setMetadata({ [METADATA_KEY]: undefined });
-    await OBR.notification.show("Metadata cleared.", "SUCCESS");
-    const meta = await getStoreMetadata();
-    const catalog = await fetchCatalog(meta.config.catalogUrl);
-    renderConfigUI(container, { catalog, ...meta });
-  });
 }
 
 async function saveConfig(container: HTMLElement): Promise<void> {
