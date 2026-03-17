@@ -47,9 +47,9 @@ function openStorefront(): void {
   OBR.popover.open({
     id: POPOVER_STORE_ID,
     url: `${baseUrl}store.html`,
-    height: 600,
-    width: 500,
-    anchorPosition: { top: 100, left: window.innerWidth * 0.55 },
+    height: 900,
+    width: 750,
+    anchorPosition: { top: 50, left: window.innerWidth * 0.5 },
     anchorOrigin: { horizontal: "CENTER", vertical: "TOP" },
     disableClickAway: true,
     hidePaper: false,

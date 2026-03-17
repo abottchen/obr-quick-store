@@ -270,8 +270,8 @@ function showDescription(item: StoreItem, x: number, y: number): void {
   const popup = document.createElement("div");
   popup.className = "description-popup";
 
-  const maxX = window.innerWidth - 260;
-  const maxY = window.innerHeight - 150;
+  const maxX = window.innerWidth - 390;
+  const maxY = window.innerHeight - 225;
   popup.style.left = `${Math.min(x, maxX)}px`;
   popup.style.top = `${Math.min(y, maxY)}px`;
 
