@@ -109,4 +109,60 @@ export const CONFIG_STYLES = `
     color: #bb86fc;
     margin-bottom: 8px;
   }
+  .debug-section {
+    border-top: 1px solid #333;
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  .btn-danger-text {
+    color: #c0392b !important;
+  }
+  .btn-danger-text:hover {
+    background: rgba(192, 57, 43, 0.15) !important;
+  }
+  .metadata-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .metadata-modal {
+    background: #1e1e2e;
+    border: 1px solid #bb86fc;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+  .metadata-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid #333;
+    font-size: 13px;
+    font-weight: 600;
+    color: #bb86fc;
+  }
+  .metadata-modal-header .btn-icon {
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+  .metadata-modal-body {
+    padding: 12px;
+    overflow: auto;
+    flex: 1;
+    font-size: 11px;
+    color: #ccc;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+    font-family: monospace;
+  }
 `;
