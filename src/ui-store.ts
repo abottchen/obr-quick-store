@@ -136,7 +136,7 @@ function renderItemRows(
 
       html += `
         <div class="item-row"
-             style="border-left-color: ${color}; background: linear-gradient(to right, ${color}33 0%, transparent 60%)"
+             style="border-left-color: ${color}; background: linear-gradient(to right, ${hexToRgba(color, 0.4)} 0%, transparent 70%)"
              data-item-name="${escapeAttr(item.name)}"
              data-item-price="${price}">
           <div class="item-image" style="background: ${color}">${imageContent}</div>
@@ -298,4 +298,11 @@ function escape(str: string): string {
 
 function escapeAttr(str: string): string {
   return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
+function hexToRgba(hex: string, alpha: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
