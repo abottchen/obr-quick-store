@@ -120,7 +120,7 @@ export function renderConfigUI(
 
 function bindConfigEvents(
   container: HTMLElement,
-  data: StoreData
+  _data: StoreData
 ): void {
   const storeNameInput = container.querySelector<HTMLInputElement>("#store-name")!;
   const npcNameInput = container.querySelector<HTMLInputElement>("#npc-name")!;
