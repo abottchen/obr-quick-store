@@ -52,8 +52,6 @@ export const CONFIG_STYLES = `
     display: flex;
     flex-direction: column;
     gap: 4px;
-    max-height: 120px;
-    overflow-y: auto;
   }
   .grouping-checkbox {
     display: flex;

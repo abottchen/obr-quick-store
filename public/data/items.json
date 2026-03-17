@@ -2622,18 +2622,6 @@
 		]
 	},
 	{
-		"name": "Baba Yaga's Dancing Broom",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "Requires attunement. The archfey Baba Yaga crafted many of these magic brooms. No two appear exactly alike. While holding the broom, you can take a Magic action to transform it into an Animated Broom under your control. The broom then moves into an unoccupied space as close to you as possible. The broom acts immediately after you on your Initiative count and remains animate until you take a Bonus Action and use a command word to render it inanimate.",
-		"image": "https://5e.tools/img/items/XDMG/Baba%20Yagas%20Dancing%20Broom.webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
 		"name": "Bag of Holding",
 		"type": "wondrous item",
 		"rarity": "uncommon",
@@ -2742,18 +2730,6 @@
 		]
 	},
 	{
-		"name": "Boots of the Winterlands",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "Requires attunement. These furred boots are snug and feel warm. While wearing them, you gain the following benefits.",
-		"image": "https://5e.tools/img/items/XDMG/Boots%20of%20the%20Winterlands.webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
 		"name": "Bracers of Archery",
 		"type": "wondrous item",
 		"rarity": "uncommon",
@@ -2808,18 +2784,6 @@
 		"description": "While wearing this cap underwater, you can take a Magic action to create a bubble of air around your head. This bubble allows you to breathe normally underwater. This bubble stays with you until the cap is removed or you are no longer underwater.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
 		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Charlatan's Die",
-		"type": "wondrous item",
-		"rarity": "common",
-		"description": "Requires attunement. Whenever you roll this six-sided die, you can control which number it rolls.",
-		"image": "https://5e.tools/img/items/XDMG/Charlatans%20Die.webp",
-		"price": 100,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu - Special"
@@ -2999,18 +2963,6 @@
 		"rarity": "uncommon",
 		"description": "This small packet contains 1d6 + 4 pinches of dust. As a Utilize action, you can sprinkle a pinch of the dust over water, turning up to a 15-foot Cube [Area of Effect] of water into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible. A creature can take a Utilize action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so destroys the pellet and ends its magic.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Dust of Sneezing and Choking",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "Found in a small container, this powder resembles Dust of Disappearance, and Identify reveals it to be such. There is enough of it for one use.",
-		"image": "https://5e.tools/img/items/XDMG/Dust%20of%20Sneezing%20and%20Choking.webp",
 		"price": 400,
 		"currency": "gp",
 		"itemGrouping": [
@@ -3234,18 +3186,6 @@
 		]
 	},
 	{
-		"name": "Hag Eye",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "A Hag Eye has 3 charges. While wearing or holding this item, you can expend 1 charge to cast Darkvision (targeting yourself only) or See Invisibility. The Hag Eye regains all expended charges daily at dawn.",
-		"image": "https://5e.tools/img/items/XDMG/Hag%20Eye.webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
 		"name": "Hat of Disguise",
 		"type": "wondrous item",
 		"rarity": "uncommon",
@@ -3318,18 +3258,6 @@
 		]
 	},
 	{
-		"name": "Heward's Handy Spice Pouch",
-		"type": "wondrous item",
-		"rarity": "common",
-		"description": "This belt pouch appears empty and has 10 charges. While holding the pouch, you can take a Magic action to expend 1 charge, name any nonmagical food seasoning (such as salt, pepper, saffron, or cilantro), and remove a pinch of the desired seasoning from the pouch. A pinch is enough to season a single meal. The pouch regains 1d6 + 4 expended charges daily at dawn.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
-		"price": 100,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
 		"name": "Horn of Silent Alarm",
 		"type": "wondrous item",
 		"rarity": "common",
@@ -3395,18 +3323,6 @@
 		"rarity": "uncommon",
 		"description": "Requires attunement by by a bard. An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a 15 Wisdom saving throw or take 2d4 Psychic damage.",
 		"image": "https://5e.tools/img/items/XDMG/Mac-Fuirmidh%20Cittern.webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Keoghtom's Ointment",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.",
-		"image": "https://5e.tools/img/items/XDMG/Keoghtoms%20Ointment.webp",
 		"price": 400,
 		"currency": "gp",
 		"itemGrouping": [
@@ -3642,60 +3558,12 @@
 		]
 	},
 	{
-		"name": "Quaal's Feather Token, Anchor",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "This object looks like a feather.",
-		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Anchor).webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Quaal's Feather Token, Fan",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "This object looks like a feather.",
-		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Fan).webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Quaal's Feather Token, Tree",
-		"type": "wondrous item",
-		"rarity": "uncommon",
-		"description": "This object looks like a feather.",
-		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Tree).webp",
-		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
 		"name": "Quiver of Ehlonna",
 		"type": "wondrous item",
 		"rarity": "uncommon",
 		"description": "Each of the quiver's three compartments connects to an extradimensional space that allows the quiver to hold numerous items while never weighing more than 2 pounds. The shortest compartment can hold up to 60 Arrow, Bolt, or similar objects. The midsize compartment holds up to 18 Javelin or similar objects. The longest compartment holds up to 6 long objects, such as bows, Quarterstaff, or Spear.",
 		"image": "https://5e.tools/img/items/XDMG/Quiver%20of%20Ehlonna.webp",
 		"price": 400,
-		"currency": "gp",
-		"itemGrouping": [
-			"Wakanga O'tamu - Special"
-		]
-	},
-	{
-		"name": "Rival Coin",
-		"type": "wondrous item",
-		"rarity": "common",
-		"description": "This gold coin has a creature embossed on each side. The two depicted creatures must be famous rivals or enemies of each other. For example, a Rival Coin might show Iggwilv on one side and Mordenkainen on the other, or Venger on one side and Tiamat on the other. One of these figures is on the \"heads\" side of the coin, the other on the \"tails\" side.",
-		"image": "https://5e.tools/img/items/XDMG/Rival%20Coin.webp",
-		"price": 100,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu - Special"
