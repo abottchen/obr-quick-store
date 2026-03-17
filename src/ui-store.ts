@@ -7,6 +7,7 @@ import type { QuickStoreMetadata, StoreItem, CartEntry } from "./types";
 
 let isMinimized = false;
 let descriptionPopup: HTMLElement | null = null;
+let hoverTimeout: ReturnType<typeof setTimeout> | null = null;
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const data = await getStoreMetadata();
@@ -244,6 +245,22 @@ function bindStorefrontEvents(
       if (!item) return;
       showDescription(item, e.clientX, e.clientY);
     });
+
+    card.addEventListener("mouseenter", () => {
+      cancelHoverTimeout();
+      hoverTimeout = setTimeout(() => {
+        const itemName = card.dataset.itemName!;
+        const item = data.catalog.find((i) => i.name === itemName);
+        if (!item) return;
+        const rect = card.getBoundingClientRect();
+        showDescription(item, rect.right + 8, rect.top);
+      }, 500);
+    });
+
+    card.addEventListener("mouseleave", () => {
+      cancelHoverTimeout();
+      dismissDescription();
+    });
   });
 
   container.querySelectorAll<HTMLElement>(".cart-item-remove").forEach((btn) => {
@@ -283,7 +300,15 @@ function showDescription(item: StoreItem, x: number, y: number): void {
   descriptionPopup = popup;
 }
 
+function cancelHoverTimeout(): void {
+  if (hoverTimeout) {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = null;
+  }
+}
+
 function dismissDescription(): void {
+  cancelHoverTimeout();
   if (descriptionPopup) {
     descriptionPopup.remove();
     descriptionPopup = null;
