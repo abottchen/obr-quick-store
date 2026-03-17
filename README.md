@@ -53,6 +53,7 @@ Import a JSON file containing an array of items:
     "description": "Restores 2d4+2 hit points.",
     "image": "",
     "price": 50,
+    "currency": "gp",
     "itemGrouping": "Potions"
   }
 ]
@@ -65,7 +66,8 @@ Import a JSON file containing an array of items:
 | `rarity` | string | One of: `common`, `uncommon`, `rare`, `very rare`, `legendary` |
 | `description` | string | Shown on right-click |
 | `image` | string | URL to an item image (optional, leave empty for a placeholder) |
-| `price` | number | Base price in gold pieces |
+| `price` | number | Base price |
+| `currency` | string | One of: `gp`, `sp`, `cp`, `pp` (optional, defaults to `gp`) |
 | `itemGrouping` | string | Group name for filtering (e.g., "Weapons", "Potions") |
 
 ## Development

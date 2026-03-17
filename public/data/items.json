@@ -6,6 +6,7 @@
     "description": "A versatile martial weapon with a straight, double-edged blade. Deals 1d8 slashing damage (1d10 two-handed).",
     "image": "",
     "price": 15,
+    "currency": "gp",
     "itemGrouping": "Weapons"
   },
   {
@@ -15,6 +16,7 @@
     "description": "A simple ranged weapon. Deals 1d6 piercing damage. Range 80/320.",
     "image": "",
     "price": 25,
+    "currency": "gp",
     "itemGrouping": "Weapons"
   },
   {
@@ -24,6 +26,7 @@
     "description": "A heavy martial weapon favored by barbarians. Deals 1d12 slashing damage.",
     "image": "",
     "price": 30,
+    "currency": "gp",
     "itemGrouping": "Weapons"
   },
   {
@@ -33,6 +36,27 @@
     "description": "A simple melee weapon with the finesse, light, and thrown properties. Deals 1d4 piercing damage.",
     "image": "",
     "price": 2,
+    "currency": "gp",
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Sling",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A simple ranged weapon. Deals 1d4 bludgeoning damage. Range 30/120.",
+    "image": "",
+    "price": 1,
+    "currency": "sp",
+    "itemGrouping": "Weapons"
+  },
+  {
+    "name": "Dart (20)",
+    "type": "Weapon",
+    "rarity": "common",
+    "description": "A bundle of 20 simple ranged weapons. Each deals 1d4 piercing damage. Range 20/60.",
+    "image": "",
+    "price": 5,
+    "currency": "cp",
     "itemGrouping": "Weapons"
   },
   {
@@ -42,6 +66,7 @@
     "description": "Made of interlocking metal rings. AC 16, requires Str 13. Disadvantage on Stealth.",
     "image": "",
     "price": 75,
+    "currency": "gp",
     "itemGrouping": "Armor"
   },
   {
@@ -51,6 +76,7 @@
     "description": "The breastpiece and shoulder protectors are made of leather. AC 11 + Dex modifier.",
     "image": "",
     "price": 10,
+    "currency": "gp",
     "itemGrouping": "Armor"
   },
   {
@@ -60,6 +86,7 @@
     "description": "A wooden or metal shield carried in one hand. +2 AC.",
     "image": "",
     "price": 10,
+    "currency": "gp",
     "itemGrouping": "Armor"
   },
   {
@@ -69,6 +96,17 @@
     "description": "Tough but flexible leather reinforced with rivets. AC 12 + Dex modifier.",
     "image": "",
     "price": 45,
+    "currency": "gp",
+    "itemGrouping": "Armor"
+  },
+  {
+    "name": "Padded Armor",
+    "type": "Armor",
+    "rarity": "common",
+    "description": "Quilted layers of cloth and batting. AC 11 + Dex modifier. Disadvantage on Stealth.",
+    "image": "",
+    "price": 5,
+    "currency": "gp",
     "itemGrouping": "Armor"
   },
   {
@@ -78,6 +116,7 @@
     "description": "A vial of red liquid that shimmers when agitated. Restores 2d4+2 hit points when consumed.",
     "image": "",
     "price": 50,
+    "currency": "gp",
     "itemGrouping": "Potions"
   },
   {
@@ -87,6 +126,7 @@
     "description": "A vial of bright red liquid. Restores 4d4+4 hit points when consumed.",
     "image": "",
     "price": 150,
+    "currency": "gp",
     "itemGrouping": "Potions"
   },
   {
@@ -96,6 +136,7 @@
     "description": "A vial of antitoxin. Grants advantage on saving throws against poison for 1 hour.",
     "image": "",
     "price": 50,
+    "currency": "gp",
     "itemGrouping": "Potions"
   },
   {
@@ -105,6 +146,7 @@
     "description": "Hempen rope, 50 feet. Has 2 hit points and can be burst with a DC 17 Strength check.",
     "image": "",
     "price": 1,
+    "currency": "gp",
     "itemGrouping": "Adventuring Gear"
   },
   {
@@ -114,6 +156,67 @@
     "description": "A bundle of 10 torches. Each burns for 1 hour, providing bright light in a 20-foot radius.",
     "image": "",
     "price": 1,
+    "currency": "cp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Candle (10)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A bundle of 10 candles. Each provides bright light in a 5-foot radius for 1 hour.",
+    "image": "",
+    "price": 1,
+    "currency": "cp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Piton (10)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A bundle of 10 iron spikes for climbing or securing ropes.",
+    "image": "",
+    "price": 5,
+    "currency": "cp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Chalk (10)",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A bundle of 10 pieces of chalk for marking paths and surfaces.",
+    "image": "",
+    "price": 1,
+    "currency": "cp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Waterskin",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A leather pouch that holds up to 4 pints of liquid.",
+    "image": "",
+    "price": 2,
+    "currency": "sp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Bedroll",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A portable sleeping pad and blanket for resting during travel.",
+    "image": "",
+    "price": 1,
+    "currency": "gp",
+    "itemGrouping": "Adventuring Gear"
+  },
+  {
+    "name": "Tinderbox",
+    "type": "Adventuring Gear",
+    "rarity": "common",
+    "description": "A small container with flint, fire steel, and tinder for starting fires.",
+    "image": "",
+    "price": 5,
+    "currency": "sp",
     "itemGrouping": "Adventuring Gear"
   },
   {
@@ -123,6 +226,7 @@
     "description": "A standard adventurer's backpack. Can hold 1 cubic foot or 30 pounds of gear.",
     "image": "",
     "price": 2,
+    "currency": "gp",
     "itemGrouping": "Adventuring Gear"
   },
   {
@@ -132,6 +236,7 @@
     "description": "Dry foods suitable for extended travel, including jerky, dried fruit, and hardtack.",
     "image": "",
     "price": 5,
+    "currency": "gp",
     "itemGrouping": "Adventuring Gear"
   },
   {
@@ -141,6 +246,7 @@
     "description": "A set of picks and tools for disabling traps and opening locks. Required for Dexterity (Sleight of Hand) checks to pick locks.",
     "image": "",
     "price": 25,
+    "currency": "gp",
     "itemGrouping": "Adventuring Gear"
   },
   {
@@ -150,6 +256,7 @@
     "description": "This bag has an interior space considerably larger than its outside dimensions. It can hold up to 500 pounds, not exceeding a volume of 64 cubic feet.",
     "image": "",
     "price": 500,
+    "currency": "gp",
     "itemGrouping": "Wondrous Items"
   },
   {
@@ -159,6 +266,7 @@
     "description": "You gain a +1 bonus to AC and saving throws while you wear this cloak. Requires attunement.",
     "image": "",
     "price": 750,
+    "currency": "gp",
     "itemGrouping": "Wondrous Items"
   },
   {
@@ -168,6 +276,7 @@
     "description": "When you speak this sword's command word, flames erupt from the blade. While ablaze, it deals an extra 2d6 fire damage.",
     "image": "",
     "price": 5000,
+    "currency": "gp",
     "itemGrouping": "Weapons"
   },
   {
@@ -177,6 +286,7 @@
     "description": "This staff grants a +2 bonus to AC, saving throws, and spell attack rolls. It has 20 charges for casting spells. Requires attunement by a sorcerer, warlock, or wizard.",
     "image": "",
     "price": 15000,
+    "currency": "gp",
     "itemGrouping": "Wondrous Items"
   },
   {
@@ -186,6 +296,7 @@
     "description": "You gain a +3 bonus to attack and damage rolls. On a roll of 20, it cuts off one of the target's heads.",
     "image": "",
     "price": 50000,
+    "currency": "gp",
     "itemGrouping": "Weapons"
   }
 ]

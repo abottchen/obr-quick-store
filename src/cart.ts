@@ -25,6 +25,7 @@ export async function addToCart(
     entries.push({
       itemName: item.name,
       itemPrice: adjustedPrice,
+      itemCurrency: item.currency ?? "gp",
       quantity: 1,
       playerId,
       playerName,
@@ -59,15 +60,53 @@ export async function clearCart(): Promise<void> {
   await setStoreMetadata({ cart: { entries: [] } });
 }
 
-export function getPlayerSubtotal(
-  entries: CartEntry[],
-  playerId: string
-): number {
-  return entries
-    .filter((e) => e.playerId === playerId)
-    .reduce((sum, e) => sum + e.itemPrice * e.quantity, 0);
+export interface CurrencyBreakdown {
+  pp: number;
+  gp: number;
+  sp: number;
+  cp: number;
 }
 
-export function getTotal(entries: CartEntry[]): number {
-  return entries.reduce((sum, e) => sum + e.itemPrice * e.quantity, 0);
+const TO_COPPER: Record<string, number> = {
+  cp: 1,
+  sp: 10,
+  gp: 100,
+  pp: 1000,
+};
+
+function toCopper(amount: number, currency: string): number {
+  return amount * (TO_COPPER[currency] ?? 100);
+}
+
+function computeBreakdown(entries: CartEntry[]): CurrencyBreakdown {
+  let ppTotal = 0;
+  let nonPpCopper = 0;
+
+  for (const e of entries) {
+    const currency = e.itemCurrency ?? "gp";
+    const lineTotal = e.itemPrice * e.quantity;
+    if (currency === "pp") {
+      ppTotal += lineTotal;
+    } else {
+      nonPpCopper += toCopper(lineTotal, currency);
+    }
+  }
+
+  const gp = Math.floor(nonPpCopper / 100);
+  const remaining = nonPpCopper % 100;
+  const sp = Math.floor(remaining / 10);
+  const cp = remaining % 10;
+
+  return { pp: ppTotal, gp, sp, cp };
+}
+
+export function getPlayerBreakdown(
+  entries: CartEntry[],
+  playerId: string
+): CurrencyBreakdown {
+  return computeBreakdown(entries.filter((e) => e.playerId === playerId));
+}
+
+export function getTotalBreakdown(entries: CartEntry[]): CurrencyBreakdown {
+  return computeBreakdown(entries);
 }

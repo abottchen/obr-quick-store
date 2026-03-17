@@ -11,6 +11,13 @@ export const RARITY_COLORS: Record<string, string> = {
   legendary: "#7a4a1a",
 };
 
+export const CURRENCY_COLORS: Record<string, string> = {
+  gp: "#ffd700",
+  sp: "#c0c0c0",
+  cp: "#b87333",
+  pp: "#d0d0d8",
+};
+
 export const DEFAULT_CONFIG = {
   activeGroupings: [] as string[],
   priceAdjustment: 100,

@@ -1,4 +1,5 @@
 export type Rarity = "common" | "uncommon" | "rare" | "very rare" | "legendary";
+export type Currency = "gp" | "sp" | "cp" | "pp";
 
 export interface StoreItem {
   name: string;
@@ -7,6 +8,7 @@ export interface StoreItem {
   description: string;
   image: string;
   price: number;
+  currency: Currency;
   itemGrouping: string;
 }
 
@@ -21,6 +23,7 @@ export interface StoreConfig {
 export interface CartEntry {
   itemName: string;
   itemPrice: number;
+  itemCurrency: Currency;
   quantity: number;
   playerId: string;
   playerName: string;

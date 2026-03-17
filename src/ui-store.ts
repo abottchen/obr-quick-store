@@ -1,7 +1,8 @@
 import OBR from "@owlbear-rodeo/sdk";
-import { RARITY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
+import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 import { onStoreMetadataChange, setStoreMetadata, getStoreMetadata } from "./metadata";
-import { addToCart, removeOneFromCart, getPlayerSubtotal, getTotal } from "./cart";
+import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
+import type { CurrencyBreakdown } from "./cart";
 import type { QuickStoreMetadata, StoreItem, CartEntry } from "./types";
 
 let isMinimized = false;
@@ -28,6 +29,20 @@ export async function initStorefront(container: HTMLElement): Promise<void> {
 
 function adjustPrice(basePrice: number, adjustment: number): number {
   return Math.round((basePrice * adjustment) / 100);
+}
+
+function currencySpan(amount: number, currency: string): string {
+  const color = CURRENCY_COLORS[currency] ?? CURRENCY_COLORS.gp;
+  return `<span style="color: ${color}">${amount} ${currency}</span>`;
+}
+
+function renderBreakdown(breakdown: CurrencyBreakdown): string {
+  const parts: string[] = [];
+  if (breakdown.pp > 0) parts.push(currencySpan(breakdown.pp, "pp"));
+  if (breakdown.gp > 0) parts.push(currencySpan(breakdown.gp, "gp"));
+  if (breakdown.sp > 0) parts.push(currencySpan(breakdown.sp, "sp"));
+  if (breakdown.cp > 0) parts.push(currencySpan(breakdown.cp, "cp"));
+  return parts.length > 0 ? parts.join(" ") : currencySpan(0, "gp");
 }
 
 function getActiveItems(data: QuickStoreMetadata): StoreItem[] {
@@ -75,7 +90,6 @@ function renderStorefront(
         <div class="items-list-header">
           <span class="col-icon"></span>
           <span class="col-name">Name</span>
-          <span class="col-type">Type</span>
           <span class="col-price">Price</span>
           <span class="col-qty">#</span>
         </div>
@@ -123,8 +137,7 @@ function renderItemRows(
              data-item-price="${price}">
           <div class="item-image" style="background: ${color}">${imageContent}</div>
           <span class="item-name">${escape(item.name)}</span>
-          <span class="item-type">${escape(item.type)}</span>
-          <span class="item-price">${price}</span>
+          <span class="item-price">${currencySpan(price, item.currency ?? "gp")}</span>
           <span class="item-qty">${playerCartQty > 0 ? playerCartQty : ""}</span>
         </div>
       `;
@@ -149,7 +162,7 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
   for (const pid of playerIds) {
     const playerEntries = entries.filter((e) => e.playerId === pid);
     const first = playerEntries[0];
-    const subtotal = getPlayerSubtotal(entries, pid);
+    const subtotal = getPlayerBreakdown(entries, pid);
 
     html += `<div class="cart-player-group">`;
     html += `<div class="cart-player-name">
@@ -162,7 +175,7 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
         <div class="cart-item" data-cart-item="${escapeAttr(entry.itemName)}" data-cart-player="${escapeAttr(entry.playerId)}">
           <span class="cart-item-name">${escape(entry.itemName)}</span>
           <span class="cart-item-qty">x${entry.quantity}</span>
-          <span class="cart-item-price">${entry.itemPrice * entry.quantity} gp</span>
+          <span class="cart-item-price">${currencySpan(entry.itemPrice * entry.quantity, entry.itemCurrency ?? "gp")}</span>
           <button class="cart-item-remove" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}" title="Remove one">&#x2715;</button>
         </div>
       `;
@@ -171,16 +184,16 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
     html += `
       <div class="cart-subtotal">
         <span>Subtotal</span>
-        <span>${subtotal} gp</span>
+        <span>${renderBreakdown(subtotal)}</span>
       </div>
     </div>`;
   }
 
-  const total = getTotal(entries);
+  const total = getTotalBreakdown(entries);
   html += `
     <div class="cart-total">
       <span>Total</span>
-      <span>${total} gp</span>
+      <span>${renderBreakdown(total)}</span>
     </div>
   </div>`;
 

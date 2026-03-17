@@ -3,6 +3,7 @@ import { setStoreMetadata } from "./metadata";
 import type { StoreItem } from "./types";
 
 const VALID_RARITIES = ["common", "uncommon", "rare", "very rare", "legendary"];
+const VALID_CURRENCIES = ["gp", "sp", "cp", "pp"];
 
 function validateCatalog(data: unknown): data is StoreItem[] {
   if (!Array.isArray(data)) return false;
@@ -14,7 +15,8 @@ function validateCatalog(data: unknown): data is StoreItem[] {
       VALID_RARITIES.includes(item.rarity) &&
       typeof item.description === "string" &&
       typeof item.price === "number" &&
-      typeof item.itemGrouping === "string"
+      typeof item.itemGrouping === "string" &&
+      (item.currency === undefined || VALID_CURRENCIES.includes(item.currency))
   );
 }
 
