@@ -652,7 +652,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Strength. Weight: 6 lb. Utilize: Seal or pry open a door or container (DC 20). Craft: Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch. (Artisan's Tools)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hammer-and-nails.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/hammer-nails.svg",
 		"price": 8,
 		"currency": "gp",
 		"itemGrouping": [
@@ -736,7 +736,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Strength. Weight: 8 lb. Utilize: Chisel a symbol or hole in stone (DC 10). Craft: Block and Tackle. (Artisan's Tools)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/stone-crafting.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/stone-crafting.svg",
 		"price": 10,
 		"currency": "gp",
 		"itemGrouping": [
@@ -784,7 +784,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 10 lb. Utilize: Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20). Craft: Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunter's Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox. (Artisan's Tools)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tinker.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tinker.svg",
 		"price": 50,
 		"currency": "gp",
 		"itemGrouping": [
@@ -808,7 +808,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Carve a pattern in wood (DC 10). Craft: Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles. (Artisan's Tools)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/wood-axe.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/wood-axe.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -856,7 +856,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/chess-pawn.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/card-joker.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -868,7 +868,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/card-random.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/card-exchange.svg",
 		"price": 5,
 		"currency": "sp",
 		"itemGrouping": [
@@ -880,7 +880,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/card-random.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/card-exchange.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -892,7 +892,7 @@
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 3 lb. Utilize: Identify a plant (DC 10). Craft: Antitoxin, Candle, Healer's Kit, Potion of Healing.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/herb-spiral.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/flower-twirl.svg",
 		"price": 5,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1108,7 +1108,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Ammunition for firearms. Stored in a Pouch. (Ammunition)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
 		"price": 3,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1120,7 +1120,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 1 1/2 lb. Ammunition for slings. Stored in a Pouch. (Ammunition)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
 		"price": 4,
 		"currency": "cp",
 		"itemGrouping": [
@@ -1180,7 +1180,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 2 lb. A bejeweled or carved rod used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
 		"price": 10,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1204,7 +1204,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 1 lb. A bejeweled or carved wand used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
 		"price": 10,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1228,7 +1228,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 2 lb. As a Utilize action, spill to cover a 10-ft-square area within 10 ft. A creature entering for the first time on a turn must succeed on a DC 10 Dex save or fall Prone. Takes 10 minutes to recover.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1276,7 +1276,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "When rung as a Utilize action, produces a sound that can be heard up to 60 feet away.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/bell.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ringing-bell.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1360,7 +1360,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 2 lb. As a Utilize action, spread to cover a 5-ft-square area within 5 ft. A creature entering for the first time on a turn must succeed on a DC 15 Dex save or take 1 Piercing damage and have Speed reduced to 0. Takes 10 minutes to recover.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/caltrops.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/caltrops.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1516,7 +1516,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/herb-spiral.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/flower-twirl.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1540,7 +1540,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
 		"price": 10,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1780,7 +1780,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Grants Advantage on any ability check made to appraise or inspect a highly detailed item. Can light a fire with sunlight (takes about 5 minutes).",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magnifying-glass.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/magnifying-glass.svg",
 		"price": 100,
 		"currency": "gp",
 		"itemGrouping": [
@@ -1984,7 +1984,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Travel-ready food including jerky, dried fruit, hardtack, and nuts. One day's worth.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/meat.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/steak.svg",
 		"price": 5,
 		"currency": "sp",
 		"itemGrouping": [
@@ -1996,7 +1996,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 4 lb. Has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/robe.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/robe.svg",
 		"price": 1,
 		"currency": "gp",
 		"itemGrouping": [
@@ -2044,7 +2044,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Working for 1 hour, you can dig a hole that is 5 feet on each side in soil or similar material.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/trench-spade.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dig-hole.svg",
 		"price": 2,
 		"currency": "gp",
 		"itemGrouping": [
@@ -2104,7 +2104,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Objects viewed through a Spyglass are magnified to twice their size.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/spyglass.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/spyglass.svg",
 		"price": 1000,
 		"currency": "gp",
 		"itemGrouping": [
@@ -2128,7 +2128,7 @@
 		"type": "adventuring gear",
 		"rarity": "common",
 		"description": "Weight: 20 lb. Sleeps up to two Small or Medium creatures.",
-		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tent.svg",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/camping-tent.svg",
 		"price": 2,
 		"currency": "gp",
 		"itemGrouping": [
