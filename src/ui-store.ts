@@ -136,7 +136,7 @@ function renderItemRows(
 
       html += `
         <div class="item-row"
-             style="border-left-color: ${color}"
+             style="border-left-color: ${color}; background: linear-gradient(to right, ${color}33 0%, transparent 60%)"
              data-item-name="${escapeAttr(item.name)}"
              data-item-price="${price}">
           <div class="item-image" style="background: ${color}">${imageContent}</div>
