@@ -32,7 +32,10 @@ export async function fetchCatalog(
   }
 
   try {
-    const response = await fetch(url);
+    const fetchUrl = forceRefresh
+      ? `${url}${url.includes("?") ? "&" : "?"}t=${Date.now()}`
+      : url;
+    const response = await fetch(fetchUrl, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
