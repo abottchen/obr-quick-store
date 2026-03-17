@@ -1057,7 +1057,7 @@
 	},
 	{
 		"name": "Acid",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "Weight: 1 lb. As an Attack action, you can throw a vial of Acid at a creature or object within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 2d6 Acid damage.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bubbling-flask.svg",
@@ -1069,7 +1069,7 @@
 	},
 	{
 		"name": "Alchemist's Fire",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "Weight: 1 lb. As an Attack action, you can throw a flask at a creature or object within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 1d4 Fire damage and start burning.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fire-bottle.svg",
@@ -1081,7 +1081,7 @@
 	},
 	{
 		"name": "Arrows (20)",
-		"type": "adventuring gear",
+		"type": "ammunition",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Ammunition for weapons with the Ammunition property. Stored in a Quiver. (Ammunition)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
@@ -1093,7 +1093,7 @@
 	},
 	{
 		"name": "Bolts (20)",
-		"type": "adventuring gear",
+		"type": "ammunition",
 		"rarity": "common",
 		"description": "Weight: 1 1/2 lb. Ammunition for crossbows. Stored in a Crossbow Bolt Case. (Ammunition)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
@@ -1105,7 +1105,7 @@
 	},
 	{
 		"name": "Firearm Bullets (10)",
-		"type": "adventuring gear",
+		"type": "ammunition",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Ammunition for firearms. Stored in a Pouch. (Ammunition)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
@@ -1117,7 +1117,7 @@
 	},
 	{
 		"name": "Sling Bullets (20)",
-		"type": "adventuring gear",
+		"type": "ammunition",
 		"rarity": "common",
 		"description": "Weight: 1 1/2 lb. Ammunition for slings. Stored in a Pouch. (Ammunition)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
@@ -1129,7 +1129,7 @@
 	},
 	{
 		"name": "Needles (50)",
-		"type": "adventuring gear",
+		"type": "ammunition",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Ammunition for blowguns. Stored in a Pouch. (Ammunition)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/sewing-needle.svg",
@@ -1141,7 +1141,7 @@
 	},
 	{
 		"name": "Antitoxin",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/standing-potion.svg",
@@ -1153,7 +1153,7 @@
 	},
 	{
 		"name": "Crystal (Arcane Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 1 lb. A bejeweled or carved crystal used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-shine.svg",
@@ -1165,7 +1165,7 @@
 	},
 	{
 		"name": "Orb (Arcane Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 3 lb. A bejeweled or carved orb used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-ball.svg",
@@ -1177,7 +1177,7 @@
 	},
 	{
 		"name": "Rod (Arcane Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 2 lb. A bejeweled or carved rod used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
@@ -1189,7 +1189,7 @@
 	},
 	{
 		"name": "Staff (Arcane Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 4 lb. A bejeweled or carved staff used to channel arcane magic. Also functions as a Quarterstaff. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
 		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
@@ -1201,7 +1201,7 @@
 	},
 	{
 		"name": "Wand (Arcane Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 1 lb. A bejeweled or carved wand used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
@@ -1213,7 +1213,7 @@
 	},
 	{
 		"name": "Backpack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Holds up to 30 pounds within 1 cubic foot. Can also serve as a saddlebag.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -1225,7 +1225,7 @@
 	},
 	{
 		"name": "Ball Bearings",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 2 lb. As a Utilize action, spill to cover a 10-ft-square area within 10 ft. A creature entering for the first time on a turn must succeed on a DC 10 Dex save or fall Prone. Takes 10 minutes to recover.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bullets.svg",
@@ -1237,7 +1237,7 @@
 	},
 	{
 		"name": "Barrel",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 70 lb. Holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/barrel.svg",
@@ -1249,7 +1249,7 @@
 	},
 	{
 		"name": "Basket",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Holds up to 40 pounds within 2 cubic feet.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/basket.svg",
@@ -1261,7 +1261,7 @@
 	},
 	{
 		"name": "Bedroll",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 7 lb. Sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/blanket.svg",
@@ -1273,7 +1273,7 @@
 	},
 	{
 		"name": "Bell",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "When rung as a Utilize action, produces a sound that can be heard up to 60 feet away.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ringing-bell.svg",
@@ -1285,7 +1285,7 @@
 	},
 	{
 		"name": "Blanket",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 3 lb. While wrapped in a blanket, you have Advantage on saving throws against extreme cold.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/blanket.svg",
@@ -1297,7 +1297,7 @@
 	},
 	{
 		"name": "Block and Tackle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Allows you to hoist up to four times the weight you can normally lift.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/rope-coil.svg",
@@ -1309,7 +1309,7 @@
 	},
 	{
 		"name": "Book",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Contains fiction or nonfiction. Consulting an accurate nonfiction Book grants a +5 bonus to Int (Arcana, History, Nature, or Religion) checks about its topic.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/book-cover.svg",
@@ -1321,7 +1321,7 @@
 	},
 	{
 		"name": "Glass Bottle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Holds up to 1 1/2 pints.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/square-bottle.svg",
@@ -1333,7 +1333,7 @@
 	},
 	{
 		"name": "Bucket",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Holds up to half a cubic foot of contents.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/empty-wood-bucket-handle.svg",
@@ -1345,7 +1345,7 @@
 	},
 	{
 		"name": "Burglar's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 42 lb. Contains: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/knapsack.svg",
@@ -1357,7 +1357,7 @@
 	},
 	{
 		"name": "Caltrops",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 2 lb. As a Utilize action, spread to cover a 5-ft-square area within 5 ft. A creature entering for the first time on a turn must succeed on a DC 15 Dex save or take 1 Piercing damage and have Speed reduced to 0. Takes 10 minutes to recover.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/caltrops.svg",
@@ -1369,7 +1369,7 @@
 	},
 	{
 		"name": "Candle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/candle-flame.svg",
@@ -1381,7 +1381,7 @@
 	},
 	{
 		"name": "Crossbow Bolt Case",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Holds up to 20 Bolts.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
@@ -1393,7 +1393,7 @@
 	},
 	{
 		"name": "Map or Scroll Case",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Holds up to 10 sheets of paper or 5 sheets of parchment.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
@@ -1405,7 +1405,7 @@
 	},
 	{
 		"name": "Chain",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 10 lb. As a Utilize action, wrap around a Grappled/Incapacitated/Restrained creature within 5 ft (DC 13 Str Athletics). Bound creature is Restrained. Escape: DC 18 Dex (Acrobatics). Burst: DC 20 Str (Athletics).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crossed-chains.svg",
@@ -1417,7 +1417,7 @@
 	},
 	{
 		"name": "Chest",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 25 lb. Holds up to 12 cubic feet of contents.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/chest.svg",
@@ -1429,7 +1429,7 @@
 	},
 	{
 		"name": "Climber's Kit",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 12 lb. Includes boot tips, gloves, pitons, and a harness. As a Utilize action, anchor yourself; you can't fall more than 25 ft from the anchor point.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/carabiner.svg",
@@ -1441,7 +1441,7 @@
 	},
 	{
 		"name": "Fine Clothes",
-		"type": "adventuring gear",
+		"type": "clothing",
 		"rarity": "common",
 		"description": "Weight: 6 lb. Made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hanger.svg",
@@ -1453,7 +1453,7 @@
 	},
 	{
 		"name": "Traveler's Clothes",
-		"type": "adventuring gear",
+		"type": "clothing",
 		"rarity": "common",
 		"description": "Weight: 4 lb. Resilient garments designed for travel in various environments.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hanger.svg",
@@ -1465,7 +1465,7 @@
 	},
 	{
 		"name": "Component Pouch",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 2 lb. A watertight pouch filled with compartments that hold all the free Material components of your spells.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/shiny-purse.svg",
@@ -1477,7 +1477,7 @@
 	},
 	{
 		"name": "Costume",
-		"type": "adventuring gear",
+		"type": "clothing",
 		"rarity": "common",
 		"description": "Weight: 4 lb. While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/double-face-mask.svg",
@@ -1489,7 +1489,7 @@
 	},
 	{
 		"name": "Crowbar",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Using a Crowbar gives you Advantage on Strength checks where its leverage can be applied.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/crowbar.svg",
@@ -1501,7 +1501,7 @@
 	},
 	{
 		"name": "Diplomat's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 39 lb. Contains: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/briefcase.svg",
@@ -1513,7 +1513,7 @@
 	},
 	{
 		"name": "Sprig of Mistletoe (Druidic Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/flower-twirl.svg",
@@ -1525,7 +1525,7 @@
 	},
 	{
 		"name": "Wooden Staff (Druidic Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 4 lb. Carved, tied with ribbon, or painted to channel primal magic. Also functions as a Quarterstaff. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
 		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
@@ -1537,7 +1537,7 @@
 	},
 	{
 		"name": "Yew Wand (Druidic Focus)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-wand.svg",
@@ -1549,7 +1549,7 @@
 	},
 	{
 		"name": "Dungeoneer's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 55 lb. Contains: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -1561,7 +1561,7 @@
 	},
 	{
 		"name": "Entertainer's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 58 1/2 lb. Contains: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -1573,7 +1573,7 @@
 	},
 	{
 		"name": "Explorer's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 55 lb. Contains: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -1585,7 +1585,7 @@
 	},
 	{
 		"name": "Flask",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Holds up to 1 pint.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/water-flask.svg",
@@ -1597,7 +1597,7 @@
 	},
 	{
 		"name": "Grappling Hook",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 4 lb. As a Utilize action, throw at a railing, ledge, or catch within 50 ft (DC 13 Dex Acrobatics to catch). If tied to a Rope, you can then climb it.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/grapple.svg",
@@ -1609,7 +1609,7 @@
 	},
 	{
 		"name": "Healer's Kit",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 3 lb. Has ten uses. As a Utilize action, expend one use to stabilize an Unconscious creature at 0 HP without needing a Wisdom (Medicine) check.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/health-capsule.svg",
@@ -1621,7 +1621,7 @@
 	},
 	{
 		"name": "Amulet (Holy Symbol)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Worn or held. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tribal-pendant.svg",
@@ -1633,7 +1633,7 @@
 	},
 	{
 		"name": "Emblem (Holy Symbol)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Borne on fabric or a Shield. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/wax-seal.svg",
@@ -1645,7 +1645,7 @@
 	},
 	{
 		"name": "Reliquary (Holy Symbol)",
-		"type": "adventuring gear",
+		"type": "spellcasting focus",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Held. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/covered-jar.svg",
@@ -1657,7 +1657,7 @@
 	},
 	{
 		"name": "Holy Water",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "Weight: 1 lb. As an Attack action, throw at a creature within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 2d8 Radiant damage if it is a Fiend or an Undead.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/holy-water.svg",
@@ -1669,7 +1669,7 @@
 	},
 	{
 		"name": "Hunting Trap",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 25 lb. As a Utilize action, set the trap. A creature stepping on it must succeed on a DC 13 Dex save or take 1d4 Piercing damage and have Speed reduced to 0. Escape: DC 13 Str (Athletics) action.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/skoll/box-trap.svg",
@@ -1681,7 +1681,7 @@
 	},
 	{
 		"name": "Ink",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ink-swirl.svg",
@@ -1693,7 +1693,7 @@
 	},
 	{
 		"name": "Ink Pen",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Using Ink, an Ink Pen is used to write or draw.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fountain-pen.svg",
@@ -1705,7 +1705,7 @@
 	},
 	{
 		"name": "Jug",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 4 lb. Holds up to 1 gallon.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/jug.svg",
@@ -1717,7 +1717,7 @@
 	},
 	{
 		"name": "Ladder",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 25 lb. 10 feet tall. You must climb to move up or down it.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ladder.svg",
@@ -1729,7 +1729,7 @@
 	},
 	{
 		"name": "Lamp",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Burns Oil as fuel to cast Bright Light in a 15-foot radius and Dim Light for an additional 30 feet.",
 		"image": "https://5e.tools/img/items/XPHB/Lamp.webp",
@@ -1741,7 +1741,7 @@
 	},
 	{
 		"name": "Bullseye Lantern",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/lantern-flame.svg",
@@ -1753,7 +1753,7 @@
 	},
 	{
 		"name": "Hooded Lantern",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, lower the hood to reduce to Dim Light in a 5-foot radius, or raise it again.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/lantern.svg",
@@ -1765,7 +1765,7 @@
 	},
 	{
 		"name": "Lock",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Comes with a key. Without the key, a creature can use Thieves' Tools to pick it with a DC 15 Dex (Sleight of Hand) check.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/plain-padlock.svg",
@@ -1777,7 +1777,7 @@
 	},
 	{
 		"name": "Magnifying Glass",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Grants Advantage on any ability check made to appraise or inspect a highly detailed item. Can light a fire with sunlight (takes about 5 minutes).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/magnifying-glass.svg",
@@ -1789,7 +1789,7 @@
 	},
 	{
 		"name": "Manacles",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 6 lb. As a Utilize action, bind a Grappled/Incapacitated/Restrained Small or Medium creature within 5 ft (DC 13 Dex Sleight of Hand). Bound creature has Disadvantage on attacks and is Restrained if fixed in place. Escape: DC 20 Dex. Burst: DC 25 Str.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/manacles.svg",
@@ -1801,7 +1801,7 @@
 	},
 	{
 		"name": "Map",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Consulting an accurate Map grants a +5 bonus to Wisdom (Survival) checks to find your way in the place it represents.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/treasure-map.svg",
@@ -1813,7 +1813,7 @@
 	},
 	{
 		"name": "Mirror",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 1/2 lb. A handheld steel Mirror useful for personal cosmetics, peeking around corners, and reflecting light as a signal.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/shinto-shrine-mirror.svg",
@@ -1825,7 +1825,7 @@
 	},
 	{
 		"name": "Net",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 3 lb. As an Attack action, throw at a creature within 15 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or be Restrained. Escape: DC 10 Str (Athletics) action. Destroying the Net (AC 10; 5 HP) also frees the target.",
 		"image": "https://5e.tools/img/items/XPHB/Net.webp",
@@ -1837,7 +1837,7 @@
 	},
 	{
 		"name": "Oil",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Douse a creature within 20 ft (Dex save or take extra 5 Fire damage if ignited within 1 min), pour on ground to cover 5-ft square (5 Fire damage), or use as fuel for Lamps/Lanterns (burns 6 hours).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/oil-can.svg",
@@ -1849,7 +1849,7 @@
 	},
 	{
 		"name": "Paper",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "One sheet of Paper can hold about 250 handwritten words.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/folded-paper.svg",
@@ -1861,7 +1861,7 @@
 	},
 	{
 		"name": "Parchment",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "One sheet of Parchment can hold about 250 handwritten words.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/papers.svg",
@@ -1873,7 +1873,7 @@
 	},
 	{
 		"name": "Perfume",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "Comes in a 4-ounce vial. For 1 hour after applying, you have Advantage on Charisma (Persuasion) checks to influence an Indifferent Humanoid within 5 feet.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/delicate-perfume.svg",
@@ -1885,7 +1885,7 @@
 	},
 	{
 		"name": "Basic Poison",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "As a Bonus Action, coat one weapon or up to three pieces of ammunition. A creature taking Piercing or Slashing damage from the poisoned weapon takes an extra 1d4 Poison damage. Lasts 1 minute or until damage is dealt.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/poison-bottle.svg",
@@ -1897,7 +1897,7 @@
 	},
 	{
 		"name": "Pole",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 7 lb. 10 feet long. Touch something up to 10 ft away. Use to vault for Advantage on High/Long Jump Str (Athletics) checks.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/bo.svg",
@@ -1909,7 +1909,7 @@
 	},
 	{
 		"name": "Iron Pot",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 10 lb. Holds up to 1 gallon.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/cauldron.svg",
@@ -1920,10 +1920,22 @@
 		]
 	},
 	{
-		"name": "Potion of Healing",
-		"type": "adventuring gear",
+		"name": "Potion of Climbing",
+		"type": "consumable",
 		"rarity": "common",
-		"description": "Weight: 1/2 lb. Magic item. As a Bonus Action, drink it or administer to a creature within 5 ft. The creature regains 2d4 + 2 Hit Points.",
+		"description": "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks to climb.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Climbing.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Potion of Comprehension",
+		"type": "consumable",
+		"rarity": "common",
+		"description": "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
 		"price": 50,
 		"currency": "gp",
@@ -1932,8 +1944,20 @@
 		]
 	},
 	{
+		"name": "Potion of Healing",
+		"type": "consumable",
+		"rarity": "common",
+		"description": "Weight: 1/2 lb. Magic item. As a Bonus Action, drink it or administer to a creature within 5 ft. The creature regains 2d4 + 2 Hit Points.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Healing.webp",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
 		"name": "Pouch",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Holds up to 6 pounds within one-fifth of a cubic foot.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/shiny-purse.svg",
@@ -1945,7 +1969,7 @@
 	},
 	{
 		"name": "Priest's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 29 lb. Contains: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -1957,7 +1981,7 @@
 	},
 	{
 		"name": "Quiver",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Holds up to 20 Arrows.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
@@ -1969,7 +1993,7 @@
 	},
 	{
 		"name": "Portable Ram",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 35 lb. Use to break down doors with a +4 bonus to the Strength check. One other character can help, giving you Advantage.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ram.svg",
@@ -1981,7 +2005,7 @@
 	},
 	{
 		"name": "Rations",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 2 lb. Travel-ready food including jerky, dried fruit, hardtack, and nuts. One day's worth.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/steak.svg",
@@ -1993,7 +2017,7 @@
 	},
 	{
 		"name": "Robe",
-		"type": "adventuring gear",
+		"type": "clothing",
 		"rarity": "common",
 		"description": "Weight: 4 lb. Has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/robe.svg",
@@ -2005,7 +2029,7 @@
 	},
 	{
 		"name": "Rope",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 5 lb. 50 feet long. Tie a knot as a Utilize action (DC 10 Dex Sleight of Hand). Burst: DC 20 Str (Athletics). Can bind an unwilling Grappled/Incapacitated/Restrained creature; Restrained if legs bound. Escape: DC 15 Dex (Acrobatics).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/rope-coil.svg",
@@ -2017,7 +2041,7 @@
 	},
 	{
 		"name": "Sack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 1/2 lb. Holds up to 30 pounds within 1 cubic foot.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/swap-bag.svg",
@@ -2029,7 +2053,7 @@
 	},
 	{
 		"name": "Scholar's Pack",
-		"type": "adventuring gear",
+		"type": "adventuring gear - packs",
 		"rarity": "common",
 		"description": "Weight: 22 lb. Contains: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
@@ -2041,7 +2065,7 @@
 	},
 	{
 		"name": "Shovel",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 5 lb. Working for 1 hour, you can dig a hole that is 5 feet on each side in soil or similar material.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/dig-hole.svg",
@@ -2053,7 +2077,7 @@
 	},
 	{
 		"name": "Signal Whistle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "When blown as a Utilize action, produces a sound that can be heard up to 600 feet away.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/whistle.svg",
@@ -2065,31 +2089,43 @@
 	},
 	{
 		"name": "Spell Scroll (Cantrip)",
-		"type": "adventuring gear",
+		"type": "adventuring gear - spell scrolls",
 		"rarity": "common",
-		"description": "Bears the words of a cantrip. If on your class's spell list, cast it using normal casting time without Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
+		"description": "Bears the words of a cantrip. Any creature that can read may cast the spell using its normal casting time, without providing Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/scroll-unfurled.svg",
 		"price": 30,
 		"currency": "gp",
 		"itemGrouping": [
-			"Base Items"
+			"Wakanga O'tamu"
 		]
 	},
 	{
 		"name": "Spell Scroll (Level 1)",
-		"type": "adventuring gear",
+		"type": "adventuring gear - spell scrolls",
 		"rarity": "common",
-		"description": "Bears the words of a level 1 spell. If on your class's spell list, cast it using normal casting time without Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
+		"description": "Bears the words of a level 1 spell. Any creature that can read may cast the spell using its normal casting time, without providing Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
 		"price": 50,
 		"currency": "gp",
 		"itemGrouping": [
-			"Base Items"
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Spell Scroll (Level 2)",
+		"type": "adventuring gear - spell scrolls",
+		"rarity": "uncommon",
+		"description": "Bears the words of a level 2 spell. Any creature that can read may cast the spell using its normal casting time, without providing Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
 		]
 	},
 	{
 		"name": "Iron Spikes (10)",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 5 lb. As a Utilize action, hammer a spike into wood, earth, or similar material to jam a door shut or tie a Rope or Chain to it.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/nails.svg",
@@ -2101,7 +2137,7 @@
 	},
 	{
 		"name": "Spyglass",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Objects viewed through a Spyglass are magnified to twice their size.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/spyglass.svg",
@@ -2113,7 +2149,7 @@
 	},
 	{
 		"name": "String",
-		"type": "adventuring gear",
+		"type": "adventuring gear - utility & equipment",
 		"rarity": "common",
 		"description": "10 feet long. You can tie a knot in it as a Utilize action.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/sewing-string.svg",
@@ -2125,7 +2161,7 @@
 	},
 	{
 		"name": "Tent",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 20 lb. Sleeps up to two Small or Medium creatures.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/camping-tent.svg",
@@ -2137,7 +2173,7 @@
 	},
 	{
 		"name": "Tinderbox",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Contains flint, fire steel, and tinder. Lighting a Candle, Lamp, Lantern, or Torch takes a Bonus Action. Lighting any other fire takes 1 minute.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/matchbox.svg",
@@ -2149,7 +2185,7 @@
 	},
 	{
 		"name": "Torch",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 1 lb. Burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. Can be used as a Simple Melee weapon dealing 1 Fire damage on a hit.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/torch.svg",
@@ -2161,7 +2197,7 @@
 	},
 	{
 		"name": "Vial",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Holds up to 4 ounces.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/caro-asercion/round-potion.svg",
@@ -2173,7 +2209,7 @@
 	},
 	{
 		"name": "Waterskin",
-		"type": "adventuring gear",
+		"type": "adventuring gear - containers & storage",
 		"rarity": "common",
 		"description": "Weight: 5 lb. (full). Holds up to 4 pints. If you don't drink sufficient water, you risk dehydration.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/waterskin.svg",
@@ -2185,93 +2221,111 @@
 	},
 	{
 		"name": "Exotic Saddle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 40 lb. Required for riding an aquatic or a flying mount. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
 		"price": 60,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Military Saddle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 30 lb. Gives Advantage on any ability check you make to remain mounted. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
 		"price": 20,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Riding Saddle",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 25 lb. Comes with a bit, a bridle, reins, and any other equipment needed to use the saddle.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saddle.svg",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Canoe",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Holds up to six Medium creatures. Maximum speed of 2 mph. Otherwise identical to a rowboat.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/canoe.svg",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Insect Repellent (Incense)",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "A block of incense. When lit, burns for 8 hours and repels normal insects within a 20-foot radius centered on it. Does not protect against giant insects or swarms.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/incense.svg",
 		"price": 1,
 		"currency": "sp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Insect Repellent (Salve)",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "A gourd or vial containing 20 applications of odorless, waterproof grease. One application protects against normal insects for 24 hours. Does not protect against giant insects or swarms.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fragrance.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Rain Catcher",
-		"type": "adventuring gear",
+		"type": "adventuring gear - camping & travel",
 		"rarity": "common",
 		"description": "Weight: 5 lb. A 5-foot-square leather tarp on a wooden frame with legs. Catches 2 gallons of drinking water per inch of rainfall and holds up to 8 gallons. Folds up for easy transport.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/drink-me.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Tej (Mug)",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "An amber-colored, fermented drink made from honey. More common and popular in Chult than beer or ale.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/beer-stein.svg",
 		"price": 4,
 		"currency": "cp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Tej (1-gallon Cask)",
-		"type": "adventuring gear",
+		"type": "consumable",
 		"rarity": "common",
 		"description": "A 1-gallon cask of tej, an amber-colored fermented drink made from honey. More common and popular in Chult than beer or ale.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/beer-stein.svg",
 		"price": 2,
 		"currency": "sp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "Yklwa",
@@ -2281,7 +2335,9 @@
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/stone-spear.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["ToA"]
+		"itemGrouping": [
+			"ToA"
+		]
 	},
 	{
 		"name": "+1 Ammunition (per piece)",
@@ -2291,7 +2347,9 @@
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Ekene-Afa"]
+		"itemGrouping": [
+			"Ekene-Afa"
+		]
 	},
 	{
 		"name": "+1 Shield, Wooden",
@@ -2301,7 +2359,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Shield.webp",
 		"price": 450,
 		"currency": "gp",
-		"itemGrouping": ["Ekene-Afa"]
+		"itemGrouping": [
+			"Ekene-Afa"
+		]
 	},
 	{
 		"name": "+1 Dagger",
@@ -2311,7 +2371,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Dagger.webp",
 		"price": 500,
 		"currency": "gp",
-		"itemGrouping": ["Ekene-Afa"]
+		"itemGrouping": [
+			"Ekene-Afa"
+		]
 	},
 	{
 		"name": "+1 Yklwa",
@@ -2321,7 +2383,9 @@
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/stone-spear.svg",
 		"price": 500,
 		"currency": "gp",
-		"itemGrouping": ["Ekene-Afa"]
+		"itemGrouping": [
+			"Ekene-Afa"
+		]
 	},
 	{
 		"name": "Flying Monkey",
@@ -2331,7 +2395,10 @@
 		"image": "https://5e.tools/img/bestiary/ToA/Flying%20Monkey.webp",
 		"price": 100,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
 	},
 	{
 		"name": "Giant Lizard",
@@ -2341,7 +2408,10 @@
 		"image": "https://5e.tools/img/bestiary/XMM/Lizard.webp",
 		"price": 100,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
 	},
 	{
 		"name": "Hadrosaurus",
@@ -2351,7 +2421,10 @@
 		"image": "https://5e.tools/img/bestiary/tokens/VGM/Hadrosaurus.webp",
 		"price": 100,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
 	},
 	{
 		"name": "Ankylosaurus",
@@ -2361,7 +2434,10 @@
 		"image": "https://5e.tools/img/bestiary/XMM/Ankylosaurus.webp",
 		"price": 250,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
 	},
 	{
 		"name": "Deinonychus",
@@ -2371,7 +2447,10 @@
 		"image": "https://5e.tools/img/bestiary/tokens/VGM/Deinonychus.webp",
 		"price": 250,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
 	},
 	{
 		"name": "Flying Snake",
@@ -2381,7 +2460,9 @@
 		"image": "https://5e.tools/img/bestiary/XMM/Flying%20Snake.webp",
 		"price": 250,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a"]
+		"itemGrouping": [
+			"Ifan Talro'a"
+		]
 	},
 	{
 		"name": "Triceratops",
@@ -2391,6 +2472,1389 @@
 		"image": "https://5e.tools/img/bestiary/XMM/Triceratops.webp",
 		"price": 500,
 		"currency": "gp",
-		"itemGrouping": ["Ifan Talro'a", "Base Items"]
+		"itemGrouping": [
+			"Ifan Talro'a",
+			"Base Items"
+		]
+	},
+	{
+		"name": "Potion of Greater Healing",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "You regain 4d4 + 4 Hit Points when you drink this potion. The potion's red liquid glimmers when agitated.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Healing.webp",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Animal Friendship",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Fire Breath",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet. The target makes a DC 13 Dex save, taking 4d6 Fire damage on a failure or half on a success. The effect ends after 3 uses or 1 hour.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Fire%20Breath.webp",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Growth",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "When you drink this potion, you gain the \"enlarge\" effect of the Enlarge/Reduce spell for 10 minutes (no Concentration required).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Hill Giant Strength",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "When you drink this potion, your Strength score changes to 21 for 1 hour. The potion has no effect if your Strength is already equal to or greater than 21.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Pugilism",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "After you drink this potion, each Unarmed Strike you make deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Pugilism.webp",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Resistance",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "When you drink this potion, you have Resistance to one type of damage for 1 hour. The type is determined when the potion is created (Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Potion of Water Breathing",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "You can breathe underwater for 24 hours after drinking this potion.",
+		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Water%20Breathing.webp",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "Oil of Slipperiness",
+		"type": "consumable",
+		"rarity": "uncommon",
+		"description": "One vial covers one Medium or smaller creature plus its equipment (one additional vial per size above Medium). Applying takes 10 minutes. The affected creature gains the effect of the Freedom of Movement spell for 8 hours.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/oil-can.svg",
+		"price": 200,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu"
+		]
+	},
+	{
+		"name": "+1 Wraps of Unarmed Power",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While wearing these wraps, you have a +1 bonus to attack rolls and damage rolls made with your Unarmed Strikes. Those strikes deal your choice of Force damage or their normal damage type.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Alchemy Jug",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. The jug sloshes when it is shaken, even if the jug is empty.",
+		"image": "https://5e.tools/img/items/XDMG/Alchemy%20Jug.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Amulet of Proof against Detection and Location",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this amulet, you can't be targeted by Divination spells or perceived through magical scrying sensors unless you allow it.",
+		"image": "https://5e.tools/img/items/XDMG/Amulet%20of%20Proof%20against%20Detection%20and%20Location.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Baba Yaga's Dancing Broom",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. The archfey Baba Yaga crafted many of these magic brooms. No two appear exactly alike. While holding the broom, you can take a Magic action to transform it into an Animated Broom under your control. The broom then moves into an unoccupied space as close to you as possible. The broom acts immediately after you on your Initiative count and remains animate until you take a Bonus Action and use a command word to render it inanimate.",
+		"image": "https://5e.tools/img/items/XDMG/Baba%20Yagas%20Dancing%20Broom.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bag of Holding",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This bag has an interior space considerably larger than its outside dimensions—roughly 2 feet square and 4 feet deep on the inside. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 5 pounds, regardless of its contents. Retrieving an item from the bag requires a Utilize action.",
+		"image": "https://5e.tools/img/items/XDMG/Bag%20of%20Holding.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bag of Tricks, Gray",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This bag made from gray cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bag of Tricks, Rust",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This bag made from rust cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bag of Tricks, Tan",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This bag made from tan cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bead of Nourishment",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bead of Refreshment",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This flavorless, gelatinous bead dissolves in liquid, transforming up to a pint of the liquid into fresh, cold drinking water. The bead has no effect on magical liquids or harmful substances such as poison.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Boots of Elvenkind",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.",
+		"image": "https://5e.tools/img/items/XDMG/Boots%20of%20Elvenkind.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Boots of False Tracks",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While wearing these boots, you can have them leave tracks like those of any kind of Humanoid of your size.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Boots of Striding and Springing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While you wear these boots, your Speed becomes 30 feet unless your Speed is higher, and your Speed isn't reduced by you carrying weight in excess of your carrying capacity or wearing Heavy Armor.",
+		"image": "https://5e.tools/img/items/XDMG/Boots%20of%20Striding%20and%20Springing.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Boots of the Winterlands",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. These furred boots are snug and feel warm. While wearing them, you gain the following benefits.",
+		"image": "https://5e.tools/img/items/XDMG/Boots%20of%20the%20Winterlands.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Bracers of Archery",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing these bracers, you have proficiency with the Longbow and Shortbow, and you gain a +2 bonus to damage rolls made with such weapons.",
+		"image": "https://5e.tools/img/items/XDMG/Bracers%20of%20Archery.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Brooch of Shielding",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this brooch, you have Resistance to Force damage, and you have Immunity to damage from the Magic Missile spell.",
+		"image": "https://5e.tools/img/items/XDMG/Brooch%20of%20Shielding.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Broom of Flying",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. This wooden broom functions like a mundane broom until you stand astride it and take a Magic action to make it hover beneath you, at which time it can be ridden in the air. It has a Fly Speed of 50 feet. It can carry up to 400 pounds, but its Fly Speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land or when you're no longer riding it.",
+		"image": "https://5e.tools/img/items/XDMG/Broom%20of%20Flying.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Candle of the Deep",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "The flame of this candle isn't extinguished when immersed in water. It gives off light and heat like a normal candle.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cap of Water Breathing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While wearing this cap underwater, you can take a Magic action to create a bubble of air around your head. This bubble allows you to breathe normally underwater. This bubble stays with you until the cap is removed or you are no longer underwater.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Charlatan's Die",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "Requires attunement. Whenever you roll this six-sided die, you can control which number it rolls.",
+		"image": "https://5e.tools/img/items/XDMG/Charlatans%20Die.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Circlet of Blasting",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While wearing this circlet, you can cast Scorching Ray with it (5 to hit). The circlet can't cast this spell again until the next dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Circlet%20of%20Blasting.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cloak of Billowing",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While wearing this cloak, you can take a Bonus Action to make it billow dramatically for 1 minute.",
+		"image": "https://5e.tools/img/items/XDMG/Cloak%20of%20Billowing.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cloak of Elvenkind",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.",
+		"image": "https://5e.tools/img/items/XDMG/Cloak%20of%20Elvenkind.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cloak of Many Fashions",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While wearing this cloak, you can take a Bonus Action to change the style, color, and apparent quality of the garment. The cloak's weight doesn't change. Regardless of its appearance, the cloak can't be anything but a cloak. Although it can duplicate the appearance of other magic cloaks, it doesn't gain their magical properties.",
+		"image": "https://5e.tools/img/items/XDMG/Cloak%20of%20Many%20Fashions.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cloak of Protection",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. You gain a +1 bonus to Armor Class and saving throws while you wear this cloak.",
+		"image": "https://5e.tools/img/items/XDMG/Cloak%20of%20Protection.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Cloak of the Manta Ray",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this cloak, you can breathe underwater, and you have a Swim Speed of 60 feet.",
+		"image": "https://5e.tools/img/items/XDMG/Cloak%20of%20the%20Manta%20Ray.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Clockwork Amulet",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This copper amulet contains tiny interlocking gears and is powered by magic from Mechanus, a plane of clockwork predictability. Faint ticking and whirring noises emanate from within.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Clothes of Mending",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This elegant outfit magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can't be repaired in this way.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Dark Shard Amulet",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "Requires attunement by by a warlock. This amulet is fashioned from a shard of resilient material originating from an otherworldly realm. While you are wearing it, you gain the following benefits.",
+		"image": "https://5e.tools/img/items/XDMG/Dark%20Shard%20Amulet.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Decanter of Endless Water",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.",
+		"image": "https://5e.tools/img/items/XDMG/Decanter%20of%20Endless%20Water.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Deck of Illusions",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This box contains a set of cards. A full deck has 34 cards: 32 depicting specific creatures and two with a mirrored surface. A deck found as treasure is usually missing 1d20 - 1 cards.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Dread Helm",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While you're wearing this fearsome steel helm, your eyes glow red and the rest of your face is hidden in shadow.",
+		"image": "https://5e.tools/img/items/XDMG/Dread%20Helm.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Driftglobe",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This small sphere of thick glass weighs 1 pound. If you are within 60 feet of it, you can command it to emanate light equivalent to that of the Light or Daylight spell (your choice). Once used, the Daylight effect can't be used again until the next dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Driftglobe.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Dust of Disappearance",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This powder resembles fine sand. There is enough of it for one use. When you take a Utilize action to throw the dust into the air, you and each creature and object within a 10-foot Emanation [Area of Effect] originating from you have the Invisible condition for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. Immediately after an affected creature makes an attack roll, deals damage, or casts a spell, the Invisible condition ends for that creature.",
+		"image": "https://5e.tools/img/items/XDMG/Dust%20of%20Disappearance.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Dust of Dryness",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This small packet contains 1d6 + 4 pinches of dust. As a Utilize action, you can sprinkle a pinch of the dust over water, turning up to a 15-foot Cube [Area of Effect] of water into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible. A creature can take a Utilize action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so destroys the pellet and ends its magic.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Dust of Sneezing and Choking",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Found in a small container, this powder resembles Dust of Disappearance, and Identify reveals it to be such. There is enough of it for one use.",
+		"image": "https://5e.tools/img/items/XDMG/Dust%20of%20Sneezing%20and%20Choking.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Ear Horn of Hearing",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While held up to your ear, this horn suppresses the effects of the Deafened condition on you.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Elemental Gem, Blue Sapphire",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, an Air Elemental is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action.",
+		"image": "https://5e.tools/img/items/XDMG/Elemental%20Gem%20(Blue%20Sapphire).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Elemental Gem, Emerald",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, a Water Elemental is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action.",
+		"image": "https://5e.tools/img/items/XDMG/Elemental%20Gem%20(Emerald).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Elemental Gem, Red Corundum",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, a Fire Elemental is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action.",
+		"image": "https://5e.tools/img/items/XDMG/Elemental%20Gem%20(Red%20Corundum).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Elemental Gem, Yellow Diamond",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, an Earth Elemental is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action.",
+		"image": "https://5e.tools/img/items/XDMG/Elemental%20Gem%20(Yellow%20Diamond).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Enduring Spellbook",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This spellbook, along with anything written on its pages, can't be damaged by fire or water. In addition, the spellbook doesn't deteriorate with age.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Ersatz Eye",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This magical eye replaces a real one that was lost or removed. While the Ersatz Eye is embedded in your eye socket, you can see through the tiny orb as though it were your natural eye. You can insert or remove the Ersatz Eye as a Magic action, and it can't be removed against your will while you are alive.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Eversmoking Bottle",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "As a Magic action, you can open or close this bottle.",
+		"image": "https://5e.tools/img/items/XDMG/Eversmoking%20Bottle.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Eyes of Charming",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 or more charges to cast Charm Person (save 13). For 1 charge, you cast the level 1 version of the spell. You increase the spell's level by one for each additional charge you expend. The lenses regain all expended charges daily at dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Eyes%20of%20Charming.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Eyes of Minute Seeing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "These crystal lenses fit over the eyes. While wearing them, your vision improves significantly out to a range of 1 foot, granting you Darkvision within that range and Advantage on Intelligence (Investigation) checks made to examine something within that range.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Eyes of the Eagle",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "These crystal lenses fit over the eyes. While wearing them, you have Advantage on Wisdom (Perception) checks that rely on sight. In conditions of clear visibility, you can make out details of even extremely distant creatures and objects as small as 2 feet across.",
+		"image": "https://5e.tools/img/items/XDMG/Eyes%20of%20the%20Eagle.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Figurine of Wondrous Power, Silver Raven",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "A Figurine of Wondrous Power is a statuette small enough to fit in a pocket. If you take a Magic action to throw the figurine to a point on the ground within 60 feet of yourself, the figurine becomes a living creature specified in the figurine's description below. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Gauntlets of Ogre Power",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is 19 or higher without them.",
+		"image": "https://5e.tools/img/items/XDMG/Gauntlets%20of%20Ogre%20Power.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Gem of Brightness",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This prism has 50 charges. While you are holding it, you can take a Magic action and use one of three command words to cause one of the following effects:",
+		"image": "https://5e.tools/img/items/XDMG/Gem%20of%20Brightness.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Gloves of Missile Snaring",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. If you're hit by an attack roll made with a Ranged or Thrown weapon while wearing these gloves, you can take a Reaction to reduce the damage by 1d10 plus your Dexterity modifier if you have a free hand. If you reduce the damage to 0, you can catch the ammunition or weapon if it is small enough for you to hold in that hand.",
+		"image": "https://5e.tools/img/items/XDMG/Gloves%20of%20Missile%20Snaring.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Gloves of Swimming and Climbing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Gloves of Thievery",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "These gloves are imperceptible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand) checks.",
+		"image": "https://5e.tools/img/items/XDMG/Gloves%20of%20Thievery.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Goggles of Night",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While wearing these dark lenses, you have Darkvision out to 60 feet. If you already have Darkvision, wearing the goggles increases its range by 60 feet.",
+		"image": "https://5e.tools/img/items/XDMG/Goggles%20of%20Night.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Hag Eye",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "A Hag Eye has 3 charges. While wearing or holding this item, you can expend 1 charge to cast Darkvision (targeting yourself only) or See Invisibility. The Hag Eye regains all expended charges daily at dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Hag%20Eye.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Hat of Disguise",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this hat, you can cast the Disguise Self spell. The spell ends if the hat is removed.",
+		"image": "https://5e.tools/img/items/XDMG/Hat%20of%20Disguise.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Hat of Vermin",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This hat has 3 charges. While holding the hat, you can take a Magic action to expend 1 charge and summon your choice of a Bat, a Frog, or a Rat. The summoned creature magically appears in the hat and tries to get away from you as quickly as possible. The creature is Indifferent [Attitude] toward you and other creatures, and it isn't under your control. It behaves as an ordinary creature of its kind and disappears after 1 hour or when it drops to 0 Hit Points. The hat regains all expended charges daily at dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Hat%20of%20Vermin.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Hat of Wizardry",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "Requires attunement by by a wizard. This cone-shaped hat is adorned with moons and stars. While you are wearing it, you gain the following benefits.",
+		"image": "https://5e.tools/img/items/XDMG/Hat%20of%20Wizardry.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Headband of Intellect",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. Your Intelligence score is 19 while you wear this headband. It has no effect on you if your Intelligence is 19 or higher without it.",
+		"image": "https://5e.tools/img/items/XDMG/Headband%20of%20Intellect.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Helm of Comprehending Languages",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While wearing this helm, you can cast Comprehend Languages from it.",
+		"image": "https://5e.tools/img/items/XDMG/Helm%20of%20Comprehending%20Languages.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Helm of Telepathy",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this helm, you have telepathy with a range of 30 feet, and you can cast Detect Thoughts or Suggestion (save 13) from the helm. Once either spell is cast from the helm, that spell can't be cast from it again until the next dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Helm%20of%20Telepathy.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Heward's Handy Spice Pouch",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This belt pouch appears empty and has 10 charges. While holding the pouch, you can take a Magic action to expend 1 charge, name any nonmagical food seasoning (such as salt, pepper, saffron, or cilantro), and remove a pinch of the desired seasoning from the pouch. A pinch is enough to season a single meal. The pouch regains 1d6 + 4 expended charges daily at dawn.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Horn of Silent Alarm",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This horn has 4 charges and regains 1d4 expended charges daily at dawn. As a Magic action, you can blow the horn while expending 1 charge. One creature of your choice hears the horn's blare, provided that creature is within 600 feet of the horn. No other creature hears the horn.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Instrument of Illusions",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While you are playing this musical instrument, you can take a Magic action to create harmless, illusory visual effects within a 5-foot Emanation [Area of Effect] originating from the instrument. If you are a Bard, the size of the Emanation [Area of Effect] increases to 15 feet. Sample visual effects include luminous musical notes, a spectral dancer, butterflies, and gently falling snow. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when you stop playing.",
+		"image": "https://5e.tools/img/items/XDMG/Instrument%20of%20Illusions.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Instrument of Scribing",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This musical instrument has 3 charges and regains all expended charges daily at dawn. While you are playing it, you can take a Magic action to expend 1 charge and write a magical message on a nonmagical object or surface that you can see within 30 feet of yourself. The message can be up to six words long and is written in a language you know. If you are a Bard, you can scribe an additional seven words and make the message glow faintly, allowing it to be seen in nonmagical Darkness. Casting the Dispel Magic spell on the message erases it. Otherwise, the message fades away after 24 hours.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Instrument of the Bards, Doss Lute",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement by by a bard. An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a 15 Wisdom saving throw or take 2d4 Psychic damage.",
+		"image": "https://5e.tools/img/items/XDMG/Doss%20Lute.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Instrument of the Bards, Fochlucan Bandore",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement by by a bard. An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a 15 Wisdom saving throw or take 2d4 Psychic damage.",
+		"image": "https://5e.tools/img/items/XDMG/Fochlucan%20Bandore.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Instrument of the Bards, Mac-Fuirmidh Cittern",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement by by a bard. An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a 15 Wisdom saving throw or take 2d4 Psychic damage.",
+		"image": "https://5e.tools/img/items/XDMG/Mac-Fuirmidh%20Cittern.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Keoghtom's Ointment",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.",
+		"image": "https://5e.tools/img/items/XDMG/Keoghtoms%20Ointment.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Lantern of Revealing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. Invisible creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.",
+		"image": "https://5e.tools/img/items/XDMG/Lantern%20of%20Revealing.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Lock of Trickery",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This lock appears to be an ordinary Lock (of the type described in chapter 6 of the Player's Handbook) and comes with a single key. The tumblers in this lock magically adjust to thwart burglars. Dexterity checks made to pick the lock have Disadvantage.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Medallion of Thoughts",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. The medallion has 5 charges. While wearing it, you can expend 1 charge to cast Detect Thoughts (save 13) from it. The medallion regains 1d4 expended charges daily at dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Medallion%20of%20Thoughts.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Mystery Key",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "A question mark is worked into the head of this key. The key has a 5 chance of unlocking any lock into which it's inserted. Once it unlocks something, the key disappears.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Nature's Mantle",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement by by a druid or ranger. This cloak shifts color and texture to blend with the terrain surrounding you. While wearing the cloak, you can use it as a Spellcasting Focus for your Druid and Ranger spells.",
+		"image": "https://5e.tools/img/items/XDMG/Natures%20Mantle.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Necklace of Adaptation",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this necklace, you can breathe normally in any environment, and you have Advantage on saving throws made to avoid or end the Poisoned condition.",
+		"image": "https://5e.tools/img/items/XDMG/Necklace%20of%20Adaptation.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Orb of Direction",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This orb can be used as an Arcane Focus.",
+		"image": "https://5e.tools/img/items/XDMG/Orb%20of%20Direction.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Orb of Time",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This orb can be used as an Arcane Focus.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pearl of Power",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement by by a spellcaster. While this pearl is on your person, you can take a Magic action to regain one expended spell slot of level 3 or lower. Once you use the pearl, it can't be used again until the next dawn.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Perfume of Bewitching",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This tiny vial contains magic perfume, enough for one use. You can take a Magic action to apply the perfume to yourself, and its effect lasts 1 hour. For the duration, you have Advantage on all Charisma (Deception and Persuasion) checks made to influence a creature within 5 feet of yourself.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Periapt of Health",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this pendant, you can take a Magic action to regain 2d4 + 2 Hit Points. Once used, this property can't be used again until the next dawn.",
+		"image": "https://5e.tools/img/items/XDMG/Periapt%20of%20Health.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Periapt of Wound Closure",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While wearing this pendant, you gain the following benefits.",
+		"image": "https://5e.tools/img/items/XDMG/Periapt%20of%20Wound%20Closure.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pipe of Smoke Monsters",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "While smoking this pipe, you can take a Magic action to exhale a puff of smoke that takes the form of a creature, such as a dragon, a flumph, or a slaad. The form must be small enough to fit in a 1-foot cube and loses its shape after a few seconds, becoming an ordinary puff of smoke.",
+		"image": "https://5e.tools/img/items/XDMG/Pipe%20of%20Smoke%20Monsters.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pipes of Haunting",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "These pipes have 3 charges and regain 1d3 expended charges daily at dawn. You can take a Magic action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature of your choice within 30 feet of you must succeed on a 15 Wisdom saving throw or have the Frightened condition for 1 minute. A creature that fails the save repeats it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its save is immune to the effect of these pipes for 24 hours.",
+		"image": "https://5e.tools/img/items/XDMG/Pipes%20of%20Haunting.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pipes of the Sewers",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While these pipes are on your person, ordinary rat and giant rat are Indifferent [Attitude] toward you and won't attack you unless you threaten or harm them.",
+		"image": "https://5e.tools/img/items/XDMG/Pipes%20of%20the%20Sewers.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pole of Angling",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This item functions as a Pole. While holding it, you can take a Magic action to cause it to transform into a fishing pole with a hook, a line, and a reel, or have the fishing pole revert to a Pole.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pole of Collapsing",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This item functions as a Pole. While holding it, you can take a Magic action to collapse it into a 1-foot-long rod for ease of storage (the pole's weight doesn't change) or cause the 1-foot-long rod to revert to a Pole. The rod elongates only as far as the surrounding space allows.",
+		"image": "https://5e.tools/img/items/XDMG/Pole%20of%20Collapsing.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Pot of Awakening",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "If you plant an ordinary shrub in this 10-pound clay pot and let it grow for 30 days, the shrub magically transforms into an Awakened Shrub at the end of that time. When the shrub awakens, its roots break the pot, destroying it.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Prosthetic Limb",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This magic item replaces a lost limb—a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as a Magic action, and it can't be removed against your will while you are alive.",
+		"image": "https://5e.tools/img/items/XDMG/Prosthetic%20Limb.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Quaal's Feather Token, Anchor",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This object looks like a feather.",
+		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Anchor).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Quaal's Feather Token, Fan",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This object looks like a feather.",
+		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Fan).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Quaal's Feather Token, Tree",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This object looks like a feather.",
+		"image": "https://5e.tools/img/items/XDMG/Quaals%20Feather%20Token%20(Tree).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Quiver of Ehlonna",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Each of the quiver's three compartments connects to an extradimensional space that allows the quiver to hold numerous items while never weighing more than 2 pounds. The shortest compartment can hold up to 60 Arrow, Bolt, or similar objects. The midsize compartment holds up to 18 Javelin or similar objects. The longest compartment holds up to 6 long objects, such as bows, Quarterstaff, or Spear.",
+		"image": "https://5e.tools/img/items/XDMG/Quiver%20of%20Ehlonna.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Rival Coin",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This gold coin has a creature embossed on each side. The two depicted creatures must be famous rivals or enemies of each other. For example, a Rival Coin might show Iggwilv on one side and Mordenkainen on the other, or Venger on one side and Tiamat on the other. One of these figures is on the \"heads\" side of the coin, the other on the \"tails\" side.",
+		"image": "https://5e.tools/img/items/XDMG/Rival%20Coin.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Robe of Useful Items",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This robe has cloth patches of various shapes and colors covering it. While wearing the robe, you can take a Magic action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.",
+		"image": "https://5e.tools/img/items/XDMG/Robe%20of%20Useful%20Items.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Rope of Climbing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "This 60-foot length of rope can hold up to 3,000 pounds. While holding one end of the rope, you can take a Magic action to command the other end of the rope to animate and move toward a destination you choose, up to the rope's length away from you. That end moves 10 feet on your turn when you first command it and 10 feet at the start of each of your subsequent turns until reaching its destination or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Rope of Mending",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This 50-foot coil of rope can repair itself when cut into any number of smaller pieces. As a Magic action, you can cause all pieces of the rope that are in contact with each other and not otherwise in use to knit back together. A Rope of Mending is forever shortened if a section of it is lost or destroyed.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Ruby of the War Mage",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "Requires attunement by by a spellcaster. Etched with eldritch runes, this 1-inch-diameter ruby allows you to use a Simple or Martial weapon as a Spellcasting Focus for your spells. For this property to work, you must attach the ruby to the weapon by pressing the ruby against it for at least 10 minutes. Thereafter, the ruby can't be removed unless you detach it as a Magic action, the weapon is destroyed, or your Attunement to the ruby ends.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Saddle of the Cavalier",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While in this saddle on a mount, you can't be dismounted against your will if you're conscious, and attack rolls against the mount have disadvantage.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Sending Stones",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Sending Stones come in pairs, with each stone carved to match the other so the pairing is easily recognized. While you touch one stone, you can cast Sending from it. The target is the bearer of the other stone. If no creature bears the other stone, you know that fact as soon as you use the stone, and you don't cast the spell.",
+		"image": "https://5e.tools/img/items/XDMG/Sending%20Stones.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Slippers of Spider Climbing",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While you wear these light shoes, you can move up, down, and across vertical surfaces and along ceilings, while leaving your hands free. You have a Climb Speed equal to your Speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.",
+		"image": "https://5e.tools/img/items/XDMG/Slippers%20of%20Spider%20Climbing.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Stone of Good Luck",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. While this polished agate is on your person, you gain a +1 bonus to ability checks and saving throws.",
+		"image": "https://5e.tools/img/items/XDMG/Stone%20of%20Good%20Luck%20(Luckstone).webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Talking Doll",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "Requires attunement. While this doll is within 5 feet of you, you can spend a Short Rest telling it to say up to six phrases, none of which can be more than six words long, and set a condition under which the doll speaks each phrase. You can also replace old phrases with new ones. Whatever the condition, it must occur within 5 feet of the doll to make it speak. For example, whenever someone picks up the doll, it might say, \"I want a piece of candy.\" The doll's phrases are lost when your Attunement to the doll ends.",
+		"image": "https://5e.tools/img/items/XDMG/Talking%20Doll.webp",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Tankard of Sobriety",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "This tankard has a stern face sculpted into one side. You can drink ale, wine, or any other nonmagical alcoholic beverage poured into it without becoming inebriated. The tankard has no effect on magical liquids or harmful substances such as poison.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Veteran's Cane",
+		"type": "wondrous item",
+		"rarity": "common",
+		"description": "As a Bonus Action, you can transform this walking cane into an ordinary Longsword or change the Longsword back into a walking cane. In either case, you must be holding the item.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/gem-pendant.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Wind Fan",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "While holding this fan, you can cast Gust of Wind (save 13) from it. Each subsequent time the fan is used before the next dawn, it has a cumulative 20 chance of not working; if the fan fails to work, it tears into useless, nonmagical tatters.",
+		"image": "https://5e.tools/img/items/XDMG/Wind%20Fan.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
+	},
+	{
+		"name": "Winged Boots",
+		"type": "wondrous item",
+		"rarity": "uncommon",
+		"description": "Requires attunement. These boots have 4 charges and regain 1d4 expended charges daily at dawn. While wearing the boots, you can take a Magic action to expend 1 charge, gaining a Fly Speed of 30 feet for 1 hour. If you are flying when the duration expires, you descend at a rate of 30 feet per round until you land.",
+		"image": "https://5e.tools/img/items/XDMG/Winged%20Boots.webp",
+		"price": 400,
+		"currency": "gp",
+		"itemGrouping": [
+			"Wakanga O'tamu - Special"
+		]
 	}
 ]
