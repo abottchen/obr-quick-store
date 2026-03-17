@@ -7,7 +7,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Padded%20Armor.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Leather Armor",
@@ -17,7 +19,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Leather%20Armor.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Studded Leather Armor",
@@ -27,7 +31,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Studded%20Leather%20Armor.webp",
 		"price": 45,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Hide Armor",
@@ -37,7 +43,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Hide%20Armor.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Chain Shirt",
@@ -47,7 +55,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Chain%20Shirt.webp",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Scale Mail",
@@ -57,7 +67,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Scale%20Mail.webp",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Breastplate",
@@ -67,7 +79,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Breastplate.webp",
 		"price": 400,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Half Plate Armor",
@@ -77,7 +91,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Half%20Plate%20Armor.webp",
 		"price": 750,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Ring Mail",
@@ -87,7 +103,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Ring%20Mail.webp",
 		"price": 90,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Chain Mail",
@@ -97,7 +115,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Chain%20Mail.webp",
 		"price": 225,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Splint Armor",
@@ -107,7 +127,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Splint%20Armor.webp",
 		"price": 600,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Plate Armor",
@@ -117,7 +139,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Plate%20Armor.webp",
 		"price": 4500,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Shield",
@@ -127,7 +151,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Shield.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Club",
@@ -137,7 +163,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Club.webp",
 		"price": 1,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Dagger",
@@ -147,7 +175,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Dagger.webp",
 		"price": 2,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Greatclub",
@@ -157,7 +187,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Greatclub.webp",
 		"price": 2,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Handaxe",
@@ -167,7 +199,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Handaxe.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Javelin",
@@ -177,7 +211,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Javelin.webp",
 		"price": 5,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Light Hammer",
@@ -187,7 +223,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Light%20Hammer.webp",
 		"price": 2,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Mace",
@@ -197,7 +235,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Mace.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Quarterstaff",
@@ -207,7 +247,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
 		"price": 2,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Sickle",
@@ -217,7 +259,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Sickle.webp",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Spear",
@@ -227,7 +271,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Spear.webp",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Dart",
@@ -237,7 +283,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Dart.webp",
 		"price": 5,
 		"currency": "cp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Light Crossbow",
@@ -247,7 +295,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Light%20Crossbow.webp",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Shortbow",
@@ -257,7 +307,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Shortbow.webp",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Sling",
@@ -267,7 +319,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Sling.webp",
 		"price": 1,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Battleaxe",
@@ -277,7 +331,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Battleaxe.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Flail",
@@ -287,7 +343,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Flail.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Glaive",
@@ -297,7 +355,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Glaive.webp",
 		"price": 20,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Greataxe",
@@ -307,7 +367,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Greataxe.webp",
 		"price": 30,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Greatsword",
@@ -317,7 +379,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Greatsword.webp",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Halberd",
@@ -327,7 +391,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Halberd.webp",
 		"price": 20,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Lance",
@@ -337,7 +403,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Lance.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Longsword",
@@ -347,7 +415,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Longsword.webp",
 		"price": 15,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Maul",
@@ -357,7 +427,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Maul.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Morningstar",
@@ -367,7 +439,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Morningstar.webp",
 		"price": 15,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Pike",
@@ -377,7 +451,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Pike.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Rapier",
@@ -387,7 +463,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Rapier.webp",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Scimitar",
@@ -397,7 +475,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Scimitar.webp",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Shortsword",
@@ -407,7 +487,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Shortsword.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Trident",
@@ -417,7 +499,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Trident.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "War Pick",
@@ -427,7 +511,9 @@
 		"image": "https://5e.tools/img/items/XPHB/War%20Pick.webp",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Warhammer",
@@ -437,7 +523,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Warhammer.webp",
 		"price": 15,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Whip",
@@ -447,7 +535,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Whip.webp",
 		"price": 2,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Blowgun",
@@ -457,7 +547,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Blowgun.webp",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Hand Crossbow",
@@ -467,7 +559,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Hand%20Crossbow.webp",
 		"price": 75,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Heavy Crossbow",
@@ -477,7 +571,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Heavy%20Crossbow.webp",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Longbow",
@@ -487,7 +583,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Longbow.webp",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Musket",
@@ -497,7 +595,9 @@
 		"image": "https://5e.tools/img/items/XPHB/Musket.webp",
 		"price": 500,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Pistol",
@@ -507,376 +607,1580 @@
 		"image": "https://5e.tools/img/items/XPHB/Pistol.webp",
 		"price": 250,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Alchemist's Supplies",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 8 lb. Utilize: Identify a substance (DC 15), or start a fire (DC 15). Craft: Acid, Alchemist's Fire, Component Pouch, Oil, Paper, Perfume. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bubbling-flask.svg",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Brewer's Supplies",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 9 lb. Utilize: Detect poisoned drink (DC 15), or identify alcohol (DC 10). Craft: Antitoxin. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/beer-bottle.svg",
 		"price": 20,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Calligrapher's Supplies",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Write text with impressive flourishes that guard against forgery (DC 15). Craft: Ink, Spell Scroll. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/quill-ink.svg",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Carpenter's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Strength. Weight: 6 lb. Utilize: Seal or pry open a door or container (DC 20). Craft: Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hammer-and-nails.svg",
 		"price": 8,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Cartographer's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Weight: 6 lb. Utilize: Draft a map of a small area (DC 15). Craft: Map. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/treasure-map.svg",
 		"price": 15,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Cobbler's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Modify footwear to give Advantage on the wearer's next Dexterity (Acrobatics) check (DC 10). Craft: Climber's Kit. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/boots.svg",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Cook's Utensils",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Weight: 8 lb. Utilize: Improve food's flavor (DC 10), or detect spoiled or poisoned food (DC 15). Craft: Rations. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/fork-knife-spoon.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Glassblower's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 5 lb. Utilize: Discern what a glass object held in the past 24 hours (DC 15). Craft: Glass Bottle, Magnifying Glass, Spyglass, Vial. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/round-bottom-flask.svg",
 		"price": 30,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Jeweler's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 2 lb. Utilize: Discern a gem's value (DC 15). Craft: Arcane Focus, Holy Symbol. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/emerald-necklace.svg",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Leatherworker's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Add a design to a leather item (DC 10). Craft: Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/leather-armor.svg",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Mason's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Strength. Weight: 8 lb. Utilize: Chisel a symbol or hole in stone (DC 10). Craft: Block and Tackle. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/stone-crafting.svg",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Painter's Supplies",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Weight: 5 lb. Utilize: Paint a recognizable image of something you've seen (DC 10). Craft: Druidic Focus, Holy Symbol. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/paint-brush.svg",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Potter's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 3 lb. Utilize: Discern what a ceramic object held in the past 24 hours (DC 15). Craft: Jug, Lamp. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/painted-pottery.svg",
 		"price": 10,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Smith's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Strength. Weight: 8 lb. Utilize: Pry open a door or container (DC 20). Craft: Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, Ball Bearings, Bucket, Caltrops, Chain, Crowbar, Firearm Bullets, Grappling Hook, Iron Pot, Iron Spikes, Sling Bullets. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/anvil.svg",
 		"price": 20,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Tinker's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 10 lb. Utilize: Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20). Craft: Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunter's Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tinker.svg",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Weaver's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10). Craft: Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler's Clothes. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/sewing-string.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Woodcarver's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Carve a pattern in wood (DC 10). Craft: Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles. (Artisan's Tools)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/wood-axe.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Disguise Kit",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 3 lb. Utilize: Apply makeup (DC 10). Craft: Costume.",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/double-face-mask.svg",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Forgery Kit",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 5 lb. Utilize: Mimic 10 or fewer words of someone else's handwriting (DC 15), or duplicate a wax seal (DC 20).",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/wax-seal.svg",
 		"price": 15,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Dice Set",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/perspective-dice-six-faces-random.svg",
 		"price": 1,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Dragonchess Set",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/chess-pawn.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Playing Cards",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/card-random.svg",
 		"price": 5,
 		"currency": "sp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Three-Dragon Ante Set",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Utilize: Discern whether someone is cheating (DC 10), or win the game (DC 20). (Gaming Set)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/card-random.svg",
 		"price": 1,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Herbalism Kit",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 3 lb. Utilize: Identify a plant (DC 10). Craft: Antitoxin, Candle, Healer's Kit, Potion of Healing.",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/herb-spiral.svg",
 		"price": 5,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Bagpipes",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 6 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/bagpipes.svg",
 		"price": 30,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Drum",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 3 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/drum.svg",
 		"price": 6,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Dulcimer",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 10 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/xylophone.svg",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Flute",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 1 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/flute.svg",
 		"price": 2,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Horn",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 2 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/trumpet.svg",
 		"price": 3,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Lute",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 2 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/guitar.svg",
 		"price": 35,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Lyre",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 2 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/lyre.svg",
 		"price": 30,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Pan Flute",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 2 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/pan-flute.svg",
 		"price": 12,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Shawm",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 1 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/saxophone.svg",
 		"price": 2,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Viol",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Charisma. Weight: 1 lb. Utilize: Play a known tune (DC 10), or improvise a song (DC 15). (Musical Instrument)",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/zajkonur/violin.svg",
 		"price": 30,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Navigator's Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Wisdom. Weight: 2 lb. Utilize: Plot a course (DC 10), or determine position by stargazing (DC 15).",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/sextant.svg",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Poisoner's Kit",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Intelligence. Weight: 2 lb. Utilize: Detect a poisoned object (DC 10). Craft: Basic Poison.",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/poison-bottle.svg",
 		"price": 50,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
 	},
 	{
 		"name": "Thieves' Tools",
 		"type": "tool",
 		"rarity": "common",
 		"description": "Ability: Dexterity. Weight: 1 lb. Utilize: Pick a lock (DC 15), or disarm a trap (DC 15).",
-		"image": "",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/lockpicks.svg",
 		"price": 25,
 		"currency": "gp",
-		"itemGrouping": ["Base Items"]
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Acid",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. As an Attack action, you can throw a vial of Acid at a creature or object within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 2d6 Acid damage.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/bubbling-flask.svg",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Alchemist's Fire",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. As an Attack action, you can throw a flask at a creature or object within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 1d4 Fire damage and start burning.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fire-bottle.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Arrows (20)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Ammunition for weapons with the Ammunition property. Stored in a Quiver. (Ammunition)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Bolts (20)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 1/2 lb. Ammunition for crossbows. Stored in a Crossbow Bolt Case. (Ammunition)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Firearm Bullets (10)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Ammunition for firearms. Stored in a Pouch. (Ammunition)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"price": 3,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Sling Bullets (20)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 1/2 lb. Ammunition for slings. Stored in a Pouch. (Ammunition)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"price": 4,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Needles (50)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Ammunition for blowguns. Stored in a Pouch. (Ammunition)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/sewing-needle.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Antitoxin",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/standing-potion.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Crystal (Arcane Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. A bejeweled or carved crystal used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-shine.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Orb (Arcane Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 3 lb. A bejeweled or carved orb used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crystal-ball.svg",
+		"price": 20,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Rod (Arcane Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. A bejeweled or carved rod used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Staff (Arcane Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. A bejeweled or carved staff used to channel arcane magic. Also functions as a Quarterstaff. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
+		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Wand (Arcane Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. A bejeweled or carved wand used to channel arcane magic. A Sorcerer, Warlock, or Wizard can use it as a Spellcasting Focus. (Arcane Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Backpack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. Holds up to 30 pounds within 1 cubic foot. Can also serve as a saddlebag.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Ball Bearings",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. As a Utilize action, spill to cover a 10-ft-square area within 10 ft. A creature entering for the first time on a turn must succeed on a DC 10 Dex save or fall Prone. Takes 10 minutes to recover.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ammunition.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Barrel",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 70 lb. Holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/barrel.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Basket",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Holds up to 40 pounds within 2 cubic feet.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/basket.svg",
+		"price": 4,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Bedroll",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 7 lb. Sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/blanket.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Bell",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "When rung as a Utilize action, produces a sound that can be heard up to 60 feet away.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/bell.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Blanket",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 3 lb. While wrapped in a blanket, you have Advantage on saving throws against extreme cold.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/blanket.svg",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Block and Tackle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. Allows you to hoist up to four times the weight you can normally lift.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/rope-coil.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Book",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. Contains fiction or nonfiction. Consulting an accurate nonfiction Book grants a +5 bonus to Int (Arcana, History, Nature, or Religion) checks about its topic.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/book-cover.svg",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Glass Bottle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Holds up to 1 1/2 pints.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/square-bottle.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Bucket",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Holds up to half a cubic foot of contents.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/empty-wood-bucket-handle.svg",
+		"price": 5,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Burglar's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 42 lb. Contains: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/knapsack.svg",
+		"price": 16,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Caltrops",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. As a Utilize action, spread to cover a 5-ft-square area within 5 ft. A creature entering for the first time on a turn must succeed on a DC 15 Dex save or take 1 Piercing damage and have Speed reduced to 0. Takes 10 minutes to recover.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/caltrops.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Candle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/candle-flame.svg",
+		"price": 1,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Crossbow Bolt Case",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Holds up to 20 Bolts.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Map or Scroll Case",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Holds up to 10 sheets of paper or 5 sheets of parchment.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Chain",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 10 lb. As a Utilize action, wrap around a Grappled/Incapacitated/Restrained creature within 5 ft (DC 13 Str Athletics). Bound creature is Restrained. Escape: DC 18 Dex (Acrobatics). Burst: DC 20 Str (Athletics).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/crossed-chains.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Chest",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 25 lb. Holds up to 12 cubic feet of contents.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/chest.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Climber's Kit",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 12 lb. Includes boot tips, gloves, pitons, and a harness. As a Utilize action, anchor yourself; you can't fall more than 25 ft from the anchor point.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/carabiner.svg",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Fine Clothes",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 6 lb. Made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hanger.svg",
+		"price": 15,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Traveler's Clothes",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. Resilient garments designed for travel in various environments.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/hanger.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Component Pouch",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. A watertight pouch filled with compartments that hold all the free Material components of your spells.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/shiny-purse.svg",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Costume",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/double-face-mask.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Crowbar",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. Using a Crowbar gives you Advantage on Strength checks where its leverage can be applied.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/crowbar.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Diplomat's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 39 lb. Contains: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/briefcase.svg",
+		"price": 39,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Sprig of Mistletoe (Druidic Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/herb-spiral.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Wooden Staff (Druidic Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. Carved, tied with ribbon, or painted to channel primal magic. Also functions as a Quarterstaff. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
+		"image": "https://5e.tools/img/items/XPHB/Quarterstaff.webp",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Yew Wand (Druidic Focus)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use it as a Spellcasting Focus. (Druidic Focus)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/orb-wand.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Dungeoneer's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 55 lb. Contains: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 12,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Entertainer's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 58 1/2 lb. Contains: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 40,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Explorer's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 55 lb. Contains: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Flask",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Holds up to 1 pint.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/water-flask.svg",
+		"price": 2,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Grappling Hook",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. As a Utilize action, throw at a railing, ledge, or catch within 50 ft (DC 13 Dex Acrobatics to catch). If tied to a Rope, you can then climb it.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/grapple.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Healer's Kit",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 3 lb. Has ten uses. As a Utilize action, expend one use to stabilize an Unconscious creature at 0 HP without needing a Wisdom (Medicine) check.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/health-capsule.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Amulet (Holy Symbol)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Worn or held. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tribal-pendant.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Emblem (Holy Symbol)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Borne on fabric or a Shield. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/wax-seal.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Reliquary (Holy Symbol)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Held. Bejeweled or painted to channel divine magic. A Cleric or Paladin can use it as a Spellcasting Focus. (Holy Symbol)",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/covered-jar.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Holy Water",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. As an Attack action, throw at a creature within 20 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or take 2d8 Radiant damage if it is a Fiend or an Undead.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/holy-water.svg",
+		"price": 25,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Hunting Trap",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 25 lb. As a Utilize action, set the trap. A creature stepping on it must succeed on a DC 13 Dex save or take 1d4 Piercing damage and have Speed reduced to 0. Escape: DC 13 Str (Athletics) action.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/skoll/box-trap.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Ink",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ink-swirl.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Ink Pen",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Using Ink, an Ink Pen is used to write or draw.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/fountain-pen.svg",
+		"price": 2,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Jug",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. Holds up to 1 gallon.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/jug.svg",
+		"price": 2,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Ladder",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 25 lb. 10 feet tall. You must climb to move up or down it.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/ladder.svg",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Lamp",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Burns Oil as fuel to cast Bright Light in a 15-foot radius and Dim Light for an additional 30 feet.",
+		"image": "https://5e.tools/img/items/XPHB/Lamp.webp",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Bullseye Lantern",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/lantern-flame.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Hooded Lantern",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, lower the hood to reduce to Dim Light in a 5-foot radius, or raise it again.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/lantern.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Lock",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Comes with a key. Without the key, a creature can use Thieves' Tools to pick it with a DC 15 Dex (Sleight of Hand) check.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/plain-padlock.svg",
+		"price": 10,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Magnifying Glass",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Grants Advantage on any ability check made to appraise or inspect a highly detailed item. Can light a fire with sunlight (takes about 5 minutes).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magnifying-glass.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Manacles",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 6 lb. As a Utilize action, bind a Grappled/Incapacitated/Restrained Small or Medium creature within 5 ft (DC 13 Dex Sleight of Hand). Bound creature has Disadvantage on attacks and is Restrained if fixed in place. Escape: DC 20 Dex. Burst: DC 25 Str.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/manacles.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Map",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Consulting an accurate Map grants a +5 bonus to Wisdom (Survival) checks to find your way in the place it represents.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/treasure-map.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Mirror",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1/2 lb. A handheld steel Mirror useful for personal cosmetics, peeking around corners, and reflecting light as a signal.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/shinto-shrine-mirror.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Net",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 3 lb. As an Attack action, throw at a creature within 15 ft. Target must succeed on a Dex save (DC 8 + Dex mod + Prof) or be Restrained. Escape: DC 10 Str (Athletics) action. Destroying the Net (AC 10; 5 HP) also frees the target.",
+		"image": "https://5e.tools/img/items/XPHB/Net.webp",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Oil",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Douse a creature within 20 ft (Dex save or take extra 5 Fire damage if ignited within 1 min), pour on ground to cover 5-ft square (5 Fire damage), or use as fuel for Lamps/Lanterns (burns 6 hours).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/oil-can.svg",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Paper",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "One sheet of Paper can hold about 250 handwritten words.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/folded-paper.svg",
+		"price": 2,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Parchment",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "One sheet of Parchment can hold about 250 handwritten words.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/papers.svg",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Perfume",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Comes in a 4-ounce vial. For 1 hour after applying, you have Advantage on Charisma (Persuasion) checks to influence an Indifferent Humanoid within 5 feet.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/delicate-perfume.svg",
+		"price": 5,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Basic Poison",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "As a Bonus Action, coat one weapon or up to three pieces of ammunition. A creature taking Piercing or Slashing damage from the poisoned weapon takes an extra 1d4 Poison damage. Lasts 1 minute or until damage is dealt.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/poison-bottle.svg",
+		"price": 100,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Pole",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 7 lb. 10 feet long. Touch something up to 10 ft away. Use to vault for Advantage on High/Long Jump Str (Athletics) checks.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/bo.svg",
+		"price": 5,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Iron Pot",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 10 lb. Holds up to 1 gallon.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/cauldron.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Potion of Healing",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1/2 lb. Magic item. As a Bonus Action, drink it or administer to a creature within 5 ft. The creature regains 2d4 + 2 Hit Points.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Pouch",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Holds up to 6 pounds within one-fifth of a cubic foot.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/shiny-purse.svg",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Priest's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 29 lb. Contains: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 33,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Quiver",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Holds up to 20 Arrows.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/quiver.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Portable Ram",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 35 lb. Use to break down doors with a +4 bonus to the Strength check. One other character can help, giving you Advantage.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/ram.svg",
+		"price": 4,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Rations",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 2 lb. Travel-ready food including jerky, dried fruit, hardtack, and nuts. One day's worth.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/meat.svg",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Robe",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 4 lb. Has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/robe.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Rope",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. 50 feet long. Tie a knot as a Utilize action (DC 10 Dex Sleight of Hand). Burst: DC 20 Str (Athletics). Can bind an unwilling Grappled/Incapacitated/Restrained creature; Restrained if legs bound. Escape: DC 15 Dex (Acrobatics).",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/rope-coil.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Sack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1/2 lb. Holds up to 30 pounds within 1 cubic foot.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/swap-bag.svg",
+		"price": 1,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Scholar's Pack",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 22 lb. Contains: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/backpack.svg",
+		"price": 40,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Shovel",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. Working for 1 hour, you can dig a hole that is 5 feet on each side in soil or similar material.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/trench-spade.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Signal Whistle",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "When blown as a Utilize action, produces a sound that can be heard up to 600 feet away.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/whistle.svg",
+		"price": 5,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Spell Scroll (Cantrip)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Bears the words of a cantrip. If on your class's spell list, cast it using normal casting time without Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/scroll-unfurled.svg",
+		"price": 30,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Spell Scroll (Level 1)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Bears the words of a level 1 spell. If on your class's spell list, cast it using normal casting time without Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
+		"price": 50,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Iron Spikes (10)",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. As a Utilize action, hammer a spike into wood, earth, or similar material to jam a door shut or tie a Rope or Chain to it.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/nails.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Spyglass",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Objects viewed through a Spyglass are magnified to twice their size.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/spyglass.svg",
+		"price": 1000,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "String",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "10 feet long. You can tie a knot in it as a Utilize action.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/sewing-string.svg",
+		"price": 1,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Tent",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 20 lb. Sleeps up to two Small or Medium creatures.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/tent.svg",
+		"price": 2,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Tinderbox",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Contains flint, fire steel, and tinder. Lighting a Candle, Lamp, Lantern, or Torch takes a Bonus Action. Lighting any other fire takes 1 minute.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/matchbox.svg",
+		"price": 5,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Torch",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 1 lb. Burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. Can be used as a Simple Melee weapon dealing 1 Fire damage on a hit.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/torch.svg",
+		"price": 1,
+		"currency": "cp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Vial",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Holds up to 4 ounces.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/caro-asercion/round-potion.svg",
+		"price": 1,
+		"currency": "gp",
+		"itemGrouping": [
+			"Base Items"
+		]
+	},
+	{
+		"name": "Waterskin",
+		"type": "adventuring gear",
+		"rarity": "common",
+		"description": "Weight: 5 lb. (full). Holds up to 4 pints. If you don't drink sufficient water, you risk dehydration.",
+		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/waterskin.svg",
+		"price": 2,
+		"currency": "sp",
+		"itemGrouping": [
+			"Base Items"
+		]
 	}
 ]
