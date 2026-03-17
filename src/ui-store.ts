@@ -270,7 +270,7 @@ function bindStorefrontEvents(
     await OBR.popover.open({
       id: POPOVER_STORE_ID,
       url: `${baseUrl}store.html`,
-      height: isMinimized ? 60 : 950,
+      height: isMinimized ? 80 : 950,
       width: 750,
       anchorPosition: { top: 50, left: window.innerWidth * 0.5 },
       anchorOrigin: { horizontal: "CENTER", vertical: "TOP" },
