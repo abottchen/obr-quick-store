@@ -1,7 +1,11 @@
 export const CONFIG_STYLES = `
   .config-header {
-    text-align: center;
     margin-bottom: 12px;
+  }
+  .config-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .config-header h1 {
     font-size: 16px;
@@ -11,6 +15,38 @@ export const CONFIG_STYLES = `
   .config-header p {
     font-size: 11px;
     color: #888;
+  }
+  .config-header-actions {
+    display: flex;
+    gap: 4px;
+  }
+  .config-header-actions .btn-icon {
+    background: transparent;
+    color: #aaa;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 1;
+    cursor: pointer;
+    border: none;
+  }
+  .config-header-actions .btn-icon:hover {
+    background: #333;
+    color: #e0e0e0;
+  }
+  .config-header-actions .btn-icon-primary {
+    color: #4caf50;
+  }
+  .config-header-actions .btn-icon-primary:hover {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4caf50;
+  }
+  .config-header-actions .btn-icon-danger {
+    color: #c0392b;
+  }
+  .config-header-actions .btn-icon-danger:hover {
+    background: rgba(192, 57, 43, 0.15);
+    color: #c0392b;
   }
   .groupings-list {
     display: flex;
@@ -72,13 +108,5 @@ export const CONFIG_STYLES = `
     font-size: 16px;
     color: #bb86fc;
     margin-bottom: 8px;
-  }
-  .actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .actions button {
-    flex: 1;
   }
 `;

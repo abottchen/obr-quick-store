@@ -70,7 +70,9 @@ function renderStorefront(
   const adjustment = data.config.priceAdjustment;
 
   const itemsList = container.querySelector<HTMLElement>("#items-list");
+  const cartPanel = container.querySelector<HTMLElement>(".cart-panel");
   const prevScroll = itemsList?.scrollTop ?? 0;
+  const prevCartScroll = cartPanel?.scrollTop ?? 0;
 
   container.innerHTML = `
     <div class="storefront">
@@ -102,7 +104,9 @@ function renderStorefront(
   `;
 
   const newItemsList = container.querySelector<HTMLElement>("#items-list");
+  const newCartPanel = container.querySelector<HTMLElement>(".cart-panel");
   if (newItemsList) newItemsList.scrollTop = prevScroll;
+  if (newCartPanel) newCartPanel.scrollTop = prevCartScroll;
 
   bindStorefrontEvents(container, data, isGM);
 }

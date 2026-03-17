@@ -38,7 +38,17 @@ export function renderConfigUI(
 
   container.innerHTML = `
     <div class="config-header">
-      <h1>Quick Store</h1>
+      <div class="config-header-row">
+        <h1>Quick Store</h1>
+        <div class="config-header-actions">
+          <button class="btn-icon" id="import-btn" title="Import Catalog">&#x1F4C1;</button>
+          ${
+            data.config.isOpen
+              ? `<button class="btn-icon btn-icon-danger" id="close-store" title="Close Store">&#x23F9;</button>`
+              : `<button class="btn-icon btn-icon-primary" id="open-store" title="Open Store">&#x25B6;</button>`
+          }
+        </div>
+      </div>
       <p>Configure and present shops to your players</p>
     </div>
 
@@ -76,18 +86,6 @@ export function renderConfigUI(
       <div class="groupings-list" id="groupings-list">
         ${renderGroupingsChecklist(data)}
       </div>
-    </div>
-
-    <div class="actions">
-      ${
-        data.config.isOpen
-          ? `<button class="btn-danger" id="close-store">Close Store</button>`
-          : `<button class="btn-primary" id="open-store">Open Store</button>`
-      }
-    </div>
-
-    <div class="actions">
-      <button class="btn-secondary" id="import-btn">Import Catalog</button>
     </div>
 
     <input type="file" id="file-input" accept=".json" style="display: none" />
