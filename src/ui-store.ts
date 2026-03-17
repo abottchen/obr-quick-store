@@ -47,15 +47,17 @@ function renderBreakdown(breakdown: CurrencyBreakdown): string {
 
 function getActiveItems(data: QuickStoreMetadata): StoreItem[] {
   const active = new Set(data.config.activeGroupings);
-  return data.catalog.filter((item) => active.has(item.itemGrouping));
+  return data.catalog.filter((item) => item.itemGrouping.some((g) => active.has(g)));
 }
 
 function groupItemsByGrouping(items: StoreItem[]): Map<string, StoreItem[]> {
   const groups = new Map<string, StoreItem[]>();
   for (const item of items) {
-    const group = groups.get(item.itemGrouping) ?? [];
-    group.push(item);
-    groups.set(item.itemGrouping, group);
+    for (const grouping of item.itemGrouping) {
+      const group = groups.get(grouping) ?? [];
+      group.push(item);
+      groups.set(grouping, group);
+    }
   }
   return groups;
 }

@@ -15,7 +15,8 @@ function validateCatalog(data: unknown): data is StoreItem[] {
       VALID_RARITIES.includes(item.rarity) &&
       typeof item.description === "string" &&
       typeof item.price === "number" &&
-      typeof item.itemGrouping === "string" &&
+      Array.isArray(item.itemGrouping) &&
+      item.itemGrouping.every((g: unknown) => typeof g === "string") &&
       (item.currency === undefined || VALID_CURRENCIES.includes(item.currency))
   );
 }

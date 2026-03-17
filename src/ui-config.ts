@@ -7,7 +7,7 @@ import { BROADCAST_CHANNEL } from "./constants";
 import type { QuickStoreMetadata } from "./types";
 
 function getGroupings(data: QuickStoreMetadata): string[] {
-  const groupings = new Set(data.catalog.map((item) => item.itemGrouping));
+  const groupings = new Set(data.catalog.flatMap((item) => item.itemGrouping));
   return [...groupings].sort();
 }
 

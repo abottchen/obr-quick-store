@@ -9,7 +9,7 @@ export interface StoreItem {
   image: string;
   price: number;
   currency: Currency;
-  itemGrouping: string;
+  itemGrouping: string[];
 }
 
 export interface StoreConfig {
