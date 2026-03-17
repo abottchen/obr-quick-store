@@ -1,6 +1,6 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
-import { onStoreMetadataChange, setStoreMetadata, getStoreMetadata } from "./metadata";
+import { onStoreMetadataChange, getStoreMetadata } from "./metadata";
 import { fetchCatalog } from "./catalog";
 import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
 import type { CurrencyBreakdown } from "./cart";
@@ -98,7 +98,7 @@ function renderStorefront(
           <p>${escape(data.config.npcName || "Shopkeeper")}</p>
         </div>
         <div class="store-header-controls">
-          ${isGM ? `<button class="btn-icon btn-small" id="close-store-btn" title="Close Store">&#x2715;</button>` : ""}
+          <button class="btn-icon btn-small" id="close-store-btn" title="Close">&#x2715;</button>
           <button class="btn-icon" id="minimize-btn" title="${isMinimized ? "Maximize" : "Minimize"}">
             ${isMinimized ? "&#x25A1;" : "&#x2012;"}
           </button>
@@ -264,24 +264,25 @@ function bindStorefrontEvents(
     });
   });
 
-  container.querySelector("#minimize-btn")?.addEventListener("click", () => {
+  container.querySelector("#minimize-btn")?.addEventListener("click", async () => {
     isMinimized = !isMinimized;
+    const baseUrl = new URL(".", document.location.href).href;
+    await OBR.popover.open({
+      id: POPOVER_STORE_ID,
+      url: `${baseUrl}store.html`,
+      height: isMinimized ? 60 : 950,
+      width: 750,
+      anchorPosition: { top: 50, left: window.innerWidth * 0.5 },
+      anchorOrigin: { horizontal: "CENTER", vertical: "TOP" },
+      disableClickAway: true,
+      hidePaper: false,
+    });
     renderStorefront(container, data, isGM);
   });
 
-  if (isGM) {
-    container.querySelector("#close-store-btn")?.addEventListener("click", async () => {
-      await setStoreMetadata({
-        config: { ...(await getStoreMetadata()).config, isOpen: false },
-      });
-      await setStoreMetadata({ cart: { entries: [] } });
-      await OBR.broadcast.sendMessage(
-        BROADCAST_CHANNEL,
-        { action: "close" },
-        { destination: "ALL" }
-      );
-    });
-  }
+  container.querySelector("#close-store-btn")?.addEventListener("click", () => {
+    OBR.popover.close(POPOVER_STORE_ID);
+  });
 
   container.querySelectorAll<HTMLElement>(".item-row").forEach((card) => {
     card.addEventListener("click", async () => {
