@@ -54,7 +54,7 @@ Import a JSON file containing an array of items:
     "image": "",
     "price": 50,
     "currency": "gp",
-    "itemGrouping": "Potions"
+    "itemGrouping": ["Potions"]
   }
 ]
 ```
@@ -68,7 +68,7 @@ Import a JSON file containing an array of items:
 | `image` | string | URL to an item image (optional, leave empty for a placeholder) |
 | `price` | number | Base price |
 | `currency` | string | One of: `gp`, `sp`, `cp`, `pp` (optional, defaults to `gp`) |
-| `itemGrouping` | string | Group name for filtering (e.g., "Weapons", "Potions") |
+| `itemGrouping` | string[] | Group names for filtering; an item appears when any of its groups are active (e.g., `["Weapons"]`, `["Potions", "Magic Items"]`) |
 
 ## Development
 
