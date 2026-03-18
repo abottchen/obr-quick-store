@@ -96,6 +96,10 @@ export function renderConfigUI(
       </div>
     </div>
 
+    <div class="section" style="margin-top: 8px;">
+      <button class="btn-secondary" id="dump-scene-btn" style="width: 100%;">📥 Dump Scene Data</button>
+    </div>
+
   `;
 
   bindConfigEvents(container, data);
@@ -166,6 +170,90 @@ function bindConfigEvents(
     );
   });
 
+  container.querySelector("#dump-scene-btn")?.addEventListener("click", dumpSceneData);
+}
+
+async function safeCall<T>(fn: () => Promise<T>): Promise<T | string> {
+  try {
+    return await fn();
+  } catch (e: unknown) {
+    return e instanceof Error ? e.message : String(e);
+  }
+}
+
+async function dumpSceneData(): Promise<void> {
+  try {
+    const [
+      sceneItems,
+      sceneMetadata,
+      fogColor,
+      fogStrokeWidth,
+      fogFilled,
+      gridScale,
+      gridDpi,
+      gridType,
+      roomMetadata,
+      players,
+      playerId,
+      playerName,
+      playerRole,
+      playerColor,
+      vpPosition,
+      vpScale,
+      vpWidth,
+      vpHeight,
+      theme,
+    ] = await Promise.all([
+      safeCall(() => OBR.scene.items.getItems()),
+      safeCall(() => OBR.scene.getMetadata()),
+      safeCall(() => OBR.scene.fog.getColor()),
+      safeCall(() => OBR.scene.fog.getStrokeWidth()),
+      safeCall(() => OBR.scene.fog.getFilled()),
+      safeCall(() => OBR.scene.grid.getScale()),
+      safeCall(() => OBR.scene.grid.getDpi()),
+      safeCall(() => OBR.scene.grid.getType()),
+      safeCall(() => OBR.room.getMetadata()),
+      safeCall(() => OBR.party.getPlayers()),
+      safeCall(() => OBR.player.getId()),
+      safeCall(() => OBR.player.getName()),
+      safeCall(() => OBR.player.getRole()),
+      safeCall(() => OBR.player.getColor()),
+      safeCall(() => OBR.viewport.getPosition()),
+      safeCall(() => OBR.viewport.getScale()),
+      safeCall(() => OBR.viewport.getWidth()),
+      safeCall(() => OBR.viewport.getHeight()),
+      safeCall(() => OBR.theme.getTheme()),
+    ]);
+
+    const dump = {
+      sceneItems,
+      sceneMetadata,
+      sceneFog: { color: fogColor, strokeWidth: fogStrokeWidth, filled: fogFilled },
+      sceneGrid: { scale: gridScale, dpi: gridDpi, type: gridType },
+      roomMetadata,
+      players,
+      currentPlayer: { id: playerId, name: playerName, role: playerRole, color: playerColor },
+      viewport: { position: vpPosition, scale: vpScale, width: vpWidth, height: vpHeight },
+      theme,
+    };
+
+    const json = JSON.stringify(dump, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-").replace("Z", "");
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `obr-scene-dump-${timestamp}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    await OBR.notification.show("Scene data downloaded", "SUCCESS");
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : String(e);
+    await OBR.notification.show(`Scene dump failed: ${msg}`, "ERROR");
+  }
 }
 
 async function saveConfig(container: HTMLElement): Promise<void> {
