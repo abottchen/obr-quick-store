@@ -1,5 +1,5 @@
 import OBR from "@owlbear-rodeo/sdk";
-import { getStoreMetadata, setStoreMetadata } from "./metadata";
+import { getConfigMetadata, updateConfigMetadata } from "./metadata";
 import { generateNpcName, generateStoreName } from "./names";
 import { fetchCatalog, clearCatalogCache } from "./catalog";
 import { clearCart } from "./cart";
@@ -137,10 +137,10 @@ function bindConfigEvents(
   container.querySelector("#refresh-catalog-btn")!.addEventListener("click", async () => {
     await saveConfig(container);
     clearCatalogCache();
-    const meta = await getStoreMetadata();
-    const catalog = await fetchCatalog(meta.config.catalogUrl, true);
+    const config = await getConfigMetadata();
+    const catalog = await fetchCatalog(config.catalogUrl, true);
     await OBR.notification.show(`Loaded ${catalog.length} items.`, "SUCCESS");
-    renderConfigUI(container, { catalog, ...meta });
+    renderConfigUI(container, { catalog, config, cart: { entries: [] } });
   });
 
   const openBtn = container.querySelector("#open-store");
@@ -148,9 +148,7 @@ function bindConfigEvents(
 
   openBtn?.addEventListener("click", async () => {
     await saveConfig(container);
-    await setStoreMetadata({
-      config: { ...(await getStoreMetadata()).config, isOpen: true },
-    });
+    await updateConfigMetadata((current) => ({ ...current, isOpen: true }));
     await OBR.broadcast.sendMessage(
       BROADCAST_CHANNEL,
       { action: "open" },
@@ -159,9 +157,7 @@ function bindConfigEvents(
   });
 
   closeBtn?.addEventListener("click", async () => {
-    await setStoreMetadata({
-      config: { ...(await getStoreMetadata()).config, isOpen: false },
-    });
+    await updateConfigMetadata((current) => ({ ...current, isOpen: false }));
     await clearCart();
     await OBR.broadcast.sendMessage(
       BROADCAST_CHANNEL,
@@ -270,17 +266,14 @@ async function saveConfig(container: HTMLElement): Promise<void> {
     if (cb.checked) activeGroupings.push(cb.value);
   });
 
-  const current = await getStoreMetadata();
-  await setStoreMetadata({
-    config: {
-      ...current.config,
-      catalogUrl,
-      storeName,
-      npcName,
-      priceAdjustment,
-      activeGroupings,
-    },
-  });
+  await updateConfigMetadata((current) => ({
+    ...current,
+    catalogUrl,
+    storeName,
+    npcName,
+    priceAdjustment,
+    activeGroupings,
+  }));
 }
 
 export function renderPlayerMessage(container: HTMLElement): void {

@@ -2,7 +2,7 @@ import OBR from "@owlbear-rodeo/sdk";
 import { BASE_STYLES } from "./styles";
 import { CONFIG_STYLES } from "./styles-config";
 import { renderConfigUI, renderPlayerMessage } from "./ui-config";
-import { getStoreMetadata, onStoreMetadataChange } from "./metadata";
+import { getConfigMetadata, onStoreDataChange } from "./metadata";
 import { fetchCatalog } from "./catalog";
 import { BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 
@@ -23,8 +23,8 @@ OBR.onReady(async () => {
     }
   });
 
-  const meta = await getStoreMetadata();
-  if (meta.config.isOpen) {
+  const config = await getConfigMetadata();
+  if (config.isOpen) {
     openStorefront();
   }
 
@@ -33,12 +33,12 @@ OBR.onReady(async () => {
     return;
   }
 
-  const catalog = await fetchCatalog(meta.config.catalogUrl);
-  renderConfigUI(app, { catalog, ...meta });
+  const catalog = await fetchCatalog(config.catalogUrl);
+  renderConfigUI(app, { catalog, config, cart: { entries: [] } });
 
-  onStoreMetadataChange(async (updated) => {
-    const freshCatalog = await fetchCatalog(updated.config.catalogUrl);
-    renderConfigUI(app, { catalog: freshCatalog, ...updated });
+  onStoreDataChange(async (updatedConfig, updatedCart) => {
+    const freshCatalog = await fetchCatalog(updatedConfig.catalogUrl);
+    renderConfigUI(app, { catalog: freshCatalog, config: updatedConfig, cart: updatedCart });
   });
 });
 

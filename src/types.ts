@@ -21,6 +21,21 @@ export interface StoreConfig {
   isOpen: boolean;
 }
 
+// Storage types — what gets written to per-player metadata keys
+export interface PlayerCartEntry {
+  itemName: string;
+  itemPrice: number;
+  itemCurrency: Currency;
+  quantity: number;
+}
+
+export interface PlayerCart {
+  entries: PlayerCartEntry[];
+  playerName: string;
+  playerColor: string;
+}
+
+// UI types — reconstructed from per-player carts for rendering
 export interface CartEntry {
   itemName: string;
   itemPrice: number;
@@ -33,11 +48,6 @@ export interface CartEntry {
 
 export interface CartState {
   entries: CartEntry[];
-}
-
-export interface QuickStoreMetadata {
-  config: StoreConfig;
-  cart: CartState;
 }
 
 export interface StoreData {

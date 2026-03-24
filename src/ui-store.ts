@@ -1,6 +1,6 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
-import { onStoreMetadataChange, getStoreMetadata } from "./metadata";
+import { getConfigMetadata, onStoreDataChange } from "./metadata";
 import { fetchCatalog } from "./catalog";
 import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
 import type { CurrencyBreakdown } from "./cart";
@@ -13,14 +13,14 @@ let groupsInitialized = false;
 let searchTerm = "";
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
-  const meta = await getStoreMetadata();
-  const catalog = await fetchCatalog(meta.config.catalogUrl);
+  const config = await getConfigMetadata();
+  const catalog = await fetchCatalog(config.catalogUrl);
   const role = await OBR.player.getRole();
-  renderStorefront(container, { catalog, ...meta }, role === "GM");
+  renderStorefront(container, { catalog, config, cart: { entries: [] } }, role === "GM");
 
-  onStoreMetadataChange(async (updated) => {
-    const freshCatalog = await fetchCatalog(updated.config.catalogUrl);
-    renderStorefront(container, { catalog: freshCatalog, ...updated }, role === "GM");
+  onStoreDataChange(async (updatedConfig, updatedCart) => {
+    const freshCatalog = await fetchCatalog(updatedConfig.catalogUrl);
+    renderStorefront(container, { catalog: freshCatalog, config: updatedConfig, cart: updatedCart }, role === "GM");
   });
 
   OBR.broadcast.onMessage(BROADCAST_CHANNEL, (event) => {

@@ -1,5 +1,7 @@
 export const EXTENSION_ID = "com.abottchen.obr-quick-store";
-export const METADATA_KEY = `${EXTENSION_ID}/data`;
+export const METADATA_KEY = `${EXTENSION_ID}/data`; // Legacy key, kept for migration
+export const CONFIG_KEY = `${EXTENSION_ID}/config`;
+export const CART_KEY_PREFIX = `${EXTENSION_ID}/cart/`;
 export const BROADCAST_CHANNEL = `${EXTENSION_ID}/store-control`;
 export const POPOVER_STORE_ID = `${EXTENSION_ID}/storefront`;
 
@@ -29,6 +31,3 @@ export const DEFAULT_CONFIG = {
   isOpen: false,
 };
 
-export const DEFAULT_CART = {
-  entries: [] as [],
-};
