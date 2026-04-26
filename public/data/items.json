@@ -2105,7 +2105,7 @@
 		"rarity": "common",
 		"description": "Bears the words of a level 1 spell. Any creature that can read may cast the spell using its normal casting time, without providing Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
-		"price": 50,
+		"price": 100,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2117,7 +2117,7 @@
 		"rarity": "uncommon",
 		"description": "Bears the words of a level 2 spell. Any creature that can read may cast the spell using its normal casting time, without providing Material components. Spell save DC 13, attack bonus +5. Scroll disintegrates after casting.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/lorc/tied-scroll.svg",
-		"price": 200,
+		"price": 550,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2483,7 +2483,7 @@
 		"rarity": "uncommon",
 		"description": "You regain 4d4 + 4 Hit Points when you drink this potion. The potion's red liquid glimmers when agitated.",
 		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Healing.webp",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2495,7 +2495,7 @@
 		"rarity": "uncommon",
 		"description": "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2507,7 +2507,7 @@
 		"rarity": "uncommon",
 		"description": "After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet. The target makes a DC 13 Dex save, taking 4d6 Fire damage on a failure or half on a success. The effect ends after 3 uses or 1 hour.",
 		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Fire%20Breath.webp",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2519,7 +2519,7 @@
 		"rarity": "uncommon",
 		"description": "When you drink this potion, you gain the \"enlarge\" effect of the Enlarge/Reduce spell for 10 minutes (no Concentration required).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2531,7 +2531,7 @@
 		"rarity": "uncommon",
 		"description": "When you drink this potion, your Strength score changes to 21 for 1 hour. The potion has no effect if your Strength is already equal to or greater than 21.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2543,7 +2543,7 @@
 		"rarity": "uncommon",
 		"description": "After you drink this potion, each Unarmed Strike you make deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes.",
 		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Pugilism.webp",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2555,7 +2555,7 @@
 		"rarity": "uncommon",
 		"description": "When you drink this potion, you have Resistance to one type of damage for 1 hour. The type is determined when the potion is created (Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder).",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/magic-potion.svg",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2567,7 +2567,7 @@
 		"rarity": "uncommon",
 		"description": "You can breathe underwater for 24 hours after drinking this potion.",
 		"image": "https://5e.tools/img/items/XDMG/Potion%20of%20Water%20Breathing.webp",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
@@ -2579,7 +2579,7 @@
 		"rarity": "uncommon",
 		"description": "One vial covers one Medium or smaller creature plus its equipment (one additional vial per size above Medium). Applying takes 10 minutes. The affected creature gains the effect of the Freedom of Movement spell for 8 hours.",
 		"image": "https://game-icons.net/icons/ffffff/000000/1x1/delapouite/oil-can.svg",
-		"price": 200,
+		"price": 300,
 		"currency": "gp",
 		"itemGrouping": [
 			"Wakanga O'tamu"
