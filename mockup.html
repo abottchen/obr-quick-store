@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Store — Interactive Mockup v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deepest: #1a1719;
+      --bg-surface: #22201f;
+      --bg-raised: #2c2926;
+      --bg-elevated: #37332f;
+      --bg-hover: #3f3a35;
+
+      --stone-warm: #c4a882;
+      --stone-light: #ddd0be;
+      --stone-mid: #8a7e6f;
+
+      --verdigris: #6faa8d;
+      --verdigris-bright: #83c4a4;
+      --verdigris-dim: #4a7d65;
+
+      --terracotta: #c47a5a;
+      --terracotta-dim: #9e5e42;
+
+      --text-primary: #dcd5cb;
+      --text-secondary: #9e9588;
+      --text-dim: #665e54;
+
+      --border: #3d3731;
+      --border-light: #524a42;
+      --border-warm: #5c4f3e;
+
+      --danger: #c45c4f;
+      --success: #6faa8d;
+
+      --rarity-common: #7a7a7a;
+      --rarity-uncommon: #4db87a;
+      --rarity-rare: #4a9edb;
+      --rarity-very-rare: #a87bdb;
+      --rarity-legendary: #e8943a;
+
+      --currency-gp: #e8c84a;
+      --currency-sp: #b8b8b8;
+      --currency-cp: #c47d3a;
+      --currency-pp: #c8c8d4;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9) translateY(6px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @keyframes cartSlideIn {
+      from { opacity: 0; transform: translateX(-12px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes flyToCart {
+      0% { opacity: 1; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.8; transform: translate(var(--fly-x, 0), var(--fly-y, -30px)) scale(0.6); }
+      100% { opacity: 0; transform: translate(var(--fly-x, 0), var(--fly-y, 60px)) scale(0.3); }
+    }
+
+    @keyframes qtyPulse {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.5); color: #a8f0ca; text-shadow: 0 0 8px rgba(131, 196, 164, 0.6); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes qtyDecrease {
+      0% { transform: scale(1); }
+      40% { transform: scale(0.65); color: #ff8a7a; text-shadow: 0 0 8px rgba(196, 92, 79, 0.6); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes goldPulseUp {
+      0% { transform: scale(1); filter: brightness(1); }
+      40% { transform: scale(1.12); filter: brightness(1.6); text-shadow: 0 0 6px rgba(232, 200, 74, 0.5); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+
+    @keyframes goldPulseDown {
+      0% { transform: scale(1); filter: brightness(1); }
+      40% { transform: scale(0.9); filter: brightness(1.6); text-shadow: 0 0 6px rgba(196, 92, 79, 0.5); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+
+    @keyframes rowFlash {
+      0% { box-shadow: inset 0 0 0 1px var(--verdigris), 0 0 12px rgba(111, 170, 141, 0.2); }
+      100% { box-shadow: inset 0 0 0 1px var(--border), 0 0 0px transparent; }
+    }
+
+    @keyframes cartCountBounce {
+      0% { transform: scale(1); background: var(--verdigris-dim); }
+      50% { transform: scale(1.4); background: var(--verdigris-bright); box-shadow: 0 0 10px rgba(131, 196, 164, 0.5); }
+      100% { transform: scale(1); background: var(--verdigris-dim); }
+    }
+
+    @keyframes legendaryGlow {
+      0%, 100% { box-shadow: 0 0 8px rgba(232, 148, 58, 0.35), 0 0 20px rgba(232, 148, 58, 0.15), inset 0 0 0 1px rgba(232, 148, 58, 0.2); }
+      50% { box-shadow: 0 0 16px rgba(232, 148, 58, 0.55), 0 0 35px rgba(232, 148, 58, 0.25), inset 0 0 0 1px rgba(232, 148, 58, 0.35); }
+    }
+
+    @keyframes veryRareGlow {
+      0%, 100% { box-shadow: 0 0 6px rgba(168, 123, 219, 0.25), 0 0 15px rgba(168, 123, 219, 0.1); }
+      50% { box-shadow: 0 0 12px rgba(168, 123, 219, 0.45), 0 0 25px rgba(168, 123, 219, 0.15); }
+    }
+
+    @keyframes headerGradientShift {
+      0% { background-position: 0% center; opacity: 0.4; }
+      50% { background-position: 100% center; opacity: 0.75; }
+      100% { background-position: 0% center; opacity: 0.4; }
+    }
+
+    @keyframes coinSheen {
+      0% { transform: rotate(0deg); opacity: 0; }
+      10% { opacity: 0.6; }
+      30% { opacity: 0; }
+      100% { transform: rotate(0deg); opacity: 0; }
+    }
+
+    @keyframes handleNudge {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-3px); }
+      60% { transform: translateY(1px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes searchFocusSpread {
+      from { background-size: 0% 100%; }
+      to { background-size: 100% 100%; }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0f0e0d;
+      color: var(--text-primary);
+      font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .mockup-container {
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .panel-label {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    /* ===== STOREFRONT ===== */
+    .storefront-panel {
+      width: 700px;
+      height: 800px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .store-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      background: linear-gradient(180deg, var(--bg-raised) 0%, var(--bg-surface) 100%);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .store-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--stone-mid) 10%,
+        var(--stone-warm) 25%,
+        var(--verdigris-bright) 50%,
+        var(--stone-warm) 75%,
+        var(--stone-mid) 90%,
+        transparent 100%
+      );
+      background-size: 200% 100%;
+      animation: headerGradientShift 7s ease-in-out infinite;
+    }
+
+    .store-header-info h1 {
+      font-size: 22px;
+      color: var(--stone-light);
+      margin-bottom: 2px;
+    }
+
+    .store-header-info p {
+      font-size: 13px;
+      color: var(--stone-mid);
+      font-style: italic;
+    }
+
+    .store-header-controls {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 18px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+
+    .btn-icon:hover {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+    }
+
+    /* Search + toolbar */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      padding: 10px 18px;
+      gap: 8px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .toolbar input {
+      flex: 1;
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-primary);
+      padding: 9px 14px;
+      font-size: 13px;
+      font-family: 'Nunito Sans', sans-serif;
+      transition: border-color 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .toolbar input:focus {
+      outline: none;
+      border-color: var(--verdigris-dim);
+      box-shadow: 0 0 0 3px rgba(111, 170, 141, 0.08), inset 0 1px 3px rgba(0,0,0,0.2);
+      background-image: linear-gradient(90deg, transparent, rgba(111, 170, 141, 0.04), transparent);
+      background-size: 100% 100%;
+      animation: searchFocusSpread 0.4s ease both;
+    }
+
+    .toolbar input::placeholder { color: var(--text-dim); }
+
+    .toolbar-btn {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      padding: 8px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      font-family: 'Nunito Sans', sans-serif;
+      line-height: 1;
+    }
+
+    .toolbar-btn:hover {
+      background: var(--bg-elevated);
+      border-color: var(--border-light);
+      color: var(--text-primary);
+    }
+
+    .toolbar-btn:active {
+      background: var(--bg-hover);
+    }
+
+    /* Column header */
+    .items-list-header {
+      display: flex;
+      align-items: center;
+      padding: 7px 18px;
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--border);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      flex-shrink: 0;
+    }
+
+    .items-list-header .col-icon { width: 44px; flex-shrink: 0; }
+    .items-list-header .col-name { flex: 1; padding-left: 10px; }
+    .items-list-header .col-price { width: 100px; text-align: right; flex-shrink: 0; padding-right: 12px; }
+
+    /* Items scroll — flex child with fade edges */
+    .items-scroll-wrapper {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+    }
+
+    .items-scroll-wrapper::before,
+    .items-scroll-wrapper::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 20px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .items-scroll-wrapper::before {
+      top: 0;
+      background: linear-gradient(to bottom, var(--bg-surface), transparent);
+    }
+
+    .items-scroll-wrapper::after {
+      bottom: 0;
+      background: linear-gradient(to top, var(--bg-surface), transparent);
+    }
+
+    .items-scroll-wrapper.fade-top::before { opacity: 1; }
+    .items-scroll-wrapper.fade-bottom::after { opacity: 1; }
+
+    .items-scroll {
+      height: 100%;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    .items-scroll::-webkit-scrollbar { width: 7px; }
+    .items-scroll::-webkit-scrollbar-track { background: transparent; }
+    .items-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    .items-scroll::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+    /* Group headers */
+    .grouping-header {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--stone-warm);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 11px 18px 9px;
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .grouping-header:hover {
+      background: var(--bg-elevated);
+      color: var(--stone-light);
+    }
+
+    .grouping-arrow {
+      font-size: 9px;
+      color: var(--stone-mid);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+    }
+
+    .grouping-arrow.expanded {
+      transform: rotate(90deg);
+    }
+
+    .grouping-count {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 400;
+      margin-left: auto;
+    }
+
+    /* Group items container */
+    .grouping-items {
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    }
+
+    .grouping-items.collapsed {
+      max-height: 0 !important;
+      opacity: 0;
+    }
+
+    /* Item rows — card-like with border */
+    .item-row {
+      display: flex;
+      align-items: center;
+      padding: 8px 14px;
+      margin: 4px 10px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      border-left: 3px solid transparent;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .item-row:hover {
+      background: var(--bg-raised);
+      border-color: var(--stone-mid);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(184, 169, 146, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .item-row:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      background: var(--bg-elevated);
+    }
+
+    .item-row.flash {
+      animation: rowFlash 0.6s ease;
+    }
+
+    .item-image {
+      width: 36px;
+      height: 36px;
+      border-radius: 7px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      color: rgba(255, 255, 255, 0.7);
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      transition: border-color 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .item-row:hover .item-image {
+      border-color: var(--border-light);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .item-name {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      padding-left: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item-price {
+      text-align: right;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 600;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+      padding-right: 4px;
+      transition: filter 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    /* Rarity treatments — via border-left on the card */
+    .item-row.rarity-uncommon { border-left: 3px solid var(--rarity-uncommon); }
+    .item-row.rarity-rare {
+      border-left: 3px solid var(--rarity-rare);
+      background: linear-gradient(90deg, rgba(74, 158, 219, 0.03) 0%, transparent 40%);
+    }
+    .item-row.rarity-rare:hover {
+      border-color: var(--rarity-rare);
+    }
+    .item-row.rarity-legendary {
+      border-left: 3px solid var(--rarity-legendary);
+      background: linear-gradient(90deg, rgba(232, 148, 58, 0.05) 0%, transparent 50%);
+      animation: legendaryGlow 3s ease-in-out infinite;
+    }
+    .item-row.rarity-legendary:hover {
+      border-color: var(--rarity-legendary);
+      box-shadow: 0 2px 12px rgba(232, 148, 58, 0.25), inset 0 0 0 1px rgba(232, 148, 58, 0.15);
+    }
+    .item-row.rarity-legendary .item-image {
+      border-color: rgba(232, 148, 58, 0.4);
+      box-shadow: 0 0 10px rgba(232, 148, 58, 0.2);
+    }
+    .item-row.rarity-very-rare {
+      border-left: 3px solid var(--rarity-very-rare);
+      background: linear-gradient(90deg, rgba(168, 123, 219, 0.03) 0%, transparent 40%);
+      animation: veryRareGlow 4s ease-in-out infinite;
+    }
+    .item-row.rarity-very-rare .item-image {
+      border-color: rgba(168, 123, 219, 0.35);
+      box-shadow: 0 0 8px rgba(168, 123, 219, 0.12);
+    }
+    .item-row.rarity-rare .item-image {
+      border-color: rgba(74, 158, 219, 0.35);
+      box-shadow: 0 0 8px rgba(74, 158, 219, 0.12);
+    }
+
+    /* Price glow on hover */
+    .item-row:hover .item-price {
+      filter: brightness(1.3);
+      text-shadow: 0 0 4px currentColor;
+    }
+
+    /* ===== CART DRAWER — flex child, not absolute ===== */
+    .cart-drawer {
+      flex-shrink: 0;
+      background: var(--bg-raised);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      max-height: 350px;
+      position: relative;
+    }
+
+    .cart-drawer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--verdigris-dim), var(--stone-warm), var(--verdigris-dim), transparent);
+      opacity: 0.35;
+    }
+
+    .cart-drawer.collapsed {
+      max-height: 52px;
+    }
+
+    .cart-drawer-handle {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      transition: background 0.15s ease;
+    }
+
+    .cart-drawer-handle:hover {
+      background: var(--bg-elevated);
+    }
+
+    .cart-drawer-handle-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cart-title {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--stone-warm);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cart-count-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: var(--verdigris-dim);
+      color: var(--text-primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 0 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .cart-count-badge.bounce {
+      animation: cartCountBounce 0.3s ease;
+    }
+
+    .cart-total-preview {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--stone-light);
+    }
+
+    .cart-drawer-arrow {
+      font-size: 10px;
+      color: var(--stone-mid);
+      transition: transform 0.3s ease;
+      margin-left: 8px;
+    }
+
+    .cart-drawer.collapsed .cart-drawer-arrow {
+      transform: rotate(180deg);
+    }
+
+    .cart-drawer-content {
+      overflow-y: auto;
+      padding: 0 20px 12px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .cart-drawer-content::-webkit-scrollbar { width: 6px; }
+    .cart-drawer-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .cart-empty {
+      font-size: 13px;
+      color: var(--text-dim);
+      font-style: italic;
+      padding: 4px 0;
+    }
+
+    .cart-player-group {
+      margin-bottom: 10px;
+    }
+
+    .cart-player-name {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cart-player-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      padding: 5px 8px 5px 12px;
+      color: var(--text-primary);
+      border-radius: 6px;
+      transition: background 0.15s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .cart-item.slide-in {
+      animation: cartSlideIn 0.25s ease both;
+    }
+
+    .cart-item:hover {
+      background: var(--bg-elevated);
+    }
+
+    .cart-item-rarity-pip {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .cart-item-name {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin: 0 8px;
+    }
+
+    .cart-qty-btn {
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+
+    .cart-qty-btn:hover {
+      background: var(--bg-elevated);
+      border-color: var(--border-light);
+      color: var(--text-primary);
+    }
+
+    .cart-qty-btn.minus:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .cart-qty-btn.plus:hover {
+      border-color: var(--verdigris);
+      color: var(--verdigris);
+    }
+
+    .cart-item-qty {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      min-width: 22px;
+      text-align: center;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .cart-item-qty.pulse-up {
+      animation: qtyPulse 0.3s ease;
+    }
+
+    .cart-item-qty.pulse-down {
+      animation: qtyDecrease 0.3s ease;
+    }
+
+    .cart-item-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      min-width: 60px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-size: 18px;
+      display: inline-block;
+    }
+
+    .cart-item-price.pulse-gold-up {
+      animation: goldPulseUp 0.35s ease;
+    }
+
+    .cart-item-price.pulse-gold-down {
+      animation: goldPulseDown 0.35s ease;
+    }
+
+    .cart-subtotal .pulse-gold-up {
+      animation: goldPulseUp 0.35s ease;
+      display: inline-block;
+    }
+
+    .cart-subtotal .pulse-gold-down {
+      animation: goldPulseDown 0.35s ease;
+      display: inline-block;
+    }
+
+    .cart-grand-total .pulse-gold-up {
+      animation: goldPulseUp 0.4s ease;
+      display: inline-block;
+    }
+
+    .cart-grand-total .pulse-gold-down {
+      animation: goldPulseDown 0.4s ease;
+      display: inline-block;
+    }
+
+    .cart-subtotal {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 6px 0 4px 15px;
+      color: var(--text-secondary);
+      border-top: 1px dashed var(--border);
+      margin-top: 4px;
+    }
+
+    .cart-subtotal > span:first-child {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .cart-grand-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px 20px;
+      color: var(--stone-light);
+      border-top: 1px solid var(--border-light);
+      background: var(--bg-elevated);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cart-grand-total > span:first-child {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* Fly particle */
+    .fly-particle {
+      position: fixed;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+      animation: flyToCart 0.45s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+    }
+
+    /* Description popup */
+    .description-popup {
+      position: fixed;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 0;
+      width: 340px;
+      z-index: 1000;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(184, 169, 146, 0.1);
+      animation: scaleIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.08) both;
+      overflow: hidden;
+    }
+
+    .description-popup.rarity-legendary {
+      border-color: rgba(232, 148, 58, 0.4);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 20px rgba(232, 148, 58, 0.25), 0 0 40px rgba(232, 148, 58, 0.1);
+      animation: scaleIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.08) both, legendaryGlow 3s ease-in-out infinite 0.2s;
+    }
+
+    .description-popup.rarity-very-rare {
+      border-color: rgba(168, 123, 219, 0.35);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 16px rgba(168, 123, 219, 0.2), 0 0 30px rgba(168, 123, 219, 0.08);
+      animation: scaleIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.08) both, veryRareGlow 4s ease-in-out infinite 0.2s;
+    }
+
+    .description-popup.rarity-rare {
+      border-color: rgba(74, 158, 219, 0.3);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 12px rgba(74, 158, 219, 0.15);
+    }
+
+    .description-popup.rarity-uncommon {
+      border-color: rgba(77, 184, 122, 0.3);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 10px rgba(77, 184, 122, 0.12);
+    }
+
+    .desc-header {
+      display: flex;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .desc-image {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .desc-header-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .description-popup h3 {
+      font-size: 15px;
+      color: var(--stone-light);
+      line-height: 1.2;
+    }
+
+    .desc-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .desc-type {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .desc-rarity {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid currentColor;
+      opacity: 0.8;
+    }
+
+    .desc-price-line {
+      margin-top: 2px;
+    }
+
+    .desc-body-text {
+      font-size: 13px;
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 14px 18px;
+    }
+
+    .desc-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-raised);
+    }
+
+    .desc-add-btn {
+      background: var(--verdigris-dim);
+      border: 1px solid var(--verdigris);
+      color: var(--text-primary);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .desc-add-btn:hover {
+      background: var(--verdigris);
+      box-shadow: 0 0 8px rgba(111, 170, 141, 0.3);
+    }
+
+    .desc-qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .desc-qty-btn {
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+
+    .desc-qty-btn:hover {
+      background: var(--bg-elevated);
+      border-color: var(--border-light);
+      color: var(--text-primary);
+    }
+
+    .desc-qty-btn.minus:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .desc-qty-btn.plus:hover {
+      border-color: var(--verdigris);
+      color: var(--verdigris);
+    }
+
+    .desc-qty-value {
+      font-size: 14px;
+      font-weight: 700;
+      min-width: 24px;
+      text-align: center;
+      color: var(--verdigris-bright);
+    }
+
+    .desc-qty-value.pulse-up {
+      animation: qtyPulse 0.3s ease;
+    }
+
+    .desc-qty-value.pulse-down {
+      animation: qtyDecrease 0.3s ease;
+    }
+
+    .desc-qty-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-left: 4px;
+    }
+
+    .desc-remove-all {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      margin-left: auto;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .desc-remove-all:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+      background: rgba(196, 92, 79, 0.08);
+    }
+
+    /* Currency */
+    .currency-gp { color: var(--currency-gp); }
+    .currency-sp { color: var(--currency-sp); }
+    .currency-cp { color: var(--currency-cp); }
+    .currency-pp { color: var(--currency-pp); }
+
+    /* Coin icons — for single-denomination prices */
+    .coin {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: inherit;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .coin-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      position: relative;
+      box-shadow: inset 0 -2px 3px rgba(0,0,0,0.35), inset 0 1px 2px rgba(255,255,255,0.25), 0 1px 2px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .coin-icon::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -6px;
+      width: 8px;
+      height: 20px;
+      background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+      transform: rotate(20deg);
+      animation: coinSheen 4s ease-in-out infinite;
+      animation-delay: var(--sheen-delay, 0s);
+    }
+
+    .coin-icon-gp {
+      background: radial-gradient(ellipse at 35% 30%, #ffe066, #d4a520 50%, #a67c00);
+    }
+
+    .coin-icon-sp {
+      background: radial-gradient(ellipse at 35% 30%, #e8e8e8, #a8a8a8 50%, #787878);
+    }
+
+    .coin-icon-cp {
+      background: radial-gradient(ellipse at 35% 30%, #e09050, #b87333 50%, #8a5522);
+    }
+
+    .coin-icon-pp {
+      background: radial-gradient(ellipse at 35% 30%, #e8e8f0, #c0c0d0 50%, #9090a8);
+    }
+
+    /* Drop cap for description popup */
+    .desc-body-text {
+      font-size: 13px;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    .desc-body-text::first-letter {
+      font-family: 'Cinzel', serif;
+      font-size: 2.4em;
+      font-weight: 700;
+      float: left;
+      line-height: 0.85;
+      margin-right: 6px;
+      margin-top: 2px;
+      color: var(--stone-light);
+    }
+
+    /* Cart handle nudge */
+    .cart-drawer-handle.nudge {
+      animation: handleNudge 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Instructions */
+    .demo-instructions {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      z-index: 50;
+      text-align: center;
+      line-height: 1.6;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .demo-instructions kbd {
+      background: var(--bg-deepest);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 11px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="mockup-container">
+    <div>
+      <div class="panel-label">Storefront — click items to add, right-click for details</div>
+      <div class="storefront-panel" id="storefront">
+        <div class="store-header">
+          <div class="store-header-info">
+            <h1>The Gilded Compass</h1>
+            <p>Wakanga O'tamu</p>
+          </div>
+          <div class="store-header-controls">
+            <button class="btn-icon" title="Minimize">&#x2012;</button>
+            <button class="btn-icon" title="Close">&#x2715;</button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input type="text" placeholder="Search items..." id="search-input" />
+          <button class="toolbar-btn" id="collapse-all-btn" title="Collapse all groups">&#x25B6; All</button>
+        </div>
+
+        <div class="items-list-header">
+          <span class="col-icon"></span>
+          <span class="col-name">Name</span>
+          <span class="col-price">Price</span>
+        </div>
+
+        <div class="items-scroll-wrapper" id="items-scroll-wrapper">
+          <div class="items-scroll" id="items-scroll">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Cart drawer — part of flex flow, not absolute -->
+        <div class="cart-drawer collapsed" id="cart-drawer">
+          <div class="cart-drawer-handle" id="cart-handle">
+            <div class="cart-drawer-handle-left">
+              <span class="cart-title">Cart</span>
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="cart-total-preview" id="cart-total-preview">—</span>
+              <span class="cart-drawer-arrow">&#x25BC;</span>
+            </div>
+          </div>
+          <div class="cart-drawer-content" id="cart-content">
+            <div class="cart-empty">Click items above to add them to your cart.</div>
+          </div>
+          <div class="cart-grand-total" id="cart-grand-total" style="display: none;">
+            <span>Total</span>
+            <span id="grand-total-value">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-instructions">
+    <kbd>Click</kbd> item row → add to cart with fly animation &nbsp;|&nbsp;
+    <kbd>Right-click</kbd> → item details &nbsp;|&nbsp;
+    Click group headers to expand/collapse &nbsp;|&nbsp;
+    Cart <kbd>+</kbd>/<kbd>−</kbd> → qty pulse (no fly)
+  </div>
+
+  <script>
+    const ITEMS = [
+      { name: "Healing Potion", type: "Potions", rarity: "common", price: 50, currency: "gp", description: "You regain 2d4 + 2 hit points when you drink this potion." },
+      { name: "Potion of Greater Healing", type: "Potions", rarity: "rare", price: 150, currency: "gp", description: "You regain 4d4 + 4 hit points when you drink this potion. The potion's red liquid glimmers when agitated." },
+      { name: "Potion of Superior Healing", type: "Potions", rarity: "very rare", price: 450, currency: "gp", description: "You regain 8d4 + 8 hit points when you drink this potion." },
+      { name: "Potion of Supreme Healing", type: "Potions", rarity: "legendary", price: 1350, currency: "gp", description: "You regain 10d4 + 20 hit points when you drink this potion. The potion's crimson liquid regularly pulses with dull light." },
+      { name: "Antitoxin", type: "Potions", rarity: "common", price: 50, currency: "gp", description: "Advantage on saving throws against poison for 1 hour." },
+      { name: "Rope (50 ft)", type: "Adventuring Gear", rarity: "common", price: 1, currency: "gp", description: "Hempen rope, 50 feet. Has 2 hit points and can be burst with a DC 17 Strength check." },
+      { name: "Grappling Hook", type: "Adventuring Gear", rarity: "common", price: 2, currency: "gp", description: "Iron grappling hook for climbing." },
+      { name: "Torch (10)", type: "Adventuring Gear", rarity: "common", price: 1, currency: "cp", description: "Bundle of 10 torches. Each burns for 1 hour, providing bright light in a 20-foot radius." },
+      { name: "Lantern, Hooded", type: "Adventuring Gear", rarity: "common", price: 5, currency: "gp", description: "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet." },
+      { name: "Climber's Kit", type: "Adventuring Gear", rarity: "common", price: 25, currency: "gp", description: "Includes pitons, boot tips, gloves, and a harness. Anchor yourself, prevent falling more than 25 feet." },
+      { name: "Tinderbox", type: "Adventuring Gear", rarity: "common", price: 5, currency: "sp", description: "Flint, fire steel, and tinder to light fires." },
+      { name: "Longsword", type: "Weapons", rarity: "common", price: 15, currency: "gp", description: "Martial melee weapon. 1d8 slashing (versatile 1d10)." },
+      { name: "Flame Tongue Longsword", type: "Weapons", rarity: "rare", price: 5000, currency: "gp", description: "You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. +2d6 fire damage." },
+      { name: "Vorpal Sword", type: "Weapons", rarity: "legendary", price: 24000, currency: "gp", description: "When you attack a creature with this weapon and roll a 20, you cut off one of the creature's heads." },
+      { name: "Shortbow", type: "Weapons", rarity: "common", price: 25, currency: "gp", description: "Simple ranged weapon. 1d6 piercing, range 80/320." },
+      { name: "Cloak of Protection", type: "Wondrous Items", rarity: "uncommon", price: 3500, currency: "gp", description: "You gain a +1 bonus to AC and saving throws while you wear this cloak." },
+      { name: "Bag of Holding", type: "Wondrous Items", rarity: "uncommon", price: 4000, currency: "gp", description: "This bag has an interior space considerably larger than its outside dimensions. The bag can hold up to 500 pounds." },
+      { name: "Amulet of Health", type: "Wondrous Items", rarity: "rare", price: 8000, currency: "gp", description: "Your Constitution score is 19 while you wear this amulet." },
+    ];
+
+    const RARITY_COLORS = {
+      common: '#7a7a7a',
+      uncommon: '#4db87a',
+      rare: '#4a9edb',
+      'very rare': '#a87bdb',
+      legendary: '#e8943a',
+    };
+
+    const CURRENCY_COLORS = { gp: '#e8c84a', sp: '#b8b8b8', cp: '#c47d3a', pp: '#c8c8d4' };
+
+    let coinCounter = 0;
+    function coinHtml(amount, currency) {
+      const delay = (coinCounter++ * 0.7) % 4;
+      return `<span class="coin"><span class="coin-icon coin-icon-${currency}" style="--sheen-delay: ${delay.toFixed(1)}s"></span><span style="color: ${CURRENCY_COLORS[currency]}">${amount}</span></span>`;
+    }
+
+    const TO_COPPER = { cp: 1, sp: 10, gp: 100, pp: 1000 };
+
+    function computeBreakdown(totalCopper) {
+      const pp = Math.floor(totalCopper / 1000);
+      totalCopper %= 1000;
+      const gp = Math.floor(totalCopper / 100);
+      totalCopper %= 100;
+      const sp = Math.floor(totalCopper / 10);
+      const cp = totalCopper % 10;
+      return { pp, gp, sp, cp };
+    }
+
+    function breakdownHtml(entries) {
+      let totalCopper = 0;
+      entries.forEach(([name, qty]) => {
+        const item = ITEMS.find(i => i.name === name);
+        totalCopper += item.price * qty * TO_COPPER[item.currency];
+      });
+      const bd = computeBreakdown(totalCopper);
+      const parts = [];
+      if (bd.pp > 0) parts.push(coinHtml(bd.pp, 'pp'));
+      if (bd.gp > 0) parts.push(coinHtml(bd.gp, 'gp'));
+      if (bd.sp > 0) parts.push(coinHtml(bd.sp, 'sp'));
+      if (bd.cp > 0) parts.push(coinHtml(bd.cp, 'cp'));
+      return parts.length > 0 ? parts.join(' ') : coinHtml(0, 'gp');
+    }
+
+    let cart = {};
+    let collapsedGroups = new Set();
+    let drawerOpen = false;
+
+    function groupItems(items) {
+      const groups = new Map();
+      items.forEach(item => {
+        if (!groups.has(item.type)) groups.set(item.type, []);
+        groups.get(item.type).push(item);
+      });
+      return groups;
+    }
+
+    function renderItems(filter = '') {
+      const container = document.getElementById('items-scroll');
+      let items = ITEMS;
+      if (filter) {
+        const term = filter.toLowerCase();
+        items = items.filter(i => i.name.toLowerCase().includes(term) || i.description.toLowerCase().includes(term));
+      }
+      const grouped = groupItems(items);
+
+      let html = '';
+      for (const [type, typeItems] of grouped) {
+        const isCollapsed = !filter && collapsedGroups.has(type);
+        const arrowClass = isCollapsed ? '' : 'expanded';
+        html += `<div class="grouping-header" data-group="${type}">
+          <span class="grouping-arrow ${arrowClass}">&#x25B6;</span>
+          ${type}
+          <span class="grouping-count">${typeItems.length}</span>
+        </div>`;
+
+        const maxH = isCollapsed ? '0' : `${typeItems.length * 60}px`;
+        html += `<div class="grouping-items${isCollapsed ? ' collapsed' : ''}" style="max-height: ${maxH};" data-group-items="${type}">`;
+
+        typeItems.forEach((item, i) => {
+          const color = RARITY_COLORS[item.rarity];
+          const rarityClass = item.rarity !== 'common' ? ` rarity-${item.rarity.replace(' ', '-')}` : '';
+          const delay = isCollapsed ? 0 : i * 40;
+          const letterColor = item.rarity !== 'common' ? color : 'rgba(255,255,255,0.5)';
+
+          html += `<div class="item-row${rarityClass}" data-item="${item.name}" style="animation-delay: ${delay}ms;">
+            <div class="item-image" style="${item.rarity !== 'common' ? `border-color: ${color}40;` : ''}color: ${letterColor};">${item.name.charAt(0)}</div>
+            <span class="item-name">${item.name}</span>
+            <span class="item-price">${coinHtml(item.price, item.currency)}</span>
+          </div>`;
+        });
+        html += '</div>';
+      }
+
+      container.innerHTML = html;
+      bindItemEvents();
+    }
+
+    function bindItemEvents() {
+      document.querySelectorAll('.grouping-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const group = header.dataset.group;
+          const itemsEl = document.querySelector(`[data-group-items="${group}"]`);
+          const arrow = header.querySelector('.grouping-arrow');
+
+          if (collapsedGroups.has(group)) {
+            collapsedGroups.delete(group);
+            arrow.classList.add('expanded');
+            itemsEl.classList.remove('collapsed');
+            itemsEl.style.maxHeight = itemsEl.scrollHeight + 'px';
+            itemsEl.querySelectorAll('.item-row').forEach((row, i) => {
+              row.style.animation = 'none';
+              row.offsetHeight;
+              row.style.animation = `fadeSlideIn 0.3s ease both`;
+              row.style.animationDelay = `${i * 40}ms`;
+            });
+          } else {
+            collapsedGroups.add(group);
+            arrow.classList.remove('expanded');
+            itemsEl.style.maxHeight = '0';
+            itemsEl.classList.add('collapsed');
+          }
+        });
+      });
+
+      document.querySelectorAll('.item-row').forEach(row => {
+        row.addEventListener('click', () => {
+          const name = row.dataset.item;
+          addToCartFromRow(name, row);
+        });
+
+        row.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+          const name = row.dataset.item;
+          const item = ITEMS.find(i => i.name === name);
+          showDescription(item, e.clientX, e.clientY);
+        });
+      });
+    }
+
+    // Add from item list — fly particle + row flash, then targeted cart update
+    function addToCartFromRow(itemName, rowEl) {
+      const isNew = !cart[itemName];
+      cart[itemName] = (cart[itemName] || 0) + 1;
+
+      // Flash the row border
+      rowEl.classList.remove('flash');
+      rowEl.offsetHeight;
+      rowEl.classList.add('flash');
+
+      // Fly particle
+      const rect = rowEl.getBoundingClientRect();
+      const drawer = document.getElementById('cart-drawer');
+      const drawerRect = drawer.getBoundingClientRect();
+      const item = ITEMS.find(i => i.name === itemName);
+      const color = RARITY_COLORS[item.rarity];
+
+      const particle = document.createElement('div');
+      particle.className = 'fly-particle';
+      particle.style.left = `${rect.left + 24}px`;
+      particle.style.top = `${rect.top + rect.height / 2 - 14}px`;
+      particle.style.background = color;
+      particle.style.setProperty('--fly-x', `${drawerRect.left + 80 - rect.left - 24}px`);
+      particle.style.setProperty('--fly-y', `${drawerRect.top - rect.top}px`);
+      particle.textContent = '+1';
+      document.body.appendChild(particle);
+      setTimeout(() => particle.remove(), 450);
+
+      if (isNew) {
+        // New item — full re-render to add the row with slide-in animation
+        renderCart();
+      } else {
+        // Existing item — just pulse its qty and update totals
+        updateCartItemInPlace(itemName, 'up');
+        updateCartTotals('up');
+      }
+      updateCartBadge(true);
+
+      if (Object.values(cart).reduce((a, b) => a + b, 0) === 1) {
+        openDrawer();
+      } else {
+        nudgeCartHandle();
+      }
+    }
+
+    // Add/remove from cart controls — targeted updates, no full re-render
+    function incrementFromCart(itemName) {
+      cart[itemName] = (cart[itemName] || 0) + 1;
+      updateCartItemInPlace(itemName, 'up');
+      updateCartTotals('up');
+      updateCartBadge(true);
+    }
+
+    function decrementFromCart(itemName) {
+      if (!cart[itemName]) return;
+      cart[itemName]--;
+      if (cart[itemName] <= 0) {
+        delete cart[itemName];
+        // Remove the item row from DOM
+        const row = document.querySelector(`[data-cart-item="${itemName}"]`);
+        if (row) {
+          row.style.transition = 'opacity 0.2s ease, max-height 0.2s ease';
+          row.style.opacity = '0';
+          row.style.maxHeight = '0';
+          row.style.overflow = 'hidden';
+          setTimeout(() => row.remove(), 200);
+        }
+        // If cart is now empty, re-render to show empty state
+        if (Object.values(cart).reduce((a, b) => a + b, 0) === 0) {
+          setTimeout(() => renderCart(), 220);
+        } else {
+          setTimeout(() => updateCartTotals('down'), 220);
+        }
+      } else {
+        updateCartItemInPlace(itemName, 'down');
+        updateCartTotals('down');
+      }
+      updateCartBadge(false);
+    }
+
+    // Update only the qty and price of a single cart item
+    function updateCartItemInPlace(itemName, direction) {
+      const row = document.querySelector(`[data-cart-item="${itemName}"]`);
+      if (!row) return;
+
+      const qtyEl = row.querySelector('.cart-item-qty');
+      const priceEl = row.querySelector('.cart-item-price');
+      const item = ITEMS.find(i => i.name === itemName);
+      const qty = cart[itemName];
+
+      // Update qty with pulse
+      qtyEl.textContent = qty;
+      qtyEl.classList.remove('pulse-up', 'pulse-down');
+      qtyEl.offsetHeight;
+      qtyEl.classList.add(direction === 'up' ? 'pulse-up' : 'pulse-down');
+
+      // Update line price with gold pulse
+      const lineTotal = item.price * qty;
+      priceEl.innerHTML = coinHtml(lineTotal, item.currency);
+      priceEl.classList.remove('pulse-gold-up', 'pulse-gold-down');
+      priceEl.offsetHeight;
+      priceEl.classList.add(direction === 'up' ? 'pulse-gold-up' : 'pulse-gold-down');
+    }
+
+    // Update subtotal and grand total with gold pulse
+    function updateCartTotals(direction) {
+      const entries = Object.entries(cart).filter(([_, qty]) => qty > 0);
+      const pulseClass = direction === 'down' ? 'pulse-gold-down' : 'pulse-gold-up';
+      const totalHtml = `<span class="${pulseClass}">${breakdownHtml(entries)}</span>`;
+
+      // Update subtotal with pulse
+      const subtotalEl = document.querySelector('.cart-subtotal span:last-child');
+      if (subtotalEl) {
+        subtotalEl.innerHTML = totalHtml;
+      }
+
+      // Update grand total with pulse
+      const grandTotalVal = document.getElementById('grand-total-value');
+      if (grandTotalVal) {
+        grandTotalVal.innerHTML = totalHtml;
+      }
+
+      // Update preview in handle
+      const preview = document.getElementById('cart-total-preview');
+      preview.innerHTML = breakdownHtml(entries);
+    }
+
+    function renderCart() {
+      const content = document.getElementById('cart-content');
+      const entries = Object.entries(cart).filter(([_, qty]) => qty > 0);
+
+      if (entries.length === 0) {
+        content.innerHTML = '<div class="cart-empty">The shopkeeper awaits your selection...</div>';
+        document.getElementById('cart-grand-total').style.display = 'none';
+        return;
+      }
+
+      let html = '<div class="cart-player-group">';
+      html += `<div class="cart-player-name"><span class="cart-player-dot" style="background: #4a90d9;"></span> Tormund</div>`;
+
+      let total = 0;
+      entries.forEach(([name, qty]) => {
+        const item = ITEMS.find(i => i.name === name);
+        const lineTotal = item.price * qty;
+        total += lineTotal;
+        const rarityColor = RARITY_COLORS[item.rarity];
+
+        html += `<div class="cart-item slide-in" data-cart-item="${name}" style="border-left-color: ${rarityColor};">
+          <span class="cart-item-rarity-pip" style="background: ${rarityColor};${item.rarity === 'legendary' ? ' box-shadow: 0 0 4px ' + rarityColor : ''}"></span>
+          <span class="cart-item-name">${name}</span>
+          <div class="cart-item-controls">
+            <button class="cart-qty-btn minus" data-cart-remove="${name}">−</button>
+            <span class="cart-item-qty">${qty}</span>
+            <button class="cart-qty-btn plus" data-cart-add="${name}">+</button>
+          </div>
+          <span class="cart-item-price">${coinHtml(lineTotal, item.currency)}</span>
+        </div>`;
+      });
+
+      html += `<div class="cart-subtotal"><span>Subtotal</span><span>${breakdownHtml(entries)}</span></div>`;
+      html += '</div>';
+      content.innerHTML = html;
+
+      const grandTotal = document.getElementById('cart-grand-total');
+      grandTotal.style.display = 'flex';
+      document.getElementById('grand-total-value').innerHTML = breakdownHtml(entries);
+
+      bindCartButtons();
+    }
+
+    function bindCartButtons() {
+      const content = document.getElementById('cart-content');
+      content.querySelectorAll('.cart-qty-btn.minus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          decrementFromCart(btn.dataset.cartRemove);
+        });
+      });
+      content.querySelectorAll('.cart-qty-btn.plus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          incrementFromCart(btn.dataset.cartAdd);
+        });
+      });
+    }
+
+    function updateCartBadge(isAdd) {
+      const totalQty = Object.values(cart).reduce((a, b) => a + b, 0);
+      const badge = document.getElementById('cart-count');
+      badge.textContent = totalQty;
+
+      // Bounce the badge
+      badge.classList.remove('bounce');
+      badge.offsetHeight;
+      badge.classList.add('bounce');
+
+      const entries = Object.entries(cart).filter(([_, qty]) => qty > 0);
+      if (entries.length === 0) {
+        document.getElementById('cart-total-preview').textContent = '—';
+        return;
+      }
+      let total = 0;
+      entries.forEach(([name, qty]) => {
+        const item = ITEMS.find(i => i.name === name);
+        total += item.price * qty;
+      });
+      document.getElementById('cart-total-preview').innerHTML = breakdownHtml(entries);
+    }
+
+    function openDrawer() {
+      drawerOpen = true;
+      document.getElementById('cart-drawer').classList.remove('collapsed');
+    }
+
+    function closeDrawer() {
+      drawerOpen = false;
+      document.getElementById('cart-drawer').classList.add('collapsed');
+    }
+
+    // Cart drawer toggle
+    document.getElementById('cart-handle').addEventListener('click', () => {
+      if (drawerOpen) closeDrawer();
+      else openDrawer();
+    });
+
+    // Collapse/Expand all toggle
+    document.getElementById('collapse-all-btn').addEventListener('click', () => {
+      const allGroups = document.querySelectorAll('.grouping-header');
+      const allHeaders = [...allGroups];
+      const allCollapsed = allHeaders.every(h => collapsedGroups.has(h.dataset.group));
+
+      allHeaders.forEach(header => {
+        const group = header.dataset.group;
+        const itemsEl = document.querySelector(`[data-group-items="${group}"]`);
+        const arrow = header.querySelector('.grouping-arrow');
+
+        if (allCollapsed) {
+          // Expand all
+          collapsedGroups.delete(group);
+          arrow.classList.add('expanded');
+          if (itemsEl) {
+            itemsEl.classList.remove('collapsed');
+            itemsEl.style.maxHeight = itemsEl.scrollHeight + 'px';
+            itemsEl.querySelectorAll('.item-row').forEach((row, i) => {
+              row.style.animation = 'none';
+              row.offsetHeight;
+              row.style.animation = `fadeSlideIn 0.3s ease both`;
+              row.style.animationDelay = `${i * 30}ms`;
+            });
+          }
+        } else {
+          // Collapse all
+          collapsedGroups.add(group);
+          arrow.classList.remove('expanded');
+          if (itemsEl) {
+            itemsEl.style.maxHeight = '0';
+            itemsEl.classList.add('collapsed');
+          }
+        }
+      });
+
+      // Update button text
+      const btn = document.getElementById('collapse-all-btn');
+      btn.innerHTML = allCollapsed ? '&#x25BC; All' : '&#x25B6; All';
+    });
+
+    // Description popup
+    let descPopup = null;
+
+    function showDescription(item, x, y) {
+      dismissDescription();
+      const color = RARITY_COLORS[item.rarity];
+      const popup = document.createElement('div');
+      const rarityClass = item.rarity !== 'common' ? ` rarity-${item.rarity.replace(' ', '-')}` : '';
+      popup.className = `description-popup${rarityClass}`;
+
+      const maxX = window.innerWidth - 360;
+      const maxY = window.innerHeight - 250;
+      popup.style.left = `${Math.min(x + 8, maxX)}px`;
+      popup.style.top = `${Math.min(y + 8, maxY)}px`;
+
+      const qty = cart[item.name] || 0;
+      const actionsHtml = renderDescActions(item, qty);
+
+      popup.innerHTML = `
+        <div class="desc-header">
+          <div class="desc-image" style="border-color: ${color}60; color: ${color};">${item.name.charAt(0)}</div>
+          <div class="desc-header-info">
+            <h3>${item.name}</h3>
+            <div class="desc-meta">
+              <span class="desc-type">${item.type}</span>
+              <span class="desc-rarity" style="color: ${color}; border-color: ${color}50;">${item.rarity}</span>
+            </div>
+            <div class="desc-price-line">${coinHtml(item.price, item.currency)}</div>
+          </div>
+        </div>
+        <p class="desc-body-text">${item.description}</p>
+        <div class="desc-actions" id="desc-actions">
+          ${actionsHtml}
+        </div>
+      `;
+
+      document.body.appendChild(popup);
+      descPopup = popup;
+      bindDescActions(item);
+    }
+
+    function renderDescActions(item, qty) {
+      if (qty === 0) {
+        return `<button class="desc-add-btn" data-desc-add="${item.name}">+ Add to Cart</button>`;
+      }
+      return `
+        <div class="desc-qty-controls">
+          <button class="desc-qty-btn minus" data-desc-minus="${item.name}">−</button>
+          <span class="desc-qty-value" id="desc-qty-val">${qty}</span>
+          <button class="desc-qty-btn plus" data-desc-plus="${item.name}">+</button>
+        </div>
+        <span class="desc-qty-label">in cart</span>
+        <button class="desc-remove-all" data-desc-remove-all="${item.name}">Remove all</button>
+      `;
+    }
+
+    function bindDescActions(item) {
+      if (!descPopup) return;
+      const actions = descPopup.querySelector('#desc-actions');
+
+      const addBtn = actions.querySelector('[data-desc-add]');
+      if (addBtn) {
+        addBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const row = document.querySelector(`[data-item="${item.name}"]`);
+          if (row) addToCartFromRow(item.name, row);
+          else {
+            cart[item.name] = (cart[item.name] || 0) + 1;
+            renderCart();
+            updateCartBadge(true);
+            if (Object.values(cart).reduce((a, b) => a + b, 0) === 1) openDrawer();
+          }
+          refreshDescActions(item);
+        });
+      }
+
+      const plusBtn = actions.querySelector('[data-desc-plus]');
+      if (plusBtn) {
+        plusBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          incrementFromCart(item.name);
+          refreshDescActions(item, 'up');
+        });
+      }
+
+      const minusBtn = actions.querySelector('[data-desc-minus]');
+      if (minusBtn) {
+        minusBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          decrementFromCart(item.name);
+          refreshDescActions(item, 'down');
+        });
+      }
+
+      const removeAllBtn = actions.querySelector('[data-desc-remove-all]');
+      if (removeAllBtn) {
+        removeAllBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const prevQty = cart[item.name] || 0;
+          delete cart[item.name];
+          // Remove from cart DOM
+          const cartRow = document.querySelector(`[data-cart-item="${item.name}"]`);
+          if (cartRow) {
+            cartRow.style.transition = 'opacity 0.2s ease, max-height 0.2s ease';
+            cartRow.style.opacity = '0';
+            cartRow.style.maxHeight = '0';
+            cartRow.style.overflow = 'hidden';
+            setTimeout(() => {
+              cartRow.remove();
+              if (Object.values(cart).reduce((a, b) => a + b, 0) === 0) {
+                renderCart();
+              } else {
+                updateCartTotals('down');
+              }
+            }, 200);
+          }
+          updateCartBadge(false);
+          refreshDescActions(item);
+        });
+      }
+    }
+
+    function refreshDescActions(item, pulseDir) {
+      if (!descPopup) return;
+      const actions = descPopup.querySelector('#desc-actions');
+      const qty = cart[item.name] || 0;
+      actions.innerHTML = renderDescActions(item, qty);
+      bindDescActions(item);
+
+      // Pulse the qty value if direction provided
+      if (pulseDir && qty > 0) {
+        const qtyVal = actions.querySelector('#desc-qty-val');
+        if (qtyVal) {
+          qtyVal.classList.add(pulseDir === 'up' ? 'pulse-up' : 'pulse-down');
+        }
+      }
+    }
+
+    function dismissDescription() {
+      if (descPopup) { descPopup.remove(); descPopup = null; }
+    }
+
+    document.addEventListener('click', (e) => {
+      if (descPopup && !descPopup.contains(e.target) && !e.target.closest('.description-popup')) {
+        dismissDescription();
+      }
+    });
+
+    document.addEventListener('contextmenu', (e) => {
+      if (descPopup) {
+        e.preventDefault();
+        if (!e.target.closest('.item-row')) {
+          dismissDescription();
+        }
+      }
+    });
+
+    // Search
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      renderItems(e.target.value);
+    });
+
+    // Scroll fade edges
+    function initScrollFades() {
+      const wrapper = document.getElementById('items-scroll-wrapper');
+      const scrollEl = document.getElementById('items-scroll');
+
+      scrollEl.addEventListener('scroll', () => {
+        const { scrollTop, scrollHeight, clientHeight } = scrollEl;
+        wrapper.classList.toggle('fade-top', scrollTop > 10);
+        wrapper.classList.toggle('fade-bottom', scrollTop < scrollHeight - clientHeight - 10);
+      });
+
+      // Initial check
+      setTimeout(() => {
+        const { scrollTop, scrollHeight, clientHeight } = scrollEl;
+        wrapper.classList.toggle('fade-bottom', scrollHeight > clientHeight + 10);
+      }, 100);
+    }
+
+    // Cart handle nudge when items added while drawer is collapsed
+    function nudgeCartHandle() {
+      if (drawerOpen) return;
+      const handle = document.getElementById('cart-handle');
+      handle.classList.remove('nudge');
+      handle.offsetHeight;
+      handle.classList.add('nudge');
+    }
+
+    // Initial render — Potions expanded, rest collapsed
+    collapsedGroups = new Set(['Adventuring Gear', 'Weapons', 'Wondrous Items']);
+    renderItems();
+    initScrollFades();
+  </script>
+</body>
+</html>
