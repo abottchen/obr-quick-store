@@ -14,6 +14,7 @@ let searchTerm = "";
 let drawerOpen = false;
 let prevCartKey = ""; // signature of last cart render — drives slide-in animation
 let currentCatalog: StoreItem[] = [];
+const prevQtyByItem: Map<string, number> = new Map(); // key: `${playerId}::${itemName}`
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const config = await getConfigMetadata();
@@ -165,6 +166,7 @@ function renderStorefront(
 
   bindStorefrontEvents(container, data, isGM);
   initScrollFades(container);
+  applyCartPulses(container, data.cart.entries);
 }
 
 function allCollapsed(grouped: Map<string, StoreItem[]>): boolean {
@@ -412,6 +414,40 @@ function bindStorefrontEvents(
       await removeOneFromCart(itemName, playerId);
     });
   });
+}
+
+function applyCartPulses(container: HTMLElement, entries: CartEntry[]): void {
+  const seen = new Set<string>();
+  for (const entry of entries) {
+    const key = `${entry.playerId}::${entry.itemName}`;
+    seen.add(key);
+    const prev = prevQtyByItem.get(key);
+    if (prev !== undefined && prev !== entry.quantity) {
+      const direction = entry.quantity > prev ? "up" : "down";
+      const row = container.querySelector<HTMLElement>(
+        `[data-cart-item="${cssEscape(entry.itemName)}"][data-cart-player="${cssEscape(entry.playerId)}"]`
+      );
+      if (row) {
+        const qty = row.querySelector<HTMLElement>(".cart-item-qty");
+        const price = row.querySelector<HTMLElement>(".cart-item-price");
+        qty?.classList.add(direction === "up" ? "pulse-up" : "pulse-down");
+        price?.classList.add(direction === "up" ? "pulse-gold-up" : "pulse-gold-down");
+      }
+      const grandTotal = container.querySelector<HTMLElement>("#grand-total-value");
+      if (grandTotal) {
+        grandTotal.classList.add(direction === "up" ? "pulse-gold-up" : "pulse-gold-down");
+      }
+    }
+    prevQtyByItem.set(key, entry.quantity);
+  }
+  // Clean up entries that no longer exist
+  for (const key of [...prevQtyByItem.keys()]) {
+    if (!seen.has(key)) prevQtyByItem.delete(key);
+  }
+}
+
+function cssEscape(value: string): string {
+  return value.replace(/(["\\])/g, "\\$1");
 }
 
 function flashRow(row: HTMLElement): void {
