@@ -11,6 +11,9 @@ let descriptionPopup: HTMLElement | null = null;
 const collapsedGroups = new Set<string>();
 let groupsInitialized = false;
 let searchTerm = "";
+let drawerOpen = false;
+let prevCartKey = ""; // signature of last cart render — drives slide-in animation
+let currentCatalog: StoreItem[] = [];
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const config = await getConfigMetadata();
@@ -78,6 +81,7 @@ function renderStorefront(
   isGM: boolean
 ): void {
   let items = getActiveItems(data);
+  currentCatalog = data.catalog;
   if (searchTerm) {
     const term = searchTerm.toLowerCase();
     items = items.filter((item) =>
@@ -88,10 +92,14 @@ function renderStorefront(
   const grouped = groupItemsByGrouping(items);
   const adjustment = data.config.priceAdjustment;
 
-  const itemsList = container.querySelector<HTMLElement>("#items-list");
-  const cartPanel = container.querySelector<HTMLElement>(".cart-panel");
-  const prevScroll = itemsList?.scrollTop ?? 0;
-  const prevCartScroll = cartPanel?.scrollTop ?? 0;
+  const itemsScroll = container.querySelector<HTMLElement>(".items-scroll");
+  const drawerContent = container.querySelector<HTMLElement>(".cart-drawer-content");
+  const prevScroll = itemsScroll?.scrollTop ?? 0;
+  const prevCartScroll = drawerContent?.scrollTop ?? 0;
+
+  const totalQty = data.cart.entries.reduce((sum, e) => sum + e.quantity, 0);
+  const totalBreakdown = renderBreakdown(getTotalBreakdown(data.cart.entries));
+  const drawerCollapsedClass = drawerOpen && totalQty > 0 ? "" : "collapsed";
 
   container.innerHTML = `
     <div class="storefront">
@@ -101,34 +109,51 @@ function renderStorefront(
           <p>${escape(data.config.npcName || "Shopkeeper")}</p>
         </div>
         <div class="store-header-controls">
-          <button class="btn-icon btn-small" id="close-store-btn" title="Close">&#x2715;</button>
           <button class="btn-icon" id="minimize-btn" title="${isMinimized ? "Maximize" : "Minimize"}">
             ${isMinimized ? "&#x25A1;" : "&#x2012;"}
           </button>
+          <button class="btn-icon" id="close-store-btn" title="Close">&#x2715;</button>
         </div>
       </div>
       <div class="store-body ${isMinimized ? "minimized" : ""}">
-        <div class="search-bar">
+        <div class="toolbar">
           <input type="text" id="search-input" placeholder="Search items..." value="${escapeAttr(searchTerm)}" />
+          <button class="toolbar-btn" id="collapse-all-btn" title="Collapse / expand all groups">${allCollapsed(grouped) ? "&#x25BC; All" : "&#x25B6; All"}</button>
         </div>
         <div class="items-list-header">
           <span class="col-icon"></span>
           <span class="col-name">Name</span>
           <span class="col-price">Price</span>
-          <span class="col-qty">#</span>
         </div>
-        <div class="items-list" id="items-list">
-          ${renderItemRows(grouped, adjustment, data.cart.entries)}
+        <div class="items-scroll-wrapper" id="items-scroll-wrapper">
+          <div class="items-scroll">
+            ${renderItemRows(grouped, adjustment, data.cart.entries)}
+          </div>
         </div>
-        ${renderCart(data.cart.entries, adjustment)}
+        <div class="cart-drawer ${drawerCollapsedClass}" id="cart-drawer">
+          <div class="cart-drawer-handle" id="cart-handle">
+            <div class="cart-drawer-handle-left">
+              <span class="cart-title">Cart</span>
+              <span class="cart-count-badge" id="cart-count">${totalQty}</span>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="cart-total-preview">${totalQty > 0 ? totalBreakdown : "&mdash;"}</span>
+              <span class="cart-drawer-arrow">&#x25BC;</span>
+            </div>
+          </div>
+          <div class="cart-drawer-content">
+            ${renderCartContent(data.cart.entries)}
+          </div>
+          ${totalQty > 0 ? `<div class="cart-grand-total"><span>Total</span><span id="grand-total-value">${totalBreakdown}</span></div>` : ""}
+        </div>
       </div>
     </div>
   `;
 
-  const newItemsList = container.querySelector<HTMLElement>("#items-list");
-  const newCartPanel = container.querySelector<HTMLElement>(".cart-panel");
-  if (newItemsList) newItemsList.scrollTop = prevScroll;
-  if (newCartPanel) newCartPanel.scrollTop = prevCartScroll;
+  const newItemsScroll = container.querySelector<HTMLElement>(".items-scroll");
+  const newDrawerContent = container.querySelector<HTMLElement>(".cart-drawer-content");
+  if (newItemsScroll) newItemsScroll.scrollTop = prevScroll;
+  if (newDrawerContent) newDrawerContent.scrollTop = prevCartScroll;
 
   if (searchTerm) {
     const searchInput = container.querySelector<HTMLInputElement>("#search-input");
@@ -139,15 +164,24 @@ function renderStorefront(
   }
 
   bindStorefrontEvents(container, data, isGM);
+  initScrollFades(container);
+}
+
+function allCollapsed(grouped: Map<string, StoreItem[]>): boolean {
+  if (grouped.size === 0) return false;
+  for (const key of grouped.keys()) {
+    if (!collapsedGroups.has(key)) return false;
+  }
+  return true;
 }
 
 function renderItemRows(
   grouped: Map<string, StoreItem[]>,
   adjustment: number,
-  cartEntries: CartEntry[]
+  _cartEntries: CartEntry[]
 ): string {
   if (grouped.size === 0) {
-    return `<p style="text-align: center; color: #666; font-style: italic; padding: 20px;">No items available.</p>`;
+    return `<p style="text-align: center; color: var(--text-dim); font-style: italic; padding: 20px;">No items available.</p>`;
   }
 
   if (!groupsInitialized) {
@@ -160,54 +194,64 @@ function renderItemRows(
   let html = "";
   for (const [grouping, items] of grouped) {
     const isCollapsed = searchTerm ? false : collapsedGroups.has(grouping);
-    const arrow = isCollapsed ? "&#x25B6;" : "&#x25BC;";
-    html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}"><span class="grouping-arrow">${arrow}</span> ${escape(grouping)} <span class="grouping-count">(${items.length})</span></div>`;
-    html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}">`;
+    const expandedClass = isCollapsed ? "" : "expanded";
+    const maxH = isCollapsed ? "0" : `${items.length * 60 + 16}px`;
+
+    html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}">
+      <span class="grouping-arrow ${expandedClass}">&#x25B6;</span>
+      ${escape(grouping)}
+      <span class="grouping-count">${items.length}</span>
+    </div>`;
+    html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}" style="max-height: ${maxH};" data-group-items="${escapeAttr(grouping)}">`;
+
     for (const item of items) {
       const price = adjustPrice(item.price, adjustment);
-      const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
+      const rarityClass = item.rarity !== "common" ? ` rarity-${item.rarity.replace(" ", "-")}` : "";
+      const rarityColor = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
+      const letterColor = item.rarity !== "common" ? rarityColor : "rgba(255,255,255,0.6)";
       const imageContent = item.image
         ? `<img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
         : item.name.charAt(0).toUpperCase();
+      const imageStyle = item.rarity !== "common"
+        ? `border-color: ${hexToRgba(rarityColor, 0.4)}; color: ${letterColor};`
+        : `color: ${letterColor};`;
 
-      const playerCartQty = cartEntries
-        .filter((e) => e.itemName === item.name)
-        .reduce((sum, e) => sum + e.quantity, 0);
-
-      html += `
-        <div class="item-row"
-             style="border-left-color: ${color};${item.rarity !== "common" ? ` background: linear-gradient(to right, ${hexToRgba(color, 0.4)} 0%, ${hexToRgba(color, 0)} 70%)` : ""}"
-             data-item-name="${escapeAttr(item.name)}"
-             data-item-price="${price}">
-          <div class="item-image" style="background: ${color}">${imageContent}</div>
-          <span class="item-name">${escape(item.name)}</span>
-          <span class="item-price">${coinHtml(price, item.currency ?? "gp")}</span>
-          <span class="item-qty">${playerCartQty > 0 ? playerCartQty : ""}</span>
-        </div>
-      `;
+      html += `<div class="item-row${rarityClass}" data-item-name="${escapeAttr(item.name)}" data-item-price="${price}">
+        <div class="item-image" style="${imageStyle}">${imageContent}</div>
+        <span class="item-name">${escape(item.name)}</span>
+        <span class="item-price">${coinHtml(price, item.currency ?? "gp")}</span>
+      </div>`;
     }
     html += `</div>`;
   }
   return html;
 }
 
-function renderCart(entries: CartEntry[], _adjustment: number): string {
+function renderCartContent(entries: CartEntry[]): string {
   if (entries.length === 0) {
-    return `
-      <div class="cart-panel">
-        <div class="cart-title">Cart</div>
-        <div class="cart-empty">No items in cart yet. Click items to add them.</div>
-      </div>
-    `;
+    prevCartKey = "";
+    return `<div class="cart-empty">The shopkeeper awaits your selection&hellip;</div>`;
   }
 
   const playerIds = [...new Set(entries.map((e) => e.playerId))];
-  let html = `<div class="cart-panel"><div class="cart-title">Cart</div>`;
+  const cartKey = playerIds
+    .map((pid) =>
+      entries
+        .filter((e) => e.playerId === pid)
+        .map((e) => `${e.itemName}:${e.quantity}`)
+        .join(",")
+    )
+    .join("|");
 
+  // For each player+item pair, decide whether to apply slide-in based on whether it
+  // existed in the previous cart key.
+  const prevSet = new Set(prevCartKey.split(",").map((s) => s.split(":")[0]));
+
+  let html = "";
   for (const pid of playerIds) {
     const playerEntries = entries.filter((e) => e.playerId === pid);
     const first = playerEntries[0];
-    const subtotal = getPlayerBreakdown(entries, pid);
+    const subtotal = renderBreakdown(getPlayerBreakdown(entries, pid));
 
     html += `<div class="cart-player-group">`;
     html += `<div class="cart-player-name">
@@ -216,32 +260,35 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
     </div>`;
 
     for (const entry of playerEntries) {
-      html += `
-        <div class="cart-item" data-cart-item="${escapeAttr(entry.itemName)}" data-cart-player="${escapeAttr(entry.playerId)}">
-          <span class="cart-item-name">${escape(entry.itemName)}</span>
-          <span class="cart-item-qty">x${entry.quantity}</span>
-          <span class="cart-item-price">${coinHtml(entry.itemPrice * entry.quantity, entry.itemCurrency ?? "gp")}</span>
-          <button class="cart-item-remove" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}" title="Remove one">&#x2715;</button>
+      const item = currentCatalog.find((i) => i.name === entry.itemName);
+      const rarity = item?.rarity ?? "common";
+      const rarityColor = RARITY_COLORS[rarity] ?? RARITY_COLORS.common;
+      const slideClass = prevSet.has(entry.itemName) ? "" : " slide-in";
+      const pipShadow = rarity === "legendary" ? ` box-shadow: 0 0 4px ${rarityColor};` : "";
+
+      html += `<div class="cart-item${slideClass}"
+        data-cart-item="${escapeAttr(entry.itemName)}"
+        data-cart-player="${escapeAttr(entry.playerId)}"
+        style="border-left-color: ${rarityColor};">
+        <span class="cart-item-rarity-pip" style="background: ${rarityColor};${pipShadow}"></span>
+        <span class="cart-item-name">${escape(entry.itemName)}</span>
+        <div class="cart-item-controls">
+          <button class="cart-qty-btn minus" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}">&minus;</button>
+          <span class="cart-item-qty">${entry.quantity}</span>
+          <button class="cart-qty-btn plus" data-add-item="${escapeAttr(entry.itemName)}" data-add-player="${escapeAttr(entry.playerId)}">+</button>
         </div>
-      `;
+        <span class="cart-item-price">${coinHtml(entry.itemPrice * entry.quantity, entry.itemCurrency ?? "gp")}</span>
+      </div>`;
     }
 
-    html += `
-      <div class="cart-subtotal">
-        <span>Subtotal</span>
-        <span>${renderBreakdown(subtotal)}</span>
-      </div>
+    html += `<div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span>${subtotal}</span>
     </div>`;
+    html += `</div>`;
   }
 
-  const total = getTotalBreakdown(entries);
-  html += `
-    <div class="cart-total">
-      <span>Total</span>
-      <span>${renderBreakdown(total)}</span>
-    </div>
-  </div>`;
-
+  prevCartKey = cartKey;
   return html;
 }
 
@@ -358,6 +405,49 @@ function dismissDescription(): void {
   }
 }
 
+function initScrollFades(container: HTMLElement): void {
+  const wrapper = container.querySelector<HTMLElement>("#items-scroll-wrapper");
+  const scrollEl = container.querySelector<HTMLElement>(".items-scroll");
+  if (!wrapper || !scrollEl) return;
+
+  const update = (): void => {
+    const { scrollTop, scrollHeight, clientHeight } = scrollEl;
+    wrapper.classList.toggle("fade-top", scrollTop > 10);
+    wrapper.classList.toggle("fade-bottom", scrollTop < scrollHeight - clientHeight - 10);
+  };
+
+  scrollEl.addEventListener("scroll", update);
+  // Initial check after layout
+  setTimeout(update, 100);
+}
+
+export function openDrawer(container: HTMLElement): void {
+  drawerOpen = true;
+  container.querySelector<HTMLElement>("#cart-drawer")?.classList.remove("collapsed");
+}
+
+export function closeDrawer(container: HTMLElement): void {
+  drawerOpen = false;
+  container.querySelector<HTMLElement>("#cart-drawer")?.classList.add("collapsed");
+}
+
+export function nudgeCartHandle(container: HTMLElement): void {
+  if (drawerOpen) return;
+  const handle = container.querySelector<HTMLElement>("#cart-handle");
+  if (!handle) return;
+  handle.classList.remove("nudge");
+  void handle.offsetHeight; // restart animation
+  handle.classList.add("nudge");
+}
+
+export function bounceCartCount(container: HTMLElement): void {
+  const badge = container.querySelector<HTMLElement>("#cart-count");
+  if (!badge) return;
+  badge.classList.remove("bounce");
+  void badge.offsetHeight;
+  badge.classList.add("bounce");
+}
+
 function escape(str: string): string {
   const div = document.createElement("div");
   div.textContent = str;
@@ -369,8 +459,12 @@ function escapeAttr(str: string): string {
 }
 
 function hexToRgba(hex: string, alpha: number): string {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
+  const normalized = hex.replace("#", "");
+  const full = normalized.length === 3
+    ? normalized.split("").map((c) => c + c).join("")
+    : normalized;
+  const r = parseInt(full.slice(0, 2), 16);
+  const g = parseInt(full.slice(2, 4), 16);
+  const b = parseInt(full.slice(4, 6), 16);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
