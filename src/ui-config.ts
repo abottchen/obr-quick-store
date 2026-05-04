@@ -62,7 +62,7 @@ export function renderConfigUI(
         <input type="text" id="catalog-url" value="${escapeAttr(data.config.catalogUrl)}" placeholder="URL to catalog JSON..." />
         <button class="btn-secondary btn-small" id="refresh-catalog-btn" title="Refresh Catalog">&#x21BB;</button>
       </div>
-      <div style="font-size: 11px; color: #888; margin-top: 4px;">${data.catalog.length} items loaded</div>
+      <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">${data.catalog.length} items loaded</div>
     </div>
 
     <div class="section">
@@ -85,7 +85,7 @@ export function renderConfigUI(
       <div class="section-title">Price Adjustment</div>
       <div class="input-row">
         <input type="number" id="price-adjustment" value="${data.config.priceAdjustment}" min="1" max="1000" step="5" />
-        <span style="color: #888; font-size: 12px; flex-shrink: 0">%</span>
+        <span style="color: var(--text-secondary); font-size: 12px; flex-shrink: 0">%</span>
       </div>
     </div>
 
