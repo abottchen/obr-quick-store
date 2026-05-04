@@ -245,7 +245,9 @@ function renderCartContent(entries: CartEntry[]): string {
 
   // For each player+item pair, decide whether to apply slide-in based on whether it
   // existed in the previous cart key.
-  const prevSet = new Set(prevCartKey.split(",").map((s) => s.split(":")[0]));
+  const prevSet = new Set(
+    prevCartKey.split(/[,|]/).map((s) => s.split(":")[0]).filter(Boolean)
+  );
 
   let html = "";
   for (const pid of playerIds) {
