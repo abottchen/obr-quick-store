@@ -299,11 +299,13 @@ function bindStorefrontEvents(
   data: StoreData,
   isGM: boolean
 ): void {
+  // Search
   container.querySelector<HTMLInputElement>("#search-input")?.addEventListener("input", (e) => {
     searchTerm = (e.target as HTMLInputElement).value;
     renderStorefront(container, data, isGM);
   });
 
+  // Group expand/collapse
   container.querySelectorAll<HTMLElement>(".grouping-header").forEach((header) => {
     header.addEventListener("click", () => {
       const group = header.dataset.group!;
@@ -316,6 +318,18 @@ function bindStorefrontEvents(
     });
   });
 
+  // Collapse / expand all
+  container.querySelector<HTMLElement>("#collapse-all-btn")?.addEventListener("click", () => {
+    const grouped = groupItemsByGrouping(getActiveItems(data));
+    if (allCollapsed(grouped)) {
+      collapsedGroups.clear();
+    } else {
+      for (const g of grouped.keys()) collapsedGroups.add(g);
+    }
+    renderStorefront(container, data, isGM);
+  });
+
+  // Minimize button (popover resize)
   container.querySelector("#minimize-btn")?.addEventListener("click", async () => {
     isMinimized = !isMinimized;
     const baseUrl = new URL(".", document.location.href).href;
@@ -332,43 +346,99 @@ function bindStorefrontEvents(
     renderStorefront(container, data, isGM);
   });
 
+  // Close button (just closes the popover for the local viewer)
   container.querySelector("#close-store-btn")?.addEventListener("click", () => {
     OBR.popover.close(POPOVER_STORE_ID);
   });
 
-  container.querySelectorAll<HTMLElement>(".item-row").forEach((card) => {
-    card.addEventListener("click", async () => {
-      const itemName = card.dataset.itemName!;
+  // Drawer toggle
+  container.querySelector<HTMLElement>("#cart-handle")?.addEventListener("click", () => {
+    if (drawerOpen) closeDrawer(container);
+    else openDrawer(container);
+  });
+
+  // Item click → add to cart with fly + flash
+  container.querySelectorAll<HTMLElement>(".item-row").forEach((row) => {
+    row.addEventListener("click", async () => {
+      const itemName = row.dataset.itemName!;
       const item = data.catalog.find((i) => i.name === itemName);
       if (!item) return;
       const price = adjustPrice(item.price, data.config.priceAdjustment);
+
+      flashRow(row);
+      flyToCart(row, container, RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common);
+      bounceCartCount(container);
+
+      const wasEmpty = data.cart.entries.length === 0;
       await addToCart(item, price);
+      if (wasEmpty) openDrawer(container);
+      else nudgeCartHandle(container);
     });
 
-    card.addEventListener("contextmenu", (e) => {
+    row.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      const itemName = card.dataset.itemName!;
+      const itemName = row.dataset.itemName!;
       const item = data.catalog.find((i) => i.name === itemName);
       if (!item) return;
-      showDescription(item, e.clientX, e.clientY);
+      showDescription(item, e.clientX, e.clientY, data);
     });
   });
 
-  container.querySelectorAll<HTMLElement>(".cart-item-remove").forEach((btn) => {
+  // Cart `+` button
+  container.querySelectorAll<HTMLButtonElement>(".cart-qty-btn.plus").forEach((btn) => {
     btn.addEventListener("click", async (e) => {
       e.stopPropagation();
-      const itemName = (btn as HTMLElement).dataset.removeItem!;
-      const playerId = (btn as HTMLElement).dataset.removePlayer!;
-      const currentPlayerId = OBR.player.id;
+      const itemName = btn.dataset.addItem!;
+      const playerId = btn.dataset.addPlayer!;
       const role = await OBR.player.getRole();
-      if (playerId === currentPlayerId || role === "GM") {
-        await removeOneFromCart(itemName, playerId);
-      }
+      if (playerId !== OBR.player.id && role !== "GM") return;
+      const item = data.catalog.find((i) => i.name === itemName);
+      if (!item) return;
+      const price = adjustPrice(item.price, data.config.priceAdjustment);
+      bounceCartCount(container);
+      await addToCart(item, price);
+    });
+  });
+
+  // Cart `−` button
+  container.querySelectorAll<HTMLButtonElement>(".cart-qty-btn.minus").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const itemName = btn.dataset.removeItem!;
+      const playerId = btn.dataset.removePlayer!;
+      const role = await OBR.player.getRole();
+      if (playerId !== OBR.player.id && role !== "GM") return;
+      bounceCartCount(container);
+      await removeOneFromCart(itemName, playerId);
     });
   });
 }
 
-function showDescription(item: StoreItem, x: number, y: number): void {
+function flashRow(row: HTMLElement): void {
+  row.classList.remove("flash");
+  void row.offsetHeight;
+  row.classList.add("flash");
+}
+
+function flyToCart(row: HTMLElement, container: HTMLElement, color: string): void {
+  const rowRect = row.getBoundingClientRect();
+  const drawer = container.querySelector<HTMLElement>("#cart-drawer");
+  if (!drawer) return;
+  const drawerRect = drawer.getBoundingClientRect();
+
+  const particle = document.createElement("div");
+  particle.className = "fly-particle";
+  particle.style.left = `${rowRect.left + 24}px`;
+  particle.style.top = `${rowRect.top + rowRect.height / 2 - 14}px`;
+  particle.style.background = color;
+  particle.style.setProperty("--fly-x", `${drawerRect.left + 80 - rowRect.left - 24}px`);
+  particle.style.setProperty("--fly-y", `${drawerRect.top - rowRect.top}px`);
+  particle.textContent = "+1";
+  document.body.appendChild(particle);
+  setTimeout(() => particle.remove(), 450);
+}
+
+function showDescription(item: StoreItem, x: number, y: number, _data?: StoreData): void {
   dismissDescription();
 
   const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
@@ -423,17 +493,17 @@ function initScrollFades(container: HTMLElement): void {
   setTimeout(update, 100);
 }
 
-export function openDrawer(container: HTMLElement): void {
+function openDrawer(container: HTMLElement): void {
   drawerOpen = true;
   container.querySelector<HTMLElement>("#cart-drawer")?.classList.remove("collapsed");
 }
 
-export function closeDrawer(container: HTMLElement): void {
+function closeDrawer(container: HTMLElement): void {
   drawerOpen = false;
   container.querySelector<HTMLElement>("#cart-drawer")?.classList.add("collapsed");
 }
 
-export function nudgeCartHandle(container: HTMLElement): void {
+function nudgeCartHandle(container: HTMLElement): void {
   if (drawerOpen) return;
   const handle = container.querySelector<HTMLElement>("#cart-handle");
   if (!handle) return;
@@ -442,7 +512,7 @@ export function nudgeCartHandle(container: HTMLElement): void {
   handle.classList.add("nudge");
 }
 
-export function bounceCartCount(container: HTMLElement): void {
+function bounceCartCount(container: HTMLElement): void {
   const badge = container.querySelector<HTMLElement>("#cart-count");
   if (!badge) return;
   badge.classList.remove("bounce");
