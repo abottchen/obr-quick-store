@@ -34,7 +34,21 @@ export async function initStorefront(container: HTMLElement): Promise<void> {
     }
   });
 
-  document.addEventListener("click", dismissDescription);
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (descriptionPopup && !descriptionPopup.contains(target)) {
+      dismissDescription();
+    }
+  });
+
+  document.addEventListener("contextmenu", (e) => {
+    if (!descriptionPopup) return;
+    const target = e.target as HTMLElement;
+    if (!target.closest(".item-row")) {
+      e.preventDefault();
+      dismissDescription();
+    }
+  });
 }
 
 function adjustPrice(basePrice: number, adjustment: number): number {
@@ -167,6 +181,12 @@ function renderStorefront(
   bindStorefrontEvents(container, data, isGM);
   initScrollFades(container);
   applyCartPulses(container, data.cart.entries);
+
+  if (descriptionPopup) {
+    const itemName = descriptionPopup.dataset.itemName;
+    const item = itemName ? data.catalog.find((i) => i.name === itemName) : null;
+    if (item) refreshDescActions(item, data);
+  }
 }
 
 function allCollapsed(grouped: Map<string, StoreItem[]>): boolean {
@@ -474,36 +494,99 @@ function flyToCart(row: HTMLElement, container: HTMLElement, color: string): voi
   setTimeout(() => particle.remove(), 450);
 }
 
-function showDescription(item: StoreItem, x: number, y: number, _data?: StoreData): void {
+function showDescription(
+  item: StoreItem,
+  x: number,
+  y: number,
+  data: StoreData
+): void {
   dismissDescription();
 
   const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
   const popup = document.createElement("div");
-  popup.className = "description-popup";
+  const rarityClass = item.rarity !== "common" ? ` rarity-${item.rarity.replace(" ", "-")}` : "";
+  popup.className = `description-popup${rarityClass}`;
 
-  const maxX = window.innerWidth - 390;
-  const maxY = window.innerHeight - 225;
-  popup.style.left = `${Math.min(x, maxX)}px`;
-  popup.style.top = `${Math.min(y, maxY)}px`;
+  const maxX = window.innerWidth - 360;
+  const maxY = window.innerHeight - 280;
+  popup.style.left = `${Math.min(x + 8, maxX)}px`;
+  popup.style.top = `${Math.min(y + 8, maxY)}px`;
 
-  const imageHtml = item.image
-    ? `<img class="desc-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
-    : "";
+  const price = adjustPrice(item.price, data.config.priceAdjustment);
+  const imageContent = item.image
+    ? `<img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
+    : item.name.charAt(0).toUpperCase();
+  const imageStyle = item.rarity !== "common"
+    ? `border-color: ${hexToRgba(color, 0.4)}; color: ${color};`
+    : `color: rgba(255,255,255,0.7);`;
 
   popup.innerHTML = `
     <div class="desc-header">
-      ${imageHtml}
+      <div class="desc-image" style="${imageStyle}">${imageContent}</div>
       <div class="desc-header-info">
         <h3>${escape(item.name)}</h3>
-        <div class="desc-type">${escape(item.type)}</div>
-        <div class="desc-rarity" style="color: ${color}">${escape(item.rarity)}</div>
+        <div class="desc-meta">
+          <span class="desc-type">${escape(item.type)}</span>
+          <span class="desc-rarity" style="color: ${color}; border-color: ${hexToRgba(color, 0.5)};">${escape(item.rarity)}</span>
+        </div>
+        <div class="desc-price-line">${coinHtml(price, item.currency ?? "gp")}</div>
       </div>
     </div>
-    <p>${escape(item.description)}</p>
+    <p class="desc-body-text">${escape(item.description)}</p>
+    <div class="desc-actions" data-desc-actions></div>
   `;
 
   document.body.appendChild(popup);
   descriptionPopup = popup;
+  popup.dataset.itemName = item.name;
+  refreshDescActions(item, data);
+}
+
+function refreshDescActions(item: StoreItem, data: StoreData): void {
+  if (!descriptionPopup) return;
+  const actions = descriptionPopup.querySelector<HTMLElement>("[data-desc-actions]");
+  if (!actions) return;
+
+  const myId = OBR.player.id;
+  const myEntry = data.cart.entries.find((e) => e.itemName === item.name && e.playerId === myId);
+  const qty = myEntry?.quantity ?? 0;
+
+  if (qty === 0) {
+    actions.innerHTML = `<button class="desc-add-btn" data-desc-add>+ Add to Cart</button>`;
+  } else {
+    actions.innerHTML = `
+      <div class="desc-qty-controls">
+        <button class="desc-qty-btn minus" data-desc-minus>&minus;</button>
+        <span class="desc-qty-value">${qty}</span>
+        <button class="desc-qty-btn plus" data-desc-plus>+</button>
+      </div>
+      <span class="desc-qty-label">in cart</span>
+      <button class="desc-remove-all" data-desc-remove-all>Remove all</button>
+    `;
+  }
+
+  const price = adjustPrice(item.price, data.config.priceAdjustment);
+
+  actions.querySelector<HTMLButtonElement>("[data-desc-add]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await addToCart(item, price);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-plus]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await addToCart(item, price);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-minus]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await removeOneFromCart(item.name, myId);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-remove-all]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    if (myEntry) {
+      for (let i = 0; i < myEntry.quantity; i++) {
+        await removeOneFromCart(item.name, myId);
+      }
+    }
+  });
 }
 
 function dismissDescription(): void {
