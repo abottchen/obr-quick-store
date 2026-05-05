@@ -2,7 +2,7 @@ import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 import { getConfigMetadata, onStoreDataChange } from "./metadata";
 import { fetchCatalog } from "./catalog";
-import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
+import { addToCart, removeOneFromCart, removeItemFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
 import type { CurrencyBreakdown } from "./cart";
 import type { StoreData, StoreItem, CartEntry } from "./types";
 
@@ -11,6 +11,10 @@ let descriptionPopup: HTMLElement | null = null;
 const collapsedGroups = new Set<string>();
 let groupsInitialized = false;
 let searchTerm = "";
+let drawerOpen = false;
+let prevCartKey = ""; // signature of last cart render — drives slide-in animation
+let currentCatalog: StoreItem[] = [];
+const prevQtyByItem: Map<string, number> = new Map(); // key: `${playerId}::${itemName}`
 
 export async function initStorefront(container: HTMLElement): Promise<void> {
   const config = await getConfigMetadata();
@@ -30,25 +34,42 @@ export async function initStorefront(container: HTMLElement): Promise<void> {
     }
   });
 
-  document.addEventListener("click", dismissDescription);
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (descriptionPopup && !descriptionPopup.contains(target)) {
+      dismissDescription();
+    }
+  });
+
+  document.addEventListener("contextmenu", (e) => {
+    if (!descriptionPopup) return;
+    const target = e.target as HTMLElement;
+    if (!target.closest(".item-row")) {
+      e.preventDefault();
+      dismissDescription();
+    }
+  });
 }
 
 function adjustPrice(basePrice: number, adjustment: number): number {
   return Math.round((basePrice * adjustment) / 100);
 }
 
-function currencySpan(amount: number, currency: string): string {
+let coinCounter = 0;
+
+function coinHtml(amount: number, currency: string): string {
+  const delay = ((coinCounter++ * 0.7) % 4).toFixed(1);
   const color = CURRENCY_COLORS[currency] ?? CURRENCY_COLORS.gp;
-  return `<span style="color: ${color}">${amount} ${currency}</span>`;
+  return `<span class="coin"><span class="coin-icon coin-icon-${currency}" style="--sheen-delay: ${delay}s"></span><span style="color: ${color}">${amount}</span></span>`;
 }
 
 function renderBreakdown(breakdown: CurrencyBreakdown): string {
   const parts: string[] = [];
-  if (breakdown.pp > 0) parts.push(currencySpan(breakdown.pp, "pp"));
-  if (breakdown.gp > 0) parts.push(currencySpan(breakdown.gp, "gp"));
-  if (breakdown.sp > 0) parts.push(currencySpan(breakdown.sp, "sp"));
-  if (breakdown.cp > 0) parts.push(currencySpan(breakdown.cp, "cp"));
-  return parts.length > 0 ? parts.join(" ") : currencySpan(0, "gp");
+  if (breakdown.pp > 0) parts.push(coinHtml(breakdown.pp, "pp"));
+  if (breakdown.gp > 0) parts.push(coinHtml(breakdown.gp, "gp"));
+  if (breakdown.sp > 0) parts.push(coinHtml(breakdown.sp, "sp"));
+  if (breakdown.cp > 0) parts.push(coinHtml(breakdown.cp, "cp"));
+  return parts.length > 0 ? parts.join(" ") : coinHtml(0, "gp");
 }
 
 function getActiveItems(data: StoreData): StoreItem[] {
@@ -75,6 +96,7 @@ function renderStorefront(
   isGM: boolean
 ): void {
   let items = getActiveItems(data);
+  currentCatalog = data.catalog;
   if (searchTerm) {
     const term = searchTerm.toLowerCase();
     items = items.filter((item) =>
@@ -85,10 +107,14 @@ function renderStorefront(
   const grouped = groupItemsByGrouping(items);
   const adjustment = data.config.priceAdjustment;
 
-  const itemsList = container.querySelector<HTMLElement>("#items-list");
-  const cartPanel = container.querySelector<HTMLElement>(".cart-panel");
-  const prevScroll = itemsList?.scrollTop ?? 0;
-  const prevCartScroll = cartPanel?.scrollTop ?? 0;
+  const itemsScroll = container.querySelector<HTMLElement>(".items-scroll");
+  const drawerContent = container.querySelector<HTMLElement>(".cart-drawer-content");
+  const prevScroll = itemsScroll?.scrollTop ?? 0;
+  const prevCartScroll = drawerContent?.scrollTop ?? 0;
+
+  const totalQty = data.cart.entries.reduce((sum, e) => sum + e.quantity, 0);
+  const totalBreakdown = renderBreakdown(getTotalBreakdown(data.cart.entries));
+  const drawerCollapsedClass = drawerOpen && totalQty > 0 ? "" : "collapsed";
 
   container.innerHTML = `
     <div class="storefront">
@@ -98,34 +124,51 @@ function renderStorefront(
           <p>${escape(data.config.npcName || "Shopkeeper")}</p>
         </div>
         <div class="store-header-controls">
-          <button class="btn-icon btn-small" id="close-store-btn" title="Close">&#x2715;</button>
           <button class="btn-icon" id="minimize-btn" title="${isMinimized ? "Maximize" : "Minimize"}">
             ${isMinimized ? "&#x25A1;" : "&#x2012;"}
           </button>
+          <button class="btn-icon" id="close-store-btn" title="Close">&#x2715;</button>
         </div>
       </div>
       <div class="store-body ${isMinimized ? "minimized" : ""}">
-        <div class="search-bar">
+        <div class="toolbar">
           <input type="text" id="search-input" placeholder="Search items..." value="${escapeAttr(searchTerm)}" />
+          <button class="toolbar-btn" id="collapse-all-btn" title="Collapse / expand all groups">${allCollapsed(grouped) ? "&#x25BC; All" : "&#x25B6; All"}</button>
         </div>
         <div class="items-list-header">
           <span class="col-icon"></span>
           <span class="col-name">Name</span>
           <span class="col-price">Price</span>
-          <span class="col-qty">#</span>
         </div>
-        <div class="items-list" id="items-list">
-          ${renderItemRows(grouped, adjustment, data.cart.entries)}
+        <div class="items-scroll-wrapper" id="items-scroll-wrapper">
+          <div class="items-scroll">
+            ${renderItemRows(grouped, adjustment, data.cart.entries)}
+          </div>
         </div>
-        ${renderCart(data.cart.entries, adjustment)}
+        <div class="cart-drawer ${drawerCollapsedClass}" id="cart-drawer">
+          <div class="cart-drawer-handle" id="cart-handle">
+            <div class="cart-drawer-handle-left">
+              <span class="cart-title">Cart</span>
+              <span class="cart-count-badge" id="cart-count">${totalQty}</span>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="cart-total-preview">${totalQty > 0 ? totalBreakdown : "&mdash;"}</span>
+              <span class="cart-drawer-arrow">&#x25BC;</span>
+            </div>
+          </div>
+          <div class="cart-drawer-content">
+            ${renderCartContent(data.cart.entries)}
+          </div>
+          ${totalQty > 0 ? `<div class="cart-grand-total"><span>Total</span><span id="grand-total-value">${totalBreakdown}</span></div>` : ""}
+        </div>
       </div>
     </div>
   `;
 
-  const newItemsList = container.querySelector<HTMLElement>("#items-list");
-  const newCartPanel = container.querySelector<HTMLElement>(".cart-panel");
-  if (newItemsList) newItemsList.scrollTop = prevScroll;
-  if (newCartPanel) newCartPanel.scrollTop = prevCartScroll;
+  const newItemsScroll = container.querySelector<HTMLElement>(".items-scroll");
+  const newDrawerContent = container.querySelector<HTMLElement>(".cart-drawer-content");
+  if (newItemsScroll) newItemsScroll.scrollTop = prevScroll;
+  if (newDrawerContent) newDrawerContent.scrollTop = prevCartScroll;
 
   if (searchTerm) {
     const searchInput = container.querySelector<HTMLInputElement>("#search-input");
@@ -136,15 +179,31 @@ function renderStorefront(
   }
 
   bindStorefrontEvents(container, data, isGM);
+  initScrollFades(container);
+  applyCartPulses(container, data.cart.entries);
+
+  if (descriptionPopup) {
+    const itemName = descriptionPopup.dataset.itemName;
+    const item = itemName ? data.catalog.find((i) => i.name === itemName) : null;
+    if (item) refreshDescActions(item, data);
+  }
+}
+
+function allCollapsed(grouped: Map<string, StoreItem[]>): boolean {
+  if (grouped.size === 0) return false;
+  for (const key of grouped.keys()) {
+    if (!collapsedGroups.has(key)) return false;
+  }
+  return true;
 }
 
 function renderItemRows(
   grouped: Map<string, StoreItem[]>,
   adjustment: number,
-  cartEntries: CartEntry[]
+  _cartEntries: CartEntry[]
 ): string {
   if (grouped.size === 0) {
-    return `<p style="text-align: center; color: #666; font-style: italic; padding: 20px;">No items available.</p>`;
+    return `<p style="text-align: center; color: var(--text-dim); font-style: italic; padding: 20px;">No items available.</p>`;
   }
 
   if (!groupsInitialized) {
@@ -157,54 +216,66 @@ function renderItemRows(
   let html = "";
   for (const [grouping, items] of grouped) {
     const isCollapsed = searchTerm ? false : collapsedGroups.has(grouping);
-    const arrow = isCollapsed ? "&#x25B6;" : "&#x25BC;";
-    html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}"><span class="grouping-arrow">${arrow}</span> ${escape(grouping)} <span class="grouping-count">(${items.length})</span></div>`;
-    html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}">`;
+    const expandedClass = isCollapsed ? "" : "expanded";
+    const maxH = isCollapsed ? "0" : `${items.length * 60 + 16}px`;
+
+    html += `<div class="grouping-header" data-group="${escapeAttr(grouping)}">
+      <span class="grouping-arrow ${expandedClass}">&#x25B6;</span>
+      ${escape(grouping)}
+      <span class="grouping-count">${items.length}</span>
+    </div>`;
+    html += `<div class="grouping-items ${isCollapsed ? "collapsed" : ""}" style="max-height: ${maxH};" data-group-items="${escapeAttr(grouping)}">`;
+
     for (const item of items) {
       const price = adjustPrice(item.price, adjustment);
-      const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
+      const rarityClass = item.rarity !== "common" ? ` rarity-${item.rarity.replace(" ", "-")}` : "";
+      const rarityColor = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
+      const letterColor = item.rarity !== "common" ? rarityColor : "rgba(255,255,255,0.6)";
       const imageContent = item.image
         ? `<img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
         : item.name.charAt(0).toUpperCase();
+      const imageStyle = item.rarity !== "common"
+        ? `border-color: ${hexToRgba(rarityColor, 0.4)}; color: ${letterColor};`
+        : `color: ${letterColor};`;
 
-      const playerCartQty = cartEntries
-        .filter((e) => e.itemName === item.name)
-        .reduce((sum, e) => sum + e.quantity, 0);
-
-      html += `
-        <div class="item-row"
-             style="border-left-color: ${color};${item.rarity !== "common" ? ` background: linear-gradient(to right, ${hexToRgba(color, 0.4)} 0%, ${hexToRgba(color, 0)} 70%)` : ""}"
-             data-item-name="${escapeAttr(item.name)}"
-             data-item-price="${price}">
-          <div class="item-image" style="background: ${color}">${imageContent}</div>
-          <span class="item-name">${escape(item.name)}</span>
-          <span class="item-price">${currencySpan(price, item.currency ?? "gp")}</span>
-          <span class="item-qty">${playerCartQty > 0 ? playerCartQty : ""}</span>
-        </div>
-      `;
+      html += `<div class="item-row${rarityClass}" data-item-name="${escapeAttr(item.name)}" data-item-price="${price}">
+        <div class="item-image" style="${imageStyle}">${imageContent}</div>
+        <span class="item-name">${escape(item.name)}</span>
+        <span class="item-price">${coinHtml(price, item.currency ?? "gp")}</span>
+      </div>`;
     }
     html += `</div>`;
   }
   return html;
 }
 
-function renderCart(entries: CartEntry[], _adjustment: number): string {
+function renderCartContent(entries: CartEntry[]): string {
   if (entries.length === 0) {
-    return `
-      <div class="cart-panel">
-        <div class="cart-title">Cart</div>
-        <div class="cart-empty">No items in cart yet. Click items to add them.</div>
-      </div>
-    `;
+    prevCartKey = "";
+    return `<div class="cart-empty">The shopkeeper awaits your selection&hellip;</div>`;
   }
 
   const playerIds = [...new Set(entries.map((e) => e.playerId))];
-  let html = `<div class="cart-panel"><div class="cart-title">Cart</div>`;
+  const cartKey = playerIds
+    .map((pid) =>
+      entries
+        .filter((e) => e.playerId === pid)
+        .map((e) => `${e.itemName}:${e.quantity}`)
+        .join(",")
+    )
+    .join("|");
 
+  // For each player+item pair, decide whether to apply slide-in based on whether it
+  // existed in the previous cart key.
+  const prevSet = new Set(
+    prevCartKey.split(/[,|]/).map((s) => s.split(":")[0]).filter(Boolean)
+  );
+
+  let html = "";
   for (const pid of playerIds) {
     const playerEntries = entries.filter((e) => e.playerId === pid);
     const first = playerEntries[0];
-    const subtotal = getPlayerBreakdown(entries, pid);
+    const subtotal = renderBreakdown(getPlayerBreakdown(entries, pid));
 
     html += `<div class="cart-player-group">`;
     html += `<div class="cart-player-name">
@@ -213,32 +284,35 @@ function renderCart(entries: CartEntry[], _adjustment: number): string {
     </div>`;
 
     for (const entry of playerEntries) {
-      html += `
-        <div class="cart-item" data-cart-item="${escapeAttr(entry.itemName)}" data-cart-player="${escapeAttr(entry.playerId)}">
-          <span class="cart-item-name">${escape(entry.itemName)}</span>
-          <span class="cart-item-qty">x${entry.quantity}</span>
-          <span class="cart-item-price">${currencySpan(entry.itemPrice * entry.quantity, entry.itemCurrency ?? "gp")}</span>
-          <button class="cart-item-remove" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}" title="Remove one">&#x2715;</button>
+      const item = currentCatalog.find((i) => i.name === entry.itemName);
+      const rarity = item?.rarity ?? "common";
+      const rarityColor = RARITY_COLORS[rarity] ?? RARITY_COLORS.common;
+      const slideClass = prevSet.has(entry.itemName) ? "" : " slide-in";
+      const pipShadow = rarity === "legendary" ? ` box-shadow: 0 0 4px ${rarityColor};` : "";
+
+      html += `<div class="cart-item${slideClass}"
+        data-cart-item="${escapeAttr(entry.itemName)}"
+        data-cart-player="${escapeAttr(entry.playerId)}"
+        style="border-left-color: ${rarityColor};">
+        <span class="cart-item-rarity-pip" style="background: ${rarityColor};${pipShadow}"></span>
+        <span class="cart-item-name">${escape(entry.itemName)}</span>
+        <div class="cart-item-controls">
+          <button class="cart-qty-btn minus" data-remove-item="${escapeAttr(entry.itemName)}" data-remove-player="${escapeAttr(entry.playerId)}">&minus;</button>
+          <span class="cart-item-qty">${entry.quantity}</span>
+          <button class="cart-qty-btn plus" data-add-item="${escapeAttr(entry.itemName)}" data-add-player="${escapeAttr(entry.playerId)}">+</button>
         </div>
-      `;
+        <span class="cart-item-price">${coinHtml(entry.itemPrice * entry.quantity, entry.itemCurrency ?? "gp")}</span>
+      </div>`;
     }
 
-    html += `
-      <div class="cart-subtotal">
-        <span>Subtotal</span>
-        <span>${renderBreakdown(subtotal)}</span>
-      </div>
+    html += `<div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span>${subtotal}</span>
     </div>`;
+    html += `</div>`;
   }
 
-  const total = getTotalBreakdown(entries);
-  html += `
-    <div class="cart-total">
-      <span>Total</span>
-      <span>${renderBreakdown(total)}</span>
-    </div>
-  </div>`;
-
+  prevCartKey = cartKey;
   return html;
 }
 
@@ -247,23 +321,43 @@ function bindStorefrontEvents(
   data: StoreData,
   isGM: boolean
 ): void {
+  // Search
   container.querySelector<HTMLInputElement>("#search-input")?.addEventListener("input", (e) => {
     searchTerm = (e.target as HTMLInputElement).value;
     renderStorefront(container, data, isGM);
   });
 
+  // Group expand/collapse
   container.querySelectorAll<HTMLElement>(".grouping-header").forEach((header) => {
     header.addEventListener("click", () => {
       const group = header.dataset.group!;
-      if (collapsedGroups.has(group)) {
+      const wasCollapsed = collapsedGroups.has(group);
+      if (wasCollapsed) {
         collapsedGroups.delete(group);
       } else {
         collapsedGroups.add(group);
       }
       renderStorefront(container, data, isGM);
+      if (wasCollapsed) staggerGroupRows(container, group);
     });
   });
 
+  // Collapse / expand all
+  container.querySelector<HTMLElement>("#collapse-all-btn")?.addEventListener("click", () => {
+    const grouped = groupItemsByGrouping(getActiveItems(data));
+    const expanding = allCollapsed(grouped);
+    if (expanding) {
+      collapsedGroups.clear();
+    } else {
+      for (const g of grouped.keys()) collapsedGroups.add(g);
+    }
+    renderStorefront(container, data, isGM);
+    if (expanding) {
+      for (const g of grouped.keys()) staggerGroupRows(container, g);
+    }
+  });
+
+  // Minimize button (popover resize)
   container.querySelector("#minimize-btn")?.addEventListener("click", async () => {
     isMinimized = !isMinimized;
     const baseUrl = new URL(".", document.location.href).href;
@@ -280,72 +374,223 @@ function bindStorefrontEvents(
     renderStorefront(container, data, isGM);
   });
 
+  // Close button (just closes the popover for the local viewer)
   container.querySelector("#close-store-btn")?.addEventListener("click", () => {
     OBR.popover.close(POPOVER_STORE_ID);
   });
 
-  container.querySelectorAll<HTMLElement>(".item-row").forEach((card) => {
-    card.addEventListener("click", async () => {
-      const itemName = card.dataset.itemName!;
+  // Drawer toggle
+  container.querySelector<HTMLElement>("#cart-handle")?.addEventListener("click", () => {
+    if (drawerOpen) closeDrawer(container);
+    else openDrawer(container);
+  });
+
+  // Item click → add to cart with fly + flash
+  container.querySelectorAll<HTMLElement>(".item-row").forEach((row) => {
+    row.addEventListener("click", async () => {
+      const itemName = row.dataset.itemName!;
       const item = data.catalog.find((i) => i.name === itemName);
       if (!item) return;
       const price = adjustPrice(item.price, data.config.priceAdjustment);
+
+      flashRow(row);
+      flyToCart(row, container, RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common);
+      bounceCartCount(container);
+
+      const wasEmpty = data.cart.entries.length === 0;
       await addToCart(item, price);
+      if (wasEmpty) openDrawer(container);
+      else nudgeCartHandle(container);
     });
 
-    card.addEventListener("contextmenu", (e) => {
+    row.addEventListener("contextmenu", (e) => {
       e.preventDefault();
-      const itemName = card.dataset.itemName!;
+      const itemName = row.dataset.itemName!;
       const item = data.catalog.find((i) => i.name === itemName);
       if (!item) return;
-      showDescription(item, e.clientX, e.clientY);
+      showDescription(item, e.clientX, e.clientY, data);
     });
   });
 
-  container.querySelectorAll<HTMLElement>(".cart-item-remove").forEach((btn) => {
+  // Cart `+` button
+  container.querySelectorAll<HTMLButtonElement>(".cart-qty-btn.plus").forEach((btn) => {
     btn.addEventListener("click", async (e) => {
       e.stopPropagation();
-      const itemName = (btn as HTMLElement).dataset.removeItem!;
-      const playerId = (btn as HTMLElement).dataset.removePlayer!;
-      const currentPlayerId = OBR.player.id;
+      const itemName = btn.dataset.addItem!;
+      const playerId = btn.dataset.addPlayer!;
       const role = await OBR.player.getRole();
-      if (playerId === currentPlayerId || role === "GM") {
-        await removeOneFromCart(itemName, playerId);
-      }
+      if (playerId !== OBR.player.id && role !== "GM") return;
+      const item = data.catalog.find((i) => i.name === itemName);
+      if (!item) return;
+      const price = adjustPrice(item.price, data.config.priceAdjustment);
+      bounceCartCount(container);
+      await addToCart(item, price);
+    });
+  });
+
+  // Cart `−` button
+  container.querySelectorAll<HTMLButtonElement>(".cart-qty-btn.minus").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const itemName = btn.dataset.removeItem!;
+      const playerId = btn.dataset.removePlayer!;
+      const role = await OBR.player.getRole();
+      if (playerId !== OBR.player.id && role !== "GM") return;
+      bounceCartCount(container);
+      await removeOneFromCart(itemName, playerId);
     });
   });
 }
 
-function showDescription(item: StoreItem, x: number, y: number): void {
+function applyCartPulses(container: HTMLElement, entries: CartEntry[]): void {
+  const seen = new Set<string>();
+  for (const entry of entries) {
+    const key = `${entry.playerId}::${entry.itemName}`;
+    seen.add(key);
+    const prev = prevQtyByItem.get(key);
+    if (prev !== undefined && prev !== entry.quantity) {
+      const direction = entry.quantity > prev ? "up" : "down";
+      const row = container.querySelector<HTMLElement>(
+        `[data-cart-item="${cssEscape(entry.itemName)}"][data-cart-player="${cssEscape(entry.playerId)}"]`
+      );
+      if (row) {
+        const qty = row.querySelector<HTMLElement>(".cart-item-qty");
+        const price = row.querySelector<HTMLElement>(".cart-item-price");
+        qty?.classList.add(direction === "up" ? "pulse-up" : "pulse-down");
+        price?.classList.add(direction === "up" ? "pulse-gold-up" : "pulse-gold-down");
+      }
+      const grandTotal = container.querySelector<HTMLElement>("#grand-total-value");
+      if (grandTotal) {
+        grandTotal.classList.add(direction === "up" ? "pulse-gold-up" : "pulse-gold-down");
+      }
+    }
+    prevQtyByItem.set(key, entry.quantity);
+  }
+  // Clean up entries that no longer exist
+  for (const key of [...prevQtyByItem.keys()]) {
+    if (!seen.has(key)) prevQtyByItem.delete(key);
+  }
+}
+
+function cssEscape(value: string): string {
+  return value.replace(/(["\\])/g, "\\$1");
+}
+
+function flashRow(row: HTMLElement): void {
+  row.classList.remove("flash");
+  void row.offsetHeight;
+  row.classList.add("flash");
+}
+
+function flyToCart(row: HTMLElement, container: HTMLElement, color: string): void {
+  const rowRect = row.getBoundingClientRect();
+  const drawer = container.querySelector<HTMLElement>("#cart-drawer");
+  if (!drawer) return;
+  const drawerRect = drawer.getBoundingClientRect();
+
+  const particle = document.createElement("div");
+  particle.className = "fly-particle";
+  particle.style.left = `${rowRect.left + 24}px`;
+  particle.style.top = `${rowRect.top + rowRect.height / 2 - 14}px`;
+  particle.style.background = color;
+  particle.style.setProperty("--fly-x", `${drawerRect.left + 80 - rowRect.left - 24}px`);
+  particle.style.setProperty("--fly-y", `${drawerRect.top - rowRect.top}px`);
+  particle.textContent = "+1";
+  document.body.appendChild(particle);
+  setTimeout(() => particle.remove(), 450);
+}
+
+function showDescription(
+  item: StoreItem,
+  x: number,
+  y: number,
+  data: StoreData
+): void {
   dismissDescription();
 
   const color = RARITY_COLORS[item.rarity] ?? RARITY_COLORS.common;
   const popup = document.createElement("div");
-  popup.className = "description-popup";
+  const rarityClass = item.rarity !== "common" ? ` rarity-${item.rarity.replace(" ", "-")}` : "";
+  popup.className = `description-popup${rarityClass}`;
 
-  const maxX = window.innerWidth - 390;
-  const maxY = window.innerHeight - 225;
-  popup.style.left = `${Math.min(x, maxX)}px`;
-  popup.style.top = `${Math.min(y, maxY)}px`;
+  const maxX = window.innerWidth - 360;
+  const maxY = window.innerHeight - 280;
+  popup.style.left = `${Math.min(x + 8, maxX)}px`;
+  popup.style.top = `${Math.min(y + 8, maxY)}px`;
 
-  const imageHtml = item.image
-    ? `<img class="desc-image" src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
-    : "";
+  const price = adjustPrice(item.price, data.config.priceAdjustment);
+  const imageContent = item.image
+    ? `<img src="${escapeAttr(item.image)}" alt="${escapeAttr(item.name)}" />`
+    : item.name.charAt(0).toUpperCase();
+  const imageStyle = item.rarity !== "common"
+    ? `border-color: ${hexToRgba(color, 0.4)}; color: ${color};`
+    : `color: rgba(255,255,255,0.7);`;
 
   popup.innerHTML = `
     <div class="desc-header">
-      ${imageHtml}
+      <div class="desc-image" style="${imageStyle}">${imageContent}</div>
       <div class="desc-header-info">
         <h3>${escape(item.name)}</h3>
-        <div class="desc-type">${escape(item.type)}</div>
-        <div class="desc-rarity" style="color: ${color}">${escape(item.rarity)}</div>
+        <div class="desc-meta">
+          <span class="desc-type">${escape(item.type)}</span>
+          <span class="desc-rarity" style="color: ${color}; border-color: ${hexToRgba(color, 0.5)};">${escape(item.rarity)}</span>
+        </div>
+        <div class="desc-price-line">${coinHtml(price, item.currency ?? "gp")}</div>
       </div>
     </div>
-    <p>${escape(item.description)}</p>
+    <p class="desc-body-text">${escape(item.description)}</p>
+    <div class="desc-actions" data-desc-actions></div>
   `;
 
   document.body.appendChild(popup);
   descriptionPopup = popup;
+  popup.dataset.itemName = item.name;
+  refreshDescActions(item, data);
+}
+
+function refreshDescActions(item: StoreItem, data: StoreData): void {
+  if (!descriptionPopup) return;
+  const actions = descriptionPopup.querySelector<HTMLElement>("[data-desc-actions]");
+  if (!actions) return;
+
+  const myId = OBR.player.id;
+  const myEntry = data.cart.entries.find((e) => e.itemName === item.name && e.playerId === myId);
+  const qty = myEntry?.quantity ?? 0;
+
+  if (qty === 0) {
+    actions.innerHTML = `<button class="desc-add-btn" data-desc-add>+ Add to Cart</button>`;
+  } else {
+    actions.innerHTML = `
+      <div class="desc-qty-controls">
+        <button class="desc-qty-btn minus" data-desc-minus>&minus;</button>
+        <span class="desc-qty-value">${qty}</span>
+        <button class="desc-qty-btn plus" data-desc-plus>+</button>
+      </div>
+      <span class="desc-qty-label">in cart</span>
+      <button class="desc-remove-all" data-desc-remove-all>Remove all</button>
+    `;
+  }
+
+  const price = adjustPrice(item.price, data.config.priceAdjustment);
+
+  actions.querySelector<HTMLButtonElement>("[data-desc-add]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await addToCart(item, price);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-plus]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await addToCart(item, price);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-minus]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    await removeOneFromCart(item.name, myId);
+  });
+  actions.querySelector<HTMLButtonElement>("[data-desc-remove-all]")?.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    if (myEntry) {
+      await removeItemFromCart(item.name, myId);
+    }
+  });
 }
 
 function dismissDescription(): void {
@@ -353,6 +598,59 @@ function dismissDescription(): void {
     descriptionPopup.remove();
     descriptionPopup = null;
   }
+}
+
+function initScrollFades(container: HTMLElement): void {
+  const wrapper = container.querySelector<HTMLElement>("#items-scroll-wrapper");
+  const scrollEl = container.querySelector<HTMLElement>(".items-scroll");
+  if (!wrapper || !scrollEl) return;
+
+  const update = (): void => {
+    const { scrollTop, scrollHeight, clientHeight } = scrollEl;
+    wrapper.classList.toggle("fade-top", scrollTop > 10);
+    wrapper.classList.toggle("fade-bottom", scrollTop < scrollHeight - clientHeight - 10);
+  };
+
+  scrollEl.addEventListener("scroll", update);
+  // Initial check after layout
+  setTimeout(update, 100);
+}
+
+function openDrawer(container: HTMLElement): void {
+  drawerOpen = true;
+  container.querySelector<HTMLElement>("#cart-drawer")?.classList.remove("collapsed");
+}
+
+function closeDrawer(container: HTMLElement): void {
+  drawerOpen = false;
+  container.querySelector<HTMLElement>("#cart-drawer")?.classList.add("collapsed");
+}
+
+function nudgeCartHandle(container: HTMLElement): void {
+  if (drawerOpen) return;
+  const handle = container.querySelector<HTMLElement>("#cart-handle");
+  if (!handle) return;
+  handle.classList.remove("nudge");
+  void handle.offsetHeight; // restart animation
+  handle.classList.add("nudge");
+}
+
+function staggerGroupRows(container: HTMLElement, group: string): void {
+  const wrapper = container.querySelector<HTMLElement>(`[data-group-items="${cssEscape(group)}"]`);
+  if (!wrapper) return;
+  const rows = wrapper.querySelectorAll<HTMLElement>(".item-row");
+  rows.forEach((row, i) => {
+    row.style.setProperty("--stagger", `${i * 0.04}s`);
+    row.classList.add("stagger-in");
+  });
+}
+
+function bounceCartCount(container: HTMLElement): void {
+  const badge = container.querySelector<HTMLElement>("#cart-count");
+  if (!badge) return;
+  badge.classList.remove("bounce");
+  void badge.offsetHeight;
+  badge.classList.add("bounce");
 }
 
 function escape(str: string): string {
@@ -366,8 +664,12 @@ function escapeAttr(str: string): string {
 }
 
 function hexToRgba(hex: string, alpha: number): string {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
+  const normalized = hex.replace("#", "");
+  const full = normalized.length === 3
+    ? normalized.split("").map((c) => c + c).join("")
+    : normalized;
+  const r = parseInt(full.slice(0, 2), 16);
+  const g = parseInt(full.slice(2, 4), 16);
+  const b = parseInt(full.slice(4, 6), 16);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
