@@ -2,7 +2,7 @@ import OBR from "@owlbear-rodeo/sdk";
 import { RARITY_COLORS, CURRENCY_COLORS, BROADCAST_CHANNEL, POPOVER_STORE_ID } from "./constants";
 import { getConfigMetadata, onStoreDataChange } from "./metadata";
 import { fetchCatalog } from "./catalog";
-import { addToCart, removeOneFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
+import { addToCart, removeOneFromCart, removeItemFromCart, getPlayerBreakdown, getTotalBreakdown } from "./cart";
 import type { CurrencyBreakdown } from "./cart";
 import type { StoreData, StoreItem, CartEntry } from "./types";
 
@@ -331,24 +331,30 @@ function bindStorefrontEvents(
   container.querySelectorAll<HTMLElement>(".grouping-header").forEach((header) => {
     header.addEventListener("click", () => {
       const group = header.dataset.group!;
-      if (collapsedGroups.has(group)) {
+      const wasCollapsed = collapsedGroups.has(group);
+      if (wasCollapsed) {
         collapsedGroups.delete(group);
       } else {
         collapsedGroups.add(group);
       }
       renderStorefront(container, data, isGM);
+      if (wasCollapsed) staggerGroupRows(container, group);
     });
   });
 
   // Collapse / expand all
   container.querySelector<HTMLElement>("#collapse-all-btn")?.addEventListener("click", () => {
     const grouped = groupItemsByGrouping(getActiveItems(data));
-    if (allCollapsed(grouped)) {
+    const expanding = allCollapsed(grouped);
+    if (expanding) {
       collapsedGroups.clear();
     } else {
       for (const g of grouped.keys()) collapsedGroups.add(g);
     }
     renderStorefront(container, data, isGM);
+    if (expanding) {
+      for (const g of grouped.keys()) staggerGroupRows(container, g);
+    }
   });
 
   // Minimize button (popover resize)
@@ -582,9 +588,7 @@ function refreshDescActions(item: StoreItem, data: StoreData): void {
   actions.querySelector<HTMLButtonElement>("[data-desc-remove-all]")?.addEventListener("click", async (e) => {
     e.stopPropagation();
     if (myEntry) {
-      for (let i = 0; i < myEntry.quantity; i++) {
-        await removeOneFromCart(item.name, myId);
-      }
+      await removeItemFromCart(item.name, myId);
     }
   });
 }
@@ -629,6 +633,16 @@ function nudgeCartHandle(container: HTMLElement): void {
   handle.classList.remove("nudge");
   void handle.offsetHeight; // restart animation
   handle.classList.add("nudge");
+}
+
+function staggerGroupRows(container: HTMLElement, group: string): void {
+  const wrapper = container.querySelector<HTMLElement>(`[data-group-items="${cssEscape(group)}"]`);
+  if (!wrapper) return;
+  const rows = wrapper.querySelectorAll<HTMLElement>(".item-row");
+  rows.forEach((row, i) => {
+    row.style.setProperty("--stagger", `${i * 0.04}s`);
+    row.classList.add("stagger-in");
+  });
 }
 
 function bounceCartCount(container: HTMLElement): void {

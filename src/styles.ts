@@ -4,8 +4,6 @@ export const BASE_STYLES = `
     --bg-surface: #22201f;
     --bg-raised: #2c2926;
     --bg-elevated: #37332f;
-    --bg-hover: #3f3a35;
-
     --stone-warm: #c4a882;
     --stone-light: #ddd0be;
     --stone-mid: #8a7e6f;
@@ -13,9 +11,6 @@ export const BASE_STYLES = `
     --verdigris: #6faa8d;
     --verdigris-bright: #83c4a4;
     --verdigris-dim: #4a7d65;
-
-    --terracotta: #c47a5a;
-    --terracotta-dim: #9e5e42;
 
     --text-primary: #dcd5cb;
     --text-secondary: #9e9588;

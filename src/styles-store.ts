@@ -304,9 +304,9 @@ export const STORE_STYLES = `
     cursor: pointer;
     user-select: none;
     position: relative;
-    border-left: 3px solid transparent;
     border-radius: 8px;
     border: 1px solid var(--border);
+    border-left: 3px solid transparent;
     background: var(--bg-surface);
     transition: all 0.2s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
@@ -323,6 +323,10 @@ export const STORE_STYLES = `
     background: var(--bg-elevated);
   }
   .item-row.flash { animation: rowFlash 0.6s ease; }
+  .item-row.stagger-in {
+    animation: fadeSlideIn 0.25s ease both;
+    animation-delay: var(--stagger, 0s);
+  }
 
   .item-image {
     width: 36px;

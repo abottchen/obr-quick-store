@@ -69,6 +69,23 @@ export function removeOneFromCart(
   });
 }
 
+export function removeItemFromCart(
+  itemName: string,
+  playerId: string
+): Promise<void> {
+  return enqueue(async () => {
+    const current = await getPlayerCart(playerId);
+    if (!current) return;
+
+    const entries = current.entries.filter((e) => e.itemName !== itemName);
+    await setPlayerCart(playerId, {
+      entries,
+      playerName: current.playerName,
+      playerColor: current.playerColor,
+    });
+  });
+}
+
 export async function clearCart(): Promise<void> {
   await clearAllCarts();
 }
